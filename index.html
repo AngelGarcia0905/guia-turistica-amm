@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Turística del Área Metropolitana de Monterrey</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    nav { background: #1f2937; padding: 12px; position: sticky; top: 0; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    #mapa { height: 400px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#atractivos">Atractivos</a>
+    <a href="#gastronomia">Gastronomía</a>
+    <a href="#tradiciones">Tradiciones</a>
+    <a href="#ruta">Ruta</a>
+    <a href="#recomendaciones">Recomendaciones</a>
+    <a href="#fuentes">Fuentes</a>
+  </nav>
+
+  <section id="inicio">
+    <h1>Área Metropolitana de Monterrey</h1>
+    <p>Patrimonio industrial, arte urbano, gastronomía y vida cultural.</p>
+    <div id="mapa"></div>
+  </section>
+
+  <section id="historia"><h2>Reseña histórica y cultural</h2></section>
+  <section id="atractivos"><h2>Atractivos turísticos</h2></section>
+  <section id="gastronomia"><h2>Gastronomía típica</h2></section>
+  <section id="tradiciones"><h2>Tradiciones y patrimonio inmaterial</h2></section>
+  <section id="ruta"><h2>Ruta turística sugerida</h2></section>
+  <section id="recomendaciones"><h2>Recomendaciones para el visitante</h2></section>
+  <section id="fuentes"><h2>Fuentes consultadas</h2></section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const mapa = L.map('mapa').setView([25.6866, -100.3161], 11);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap'
+    }).addTo(mapa);
+    L.marker([25.6786, -100.2850]).addTo(mapa)
+      .bindPopup('<b>Parque Fundidora</b><br>Antiguo complejo siderúrgico.');
+  </script>
+</body>
+</html>
