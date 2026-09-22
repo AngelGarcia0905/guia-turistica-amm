@@ -1,52 +1,520 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guía Turística del Área Metropolitana de Monterrey</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; }
-    nav { background: #1f2937; padding: 12px; position: sticky; top: 0; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    #mapa { height: 400px; border-radius: 8px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Turística del Área Metropolitana de Monterrey</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --bg-alt: #ffffff;
+    --text: #23211d;
+    --muted: #6b6459;
+    --accent: #b5502e;
+    --accent-dark: #8a3a1f;
+    --steel: #3f4a52;
+    --card-border: #e4ddd0;
+    --nav-bg: #201d19;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
+  nav {
+    background: var(--nav-bg);
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  nav .brand {
+    color: #e7cdb0;
+    font-weight: bold;
+    margin-right: 12px;
+    font-family: Georgia, serif;
+    letter-spacing: 0.5px;
+  }
+  nav a {
+    color: #f1ece3;
+    margin: 2px 4px;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.92em;
+    white-space: nowrap;
+  }
+  nav a:hover, nav a.active { background: var(--accent); color: #fff; }
+
+  .hero {
+    background: linear-gradient(rgba(20,18,15,0.55), rgba(20,18,15,0.55)),
+      url('https://upload.wikimedia.org/wikipedia/commons/2/27/Puente_Atirantado%2C_Monterrey%2C_Mex.JPG') center/cover;
+    color: #fff;
+    padding: 90px 20px 70px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.6em; margin: 0 0 10px; }
+  .hero p { font-size: 1.15em; max-width: 640px; margin: 0 auto; color: #f1ece3; }
+  .hero .tags { margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .hero .tag { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); padding: 5px 14px; border-radius: 999px; font-size: 0.85em; }
+
+  section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+  section h2 {
+    font-size: 1.9em;
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+  }
+  section > p.lead { color: var(--muted); max-width: 700px; margin-top: 0; }
+
+  #mapa { height: 420px; border-radius: 10px; margin-top: 20px; border: 1px solid var(--card-border); }
+
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 24px; }
+  .filter-btn {
+    background: var(--bg-alt);
+    border: 1px solid var(--card-border);
+    color: var(--text);
+    padding: 7px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  .filter-btn:hover { border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--bg-alt);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+  .card img { width: 100%; height: 150px; object-fit: cover; background: #ddd; display: block; }
+  .card .card-body { padding: 14px 16px; flex: 1; display: flex; flex-direction: column; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05em; }
+  .card p { margin: 0; font-size: 0.9em; color: var(--muted); flex: 1; }
+  .card .badge {
+    align-self: flex-start;
+    background: var(--steel);
+    color: #fff;
+    font-size: 0.72em;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+  }
+  .card .badge.zone-sp { background: var(--accent); }
+
+  .placeholder-img {
+    width: 100%; height: 150px;
+    background: repeating-linear-gradient(45deg, #e9e2d4, #e9e2d4 10px, #f0ebe0 10px, #f0ebe0 20px);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 0.8em; text-align: center; padding: 8px;
+  }
+
+  .tabs { display: flex; gap: 6px; margin-bottom: 20px; border-bottom: 1px solid var(--card-border); flex-wrap: wrap; }
+  .tab-btn {
+    background: none; border: none; padding: 10px 18px; cursor: pointer;
+    font-size: 0.95em; color: var(--muted); border-bottom: 3px solid transparent;
+  }
+  .tab-btn.active { color: var(--accent-dark); border-bottom-color: var(--accent); font-weight: bold; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .route-day { background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px; padding: 24px; margin-bottom: 22px; }
+  .route-day h3 { margin-top: 0; color: var(--accent-dark); }
+  .timeline { list-style: none; padding: 0; margin: 0; }
+  .timeline li { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px dashed var(--card-border); }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .time { font-weight: bold; color: var(--accent); min-width: 80px; }
+
+  .note-box {
+    background: #fbf3e6; border-left: 4px solid #d1a04a; padding: 12px 16px;
+    border-radius: 6px; font-size: 0.88em; color: #6b5a30; margin: 18px 0;
+  }
+
+  .companies { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+  .company-card {
+    background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px;
+    padding: 20px; flex: 1; min-width: 240px; display: flex; gap: 14px; align-items: center;
+  }
+  .company-card img { width: 60px; height: 60px; object-fit: contain; }
+
+  .sources-list { list-style: none; padding: 0; }
+  .sources-list li {
+    background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 8px;
+    padding: 14px 18px; margin-bottom: 12px; font-size: 0.92em;
+  }
+  .sources-list .src-type { color: var(--accent-dark); font-weight: bold; display: block; margin-bottom: 4px; font-size: 0.8em; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .quiz-box {
+    background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px;
+    padding: 24px; margin-top: 20px;
+  }
+  .quiz-question { margin-bottom: 18px; }
+  .quiz-question p { font-weight: bold; margin-bottom: 8px; }
+  .quiz-options { display: flex; flex-direction: column; gap: 6px; }
+  .quiz-options label {
+    background: var(--bg); border: 1px solid var(--card-border); border-radius: 6px;
+    padding: 8px 12px; cursor: pointer; font-size: 0.92em;
+  }
+  .quiz-options label.correct { background: #dff3e0; border-color: #6cbf7a; }
+  .quiz-options label.incorrect { background: #f7dede; border-color: #d97070; }
+  #quiz-result { margin-top: 14px; font-weight: bold; }
+  .quiz-btn {
+    background: var(--accent); color: #fff; border: none; padding: 10px 22px;
+    border-radius: 6px; cursor: pointer; font-size: 0.95em; margin-top: 8px;
+  }
+  .quiz-btn:hover { background: var(--accent-dark); }
+
+  footer { text-align: center; padding: 30px; color: var(--muted); font-size: 0.85em; background: var(--nav-bg); color: #cfc6b8; }
+  footer strong { color: #fff; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 60px 16px 50px; }
+    .hero h1 { font-size: 1.9em; }
+    section { padding: 34px 14px; }
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#historia">Historia</a>
-    <a href="#atractivos">Atractivos</a>
-    <a href="#gastronomia">Gastronomía</a>
-    <a href="#tradiciones">Tradiciones</a>
-    <a href="#ruta">Ruta</a>
-    <a href="#recomendaciones">Recomendaciones</a>
-    <a href="#fuentes">Fuentes</a>
-  </nav>
 
-  <section id="inicio">
-    <h1>Área Metropolitana de Monterrey</h1>
-    <p>Patrimonio industrial, arte urbano, gastronomía y vida cultural.</p>
-    <div id="mapa"></div>
-  </section>
+<nav id="navbar">
+  <span class="brand">AMM Guía</span>
+  <a href="#inicio">Inicio</a>
+  <a href="#historia">Historia</a>
+  <a href="#atractivos">Atractivos</a>
+  <a href="#gastronomia">Gastronomía</a>
+  <a href="#tradiciones">Bebidas</a>
+  <a href="#empresas">Empresas</a>
+  <a href="#ruta">Ruta</a>
+  <a href="#saber-mas">Ponte a prueba</a>
+  <a href="#fuentes">Fuentes</a>
+</nav>
 
-  <section id="historia"><h2>Reseña histórica y cultural</h2></section>
-  <section id="atractivos"><h2>Atractivos turísticos</h2></section>
-  <section id="gastronomia"><h2>Gastronomía típica</h2></section>
-  <section id="tradiciones"><h2>Tradiciones y patrimonio inmaterial</h2></section>
-  <section id="ruta"><h2>Ruta turística sugerida</h2></section>
-  <section id="recomendaciones"><h2>Recomendaciones para el visitante</h2></section>
-  <section id="fuentes"><h2>Fuentes consultadas</h2></section>
+<section id="inicio" class="hero">
+  <h1>Área Metropolitana de Monterrey</h1>
+  <p>Patrimonio industrial, arte urbano, gastronomía y vida cultural en el corazón del noreste de México. Guía interactiva enfocada en Monterrey y San Pedro Garza García.</p>
+  <div class="tags">
+    <span class="tag">Patrimonio industrial</span>
+    <span class="tag">Arte urbano</span>
+    <span class="tag">Gastronomía norteña</span>
+    <span class="tag">Naturaleza y miradores</span>
+  </div>
+</section>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    const mapa = L.map('mapa').setView([25.6866, -100.3161], 11);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap'
-    }).addTo(mapa);
-    L.marker([25.6786, -100.2850]).addTo(mapa)
-      .bindPopup('<b>Parque Fundidora</b><br>Antiguo complejo siderúrgico.');
-  </script>
+<section id="historia">
+  <h2>Reseña histórica y cultural</h2>
+  <p class="lead">Por qué el Área Metropolitana de Monterrey merece una guía turística propia.</p>
+  <p>El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del noreste de México y reúne municipios como Monterrey, San Pedro Garza García, Guadalupe, San Nicolás de los Garza, Santa Catarina, Apodaca, General Escobedo, García y Juárez. Su relevancia turística y cultural se explica por la combinación de tres elementos:</p>
+  <ul>
+    <li><strong>Pasado industrial:</strong> lo que puso a Monterrey como "la Sultana del Norte" y hoy se conserva en espacios reconvertidos como el Parque Fundidora y el Museo del Acero Horno3.</li>
+    <li><strong>Arte urbano y contemporáneo:</strong> una escena creciente en zonas como el Barrio Antiguo, el Paseo Santa Lucía y el MARCO.</li>
+    <li><strong>Identidad gastronómica:</strong> muy marcada, con el cabrito, el machacado y la carne asada como parte de la vida social regional.</li>
+  </ul>
+  <p>Esta guía se centra en Monterrey y San Pedro Garza García, al ser los municipios con mayor concentración de zonas turísticas del AMM, para mostrar una ciudad moderna que no ha perdido sus raíces.</p>
+  <div id="mapa"></div>
+</section>
+
+<section id="atractivos">
+  <h2>Atractivos turísticos</h2>
+  <p class="lead">Museos, parques, miradores y zonas emblemáticas de Monterrey y San Pedro Garza García.</p>
+  <div class="filters" id="filtros-atractivos">
+    <button class="filter-btn active" data-filter="todos">Todos</button>
+    <button class="filter-btn" data-filter="Monterrey">Monterrey</button>
+    <button class="filter-btn" data-filter="San Pedro Garza García">San Pedro</button>
+  </div>
+  <div class="grid" id="grid-atractivos"></div>
+</section>
+
+<section id="gastronomia">
+  <h2>Gastronomía típica</h2>
+  <p class="lead">Platillos y postres que forman parte de la vida social regiomontana.</p>
+  <div class="grid" id="grid-platillos"></div>
+</section>
+
+<section id="tradiciones">
+  <h2>Bebidas y tradición cervecera</h2>
+  <p class="lead">Monterrey tiene una fuerte identidad cervecera ligada a su historia industrial, además de bebidas y preparaciones tradicionales del norte de México.</p>
+  <div class="note-box">Nota: algunos elementos (por ejemplo, champurrado, birria y tinga) corresponden más a guisos o bebidas de masa/caldo que a bebidas embotelladas; se mantienen aquí a la espera de una clasificación final del equipo.</div>
+  <div class="grid" id="grid-bebidas"></div>
+</section>
+
+<section id="empresas">
+  <h2>Empresas que levantaron a Monterrey</h2>
+  <p class="lead">La identidad industrial de la ciudad también se explica por sus empresas fundadoras.</p>
+  <div class="companies" id="lista-empresas"></div>
+</section>
+
+<section id="ruta">
+  <h2>Ruta turística sugerida (2 días)</h2>
+  <p class="lead">Un borrador de itinerario para conocer lo esencial del AMM en un fin de semana.</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="dia1">Día 1 · Patrimonio industrial y ciudad</button>
+    <button class="tab-btn" data-tab="dia2">Día 2 · Arte, historia y vida cultural</button>
+  </div>
+
+  <div class="tab-panel active" id="dia1">
+    <div class="route-day">
+      <h3>Día 1: Patrimonio industrial y ciudad</h3>
+      <ul class="timeline">
+        <li><span class="time">Mañana</span><span>Parque Fundidora y Museo del Acero Horno3.</span></li>
+        <li><span class="time">Mediodía</span><span>Comida de cabrito o machacado en un restaurante tradicional.</span></li>
+        <li><span class="time">Tarde</span><span>Recorrido por el Paseo Santa Lucía hasta la Macroplaza.</span></li>
+        <li><span class="time">Noche</span><span>Cena y paseo por el Barrio Antiguo.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="dia2">
+    <div class="route-day">
+      <h3>Día 2: Arte, historia y vida cultural</h3>
+      <ul class="timeline">
+        <li><span class="time">Mañana</span><span>Visita al MARCO (Museo de Arte Contemporáneo).</span></li>
+        <li><span class="time">Mediodía</span><span>Comida en la zona centro.</span></li>
+        <li><span class="time">Tarde</span><span>Museo Regional El Obispado y mirador de la ciudad.</span></li>
+        <li><span class="time">Noche</span><span>Carne asada o cena típica y cierre de la ruta.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="note-box">Los horarios y costos son un borrador y se confirmarán en la versión final de la guía.</div>
+</section>
+
+<section id="saber-mas">
+  <h2>Ponte a prueba</h2>
+  <p class="lead">Un breve quiz para repasar lo aprendido sobre el AMM.</p>
+  <div class="quiz-box" id="quiz"></div>
+</section>
+
+<section id="fuentes">
+  <h2>Fuentes consultadas</h2>
+  <p class="lead">Fichas de fuentes utilizadas para construir esta guía (avance de investigación).</p>
+  <ul class="sources-list" id="lista-fuentes"></ul>
+</section>
+
+<footer>
+  <p><strong>Guía turística digital — Área Metropolitana de Monterrey</strong><br>
+  Universidad Autónoma de Nuevo León · Facultad de Ingeniería Mecánica y Eléctrica<br>
+  Proyecto de equipo — Avance de investigación</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// ---------- DATA ----------
+const atractivos = [
+  { nombre: "Parque Fundidora", zona: "Monterrey", desc: "Antiguo complejo siderúrgico convertido en parque urbano con áreas verdes, eventos y arquitectura industrial.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Parque_Fundidora_%28Monterrey%29.jpg", coords: [25.6786, -100.2850] },
+  { nombre: "Museo del Acero Horno3", zona: "Monterrey", desc: "Museo dentro de un alto horno real, con recorrido interactivo sobre la producción de acero.", img: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Exterior_Museo.JPG", coords: [25.6779, -100.2843] },
+  { nombre: "Paseo Santa Lucía", zona: "Monterrey", desc: "Canal artificial con recorrido peatonal y en lancha que conecta Fundidora con la Macroplaza.", img: "https://upload.wikimedia.org/wikipedia/commons/3/39/PaseoSantaLucia.JPG", coords: [25.6720, -100.2989] },
+  { nombre: "Macroplaza", zona: "Monterrey", desc: "Una de las plazas públicas más grandes del país, rodeada de edificios históricos y arte escultórico.", img: "https://upload.wikimedia.org/wikipedia/commons/c/c8/%C3%81guila_Macroplaza_I.JPG", coords: [25.6698, -100.3105] },
+  { nombre: "MARCO — Museo de Arte Contemporáneo", zona: "Monterrey", desc: "Museo de arte contemporáneo con exposiciones nacionales e internacionales.", img: "https://upload.wikimedia.org/wikipedia/commons/6/60/Interior_de_Museo_de_Arte_Contempor%C3%A1neo%2C_Monterrey%2C_Nuevo_Le%C3%B3n%2C_M%C3%A9xico.jpg", coords: [25.6699, -100.3117] },
+  { nombre: "Barrio Antiguo", zona: "Monterrey", desc: "Zona histórica con vida nocturna, galerías, murales y arte urbano.", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Monterrey_Barrio_Antiguo.JPG", coords: [25.6685, -100.3082] },
+  { nombre: "Museo Regional de Nuevo León \"El Obispado\"", zona: "Monterrey", desc: "Antiguo edificio del siglo XVIII con vistas de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Museo_Regional_de_Nuevo_Le%C3%B3n_El_Obispado.JPG", coords: [25.6725, -100.3311] },
+  { nombre: "Alameda", zona: "Monterrey", desc: "Parque público en el centro de la ciudad, punto tradicional de encuentro y descanso rodeado de vialidades históricas.", img: null, coords: [25.6688, -100.3151] },
+  { nombre: "Centro MTY — Faro del Comercio", zona: "Monterrey", desc: "Área comercial del centro con comercios tradicionales y ambiente de calle.", img: "https://upload.wikimedia.org/wikipedia/commons/3/39/Faro_del_Comercio_Monterrey.JPG", coords: [25.6697, -100.3103] },
+  { nombre: "Fashion Drive", zona: "San Pedro Garza García", desc: "Corredor comercial de tiendas y restaurantes en San Pedro.", img: null, coords: [25.6510, -100.3600] },
+  { nombre: "Plazas de San Agustín", zona: "San Pedro Garza García", desc: "Conjunto de plazas comerciales y de entretenimiento en la zona de San Agustín.", img: null, coords: [25.6520, -100.3450] },
+  { nombre: "Chipinque", zona: "San Pedro Garza García", desc: "Parque ecológico de montaña con senderos, miradores y vida silvestre.", img: "https://upload.wikimedia.org/wikipedia/commons/0/06/IMAGEN_CHIPINQUE.jpg", coords: [25.6150, -100.3450] },
+  { nombre: "Puente Atirantado", zona: "Monterrey", desc: "Puente vehicular emblemático por su diseño estructural, parte del paisaje urbano de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/2/27/Puente_Atirantado%2C_Monterrey%2C_Mex.JPG", coords: [25.6390, -100.2870] },
+  { nombre: "Salón de la Fama del Beisbol Mexicano", zona: "Monterrey", desc: "Museo dedicado a la historia del beisbol profesional mexicano.", img: null, coords: [25.6900, -100.3000] },
+  { nombre: "Museo del Ferrocarril", zona: "Monterrey", desc: "Museo instalado en una antigua estación de tren, con locomotoras y vagones históricos.", img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Estaci%C3%B3n_Ferroviaria_Mty.jpg", coords: [25.6750, -100.3200] },
+  { nombre: "Papalote Museo del Niño", zona: "Monterrey", desc: "Museo interactivo infantil enfocado en ciencia y tecnología.", img: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Papalote_Museo_del_Ni%C3%B1o_en_Monterrey.jpg", coords: [25.6780, -100.2900] },
+  { nombre: "Arena Monterrey", zona: "Monterrey", desc: "Recinto multiusos para eventos deportivos y espectáculos.", img: "https://upload.wikimedia.org/wikipedia/commons/9/99/Arena_Mty_1.jpg", coords: [25.7300, -100.3000] },
+  { nombre: "Virgen de Acero", zona: "Monterrey", desc: "Escultura monumental de la Virgen elaborada en acero, referencia del paisaje industrial de la ciudad.", img: null, coords: [25.6600, -100.2600] },
+  { nombre: "Mirador del Obispado", zona: "Monterrey", desc: "Punto panorámico junto al Obispado con vista a la ciudad y al Cerro de la Silla.", img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Monterrey_as_seen_from_Cerro_del_Obispado_%28September_2005%29.jpg", coords: [25.6728, -100.3315] },
+];
+
+const platillos = [
+  { nombre: "Cabrito al pastor o al horno", desc: "Platillo emblemático de Nuevo León, asociado a celebraciones y a la cocina tradicional norteña.", img: "https://upload.wikimedia.org/wikipedia/commons/a/af/Cabritos_in_Monterrey.jpg" },
+  { nombre: "Machacado con huevo", desc: "Carne seca deshebrada, base del desayuno regional.", img: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Machacado_con_huevo.jpg" },
+  { nombre: "Carne asada", desc: "Más que un platillo, una tradición social de reunión familiar y de amigos, sobre todo en fines de semana.", img: "https://upload.wikimedia.org/wikipedia/commons/1/15/Carne_asada.jpg" },
+  { nombre: "Frijoles con veneno", desc: "Frijoles refritos servidos con chicharrón, queso y chile, plato tradicional regiomontano.", img: "https://upload.wikimedia.org/wikipedia/commons/0/01/Frijoles_con_veneno.jpg" },
+  { nombre: "Barbacoa", desc: "Carne cocida lentamente, típica de reuniones de fin de semana en el noreste de México.", img: "https://upload.wikimedia.org/wikipedia/commons/0/00/Barbacoa_taco.jpg" },
+  { nombre: "Migas", desc: "Platillo de desayuno a base de tortilla frita, huevo y salsa.", img: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Migas_de_huevo.jpg" },
+  { nombre: "Tacos de trompo", desc: "Tacos de carne de cerdo adobada preparada en trompo vertical.", img: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Trompo_de_tacos_al_pastor.jpg" },
+  { nombre: "Huevos rancheros", desc: "Huevos estrellados servidos sobre tortilla con salsa de jitomate y chile.", img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Huevos_Rancheros.jpg" },
+  { nombre: "Chilaquiles", desc: "Tortilla frita bañada en salsa, común en el desayuno regiomontano.", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Chilaquiles_Rojos.JPG" },
+  { nombre: "Discada", desc: "Mezcla de carnes y vegetales cocinados en un disco de arado, platillo social del norte de México.", img: "https://upload.wikimedia.org/wikipedia/commons/9/9f/DISCADA.JPG" },
+  { nombre: "Carne seca", desc: "Carne deshidratada, base del machacado y de otros platillos regionales.", img: "https://upload.wikimedia.org/wikipedia/commons/6/61/Carne_Seca.jpg" },
+  { nombre: "Menudo", desc: "Caldo de panza de res con chile, tradicional para el desayuno de fin de semana.", img: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Menudo_%28sopa_de_M%C3%A9xico%29.JPG" },
+  { nombre: "Frijoles charros", desc: "Frijoles de la olla con tocino, chorizo y chile, acompañamiento típico de la carne asada.", img: "https://upload.wikimedia.org/wikipedia/commons/3/34/Frijoles_charros_10293.jpg" },
+];
+
+const bebidas = [
+  { nombre: "Tecate Light", desc: "Cerveza clara producida en Monterrey, parte de la tradición cervecera regiomontana.", img: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cerveza_tecate.jpg" },
+  { nombre: "Corona", desc: "Cerveza clara mexicana de consumo extendido en reuniones sociales.", img: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Corona_bottles.jpg" },
+  { nombre: "Carta Blanca", desc: "Cerveza clara con origen en Cervecería Cuauhtémoc, fundada en Monterrey.", img: "https://upload.wikimedia.org/wikipedia/commons/5/56/Cartel_publicitario_de_la_cerveza_Carta_Blanca.jpg" },
+  { nombre: "Champurrado", desc: "Bebida caliente de masa de maíz, chocolate y canela.", img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Champurrado.jpg" },
+  { nombre: "Michelada", desc: "Cerveza preparada con limón, sal y salsas, bebida social muy popular en el norte de México.", img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Michelada_mexicana.jpg" },
+  { nombre: "Topo Chico", desc: "Agua mineral embotellada originaria de Monterrey, símbolo local reconocido internacionalmente.", img: "https://upload.wikimedia.org/wikipedia/commons/0/04/24_case_of_Topo_Chico.jpg" },
+  { nombre: "Capirotada", desc: "Postre a base de pan, piloncillo, frutos secos y queso, tradicional de temporada.", img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Capirotada_in_Mexican_pottery.jpg" },
+];
+
+const empresas = [
+  { nombre: "Cemex", desc: "Empresa cementera y de materiales para construcción con origen en Monterrey, una de las más grandes del mundo en su ramo.", img: "https://upload.wikimedia.org/wikipedia/commons/2/26/CEMEX_Monterrey.jpg" },
+  { nombre: "Ternium", desc: "Empresa siderúrgica con fuerte presencia en Monterrey, heredera de la tradición industrial del acero que dio origen a Fundidora y Horno3.", img: "https://upload.wikimedia.org/wikipedia/commons/8/83/Ternium_Logo.svg" },
+];
+
+const fuentes = [
+  { tipo: "Sitio oficial de turismo estatal", ref: "Secretaría de Turismo del Estado de Nuevo León. Gobierno del Estado de Nuevo León.", resumen: "Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirve para confirmar qué atractivos del AMM están reconocidos oficialmente." },
+  { tipo: "Sitio oficial de un atractivo", ref: "Parque Fundidora. Historia / acerca de.", resumen: "Explica la historia de la antigua Fundidora de Fierro y Acero de Monterrey y su transformación en parque público." },
+  { tipo: "Sitio oficial de museo", ref: "Museo del Acero Horno3.", resumen: "Describe el museo instalado en el alto horno número 3 y su propuesta interactiva sobre la industria del acero." },
+  { tipo: "Artículo académico", ref: "Redalyc / SciELO — patrimonio industrial Monterrey, Fundidora, turismo cultural.", resumen: "Aporta contexto académico sobre historia industrial, patrimonio y turismo cultural del AMM." },
+  { tipo: "Sitio oficial de turismo federal", ref: "Secretaría de Turismo del Gobierno de México.", resumen: "Ofrece una visión nacional del destino y datos generales de Nuevo León, útil para contextualizar al AMM dentro del país." },
+  { tipo: "Fuente primaria (opcional)", ref: "Comunicación personal — entrevista con comerciante, guía o habitante de la zona.", resumen: "Recomendaciones directas sobre la zona, un platillo o una tradición local." },
+];
+
+const quizData = [
+  { q: "¿Qué antiguo complejo siderúrgico se convirtió en parque urbano en Monterrey?", options: ["Parque Fundidora", "Chipinque", "Macroplaza", "Barrio Antiguo"], correct: 0 },
+  { q: "¿En qué municipio se encuentra Chipinque?", options: ["Guadalupe", "San Nicolás de los Garza", "San Pedro Garza García", "Santa Catarina"], correct: 2 },
+  { q: "¿Cuál es el platillo emblemático de Nuevo León asociado a celebraciones?", options: ["Discada", "Cabrito", "Chilaquiles", "Menudo"], correct: 1 },
+  { q: "¿Qué museo está instalado en un alto horno real?", options: ["MARCO", "Museo del Ferrocarril", "Museo del Acero Horno3", "Papalote Museo del Niño"], correct: 2 },
+  { q: "¿Qué canal artificial conecta Fundidora con la Macroplaza?", options: ["Paseo Santa Lucía", "Puente Atirantado", "Río Santa Catarina", "Alameda"], correct: 0 },
+];
+
+// ---------- RENDER: Atractivos ----------
+function cardImg(img, nombre) {
+  return img
+    ? `<img src="${img}" alt="${nombre}" loading="lazy">`
+    : `<div class="placeholder-img">Imagen pendiente</div>`;
+}
+
+function renderAtractivos(filter) {
+  const grid = document.getElementById('grid-atractivos');
+  grid.innerHTML = atractivos
+    .filter(a => filter === 'todos' || a.zona === filter)
+    .map(a => `
+      <div class="card">
+        ${cardImg(a.img, a.nombre)}
+        <div class="card-body">
+          <span class="badge ${a.zona.includes('San Pedro') ? 'zone-sp' : ''}">${a.zona}</span>
+          <h3>${a.nombre}</h3>
+          <p>${a.desc}</p>
+        </div>
+      </div>
+    `).join('');
+}
+renderAtractivos('todos');
+
+document.querySelectorAll('#filtros-atractivos .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#filtros-atractivos .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderAtractivos(btn.dataset.filter);
+  });
+});
+
+// ---------- RENDER: Platillos / Bebidas ----------
+function renderSimpleGrid(containerId, data) {
+  document.getElementById(containerId).innerHTML = data.map(item => `
+    <div class="card">
+      ${cardImg(item.img, item.nombre)}
+      <div class="card-body">
+        <h3>${item.nombre}</h3>
+        <p>${item.desc}</p>
+      </div>
+    </div>
+  `).join('');
+}
+renderSimpleGrid('grid-platillos', platillos);
+renderSimpleGrid('grid-bebidas', bebidas);
+
+// ---------- RENDER: Empresas ----------
+document.getElementById('lista-empresas').innerHTML = empresas.map(e => `
+  <div class="company-card">
+    <img src="${e.img}" alt="${e.nombre}">
+    <div><h3 style="margin:0 0 6px;">${e.nombre}</h3><p style="margin:0; font-size:0.9em; color:var(--muted);">${e.desc}</p></div>
+  </div>
+`).join('');
+
+// ---------- RENDER: Fuentes ----------
+document.getElementById('lista-fuentes').innerHTML = fuentes.map(f => `
+  <li><span class="src-type">${f.tipo}</span><strong>${f.ref}</strong><p style="margin:6px 0 0;">${f.resumen}</p></li>
+`).join('');
+
+// ---------- Tabs (ruta) ----------
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ---------- Quiz ----------
+function renderQuiz() {
+  const box = document.getElementById('quiz');
+  box.innerHTML = quizData.map((item, qi) => `
+    <div class="quiz-question" data-qi="${qi}">
+      <p>${qi + 1}. ${item.q}</p>
+      <div class="quiz-options">
+        ${item.options.map((opt, oi) => `
+          <label><input type="radio" name="q${qi}" value="${oi}" style="margin-right:8px;">${opt}</label>
+        `).join('')}
+      </div>
+    </div>
+  `).join('') + `<button class="quiz-btn" id="quiz-submit">Revisar respuestas</button><div id="quiz-result"></div>`;
+
+  document.getElementById('quiz-submit').addEventListener('click', () => {
+    let score = 0;
+    quizData.forEach((item, qi) => {
+      const selected = document.querySelector(`input[name="q${qi}"]:checked`);
+      const labels = document.querySelectorAll(`.quiz-question[data-qi="${qi}"] label`);
+      labels.forEach((label, oi) => {
+        label.classList.remove('correct', 'incorrect');
+        if (oi === item.correct) label.classList.add('correct');
+        else if (selected && parseInt(selected.value) === oi) label.classList.add('incorrect');
+      });
+      if (selected && parseInt(selected.value) === item.correct) score++;
+    });
+    document.getElementById('quiz-result').textContent = `Obtuviste ${score} de ${quizData.length} respuestas correctas.`;
+  });
+}
+renderQuiz();
+
+// ---------- Map ----------
+const mapa = L.map('mapa').setView([25.6700, -100.3100], 12);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap'
+}).addTo(mapa);
+
+atractivos.forEach(a => {
+  L.marker(a.coords).addTo(mapa)
+    .bindPopup(`<b>${a.nombre}</b><br>${a.desc}`);
+});
+
+// ---------- Nav active link on scroll ----------
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 90;
+    if (window.scrollY >= top) current = sec.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+  });
+});
+</script>
 </body>
 </html>
