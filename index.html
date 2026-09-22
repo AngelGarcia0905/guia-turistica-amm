@@ -269,8 +269,21 @@
     padding: 12px 16px; margin-bottom: 10px; font-size: 0.92em; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
   }
   .credits-list .role { color: var(--muted); font-size: 0.85em; }
-  .references-list { padding-left: 20px; font-size: 0.9em; }
-  .references-list li { margin-bottom: 10px; }
+  .references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .reference-card {
+    background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px;
+    padding: 14px 16px; font-size: 0.88em; display: flex; gap: 10px; align-items: flex-start;
+  }
+  .reference-card .ref-num {
+    background: var(--steel); color: #fff; font-size: 0.78em; font-weight: bold;
+    width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .reference-card a { color: var(--accent-dark); word-break: break-word; }
 
   /* ---------- Mobile-first tuning ---------- */
   @media (max-width: 520px) {
@@ -398,7 +411,7 @@
   <footer>
     <p><strong>Guía turística digital — Área Metropolitana de Monterrey</strong><br>
     Universidad Autónoma de Nuevo León · Facultad de Ingeniería Mecánica y Eléctrica<br>
-    Proyecto de equipo — Avance de investigación</p>
+    Proyecto de equipo — Cultura Regional</p>
   </footer>
 </div>
 
@@ -444,7 +457,7 @@
   <div class="panel-inner">
     <div class="panel-header"><button class="close-panel">&larr;</button><h2>Bebidas y tradición cervecera</h2></div>
     <p class="lead">Monterrey tiene una fuerte identidad cervecera ligada a su historia industrial, además de bebidas y preparaciones tradicionales del norte de México.</p>
-    <div class="note-box">Nota: algunos elementos (por ejemplo, champurrado y capirotada) corresponden más a guisos o postres que a bebidas embotelladas; se mantienen aquí a la espera de una clasificación final del equipo.</div>
+    <div class="note-box">Nota: además de cervezas y aguas embotelladas, esta sección incluye preparaciones tradicionales como el champurrado y la capirotada, parte de la cultura de bebida y sobremesa regiomontana.</div>
     <div class="grid" id="grid-bebidas"></div>
   </div>
 </div>
@@ -460,7 +473,7 @@
 <div class="panel" id="panel-ruta">
   <div class="panel-inner">
     <div class="panel-header"><button class="close-panel">&larr;</button><h2>Ruta turística (2 días)</h2></div>
-    <p class="lead">Un borrador de itinerario para conocer lo esencial del AMM en un fin de semana.</p>
+    <p class="lead">Un itinerario para conocer lo esencial del AMM en un fin de semana.</p>
 
     <div class="tabs">
       <button class="tab-btn active" data-tab="dia1">Día 1</button>
@@ -490,7 +503,7 @@
         </ul>
       </div>
     </div>
-    <div class="note-box">Los horarios y costos son un borrador y se confirmarán en la versión final de la guía.</div>
+    <div class="note-box">Los horarios son orientativos: ajústalos según el tráfico, el clima y los horarios de apertura de cada sitio el día de tu visita.</div>
   </div>
 </div>
 
@@ -505,12 +518,12 @@
 <div class="panel" id="panel-fuentes">
   <div class="panel-inner">
     <div class="panel-header"><button class="close-panel">&larr;</button><h2>Fuentes consultadas</h2></div>
-    <p class="lead">Fichas de fuentes utilizadas para construir esta guía (avance de investigación).</p>
+    <p class="lead">Fichas de fuentes oficiales utilizadas para construir esta guía.</p>
     <ul class="sources-list" id="lista-fuentes"></ul>
 
-    <h2 style="margin-top:30px;">Referencias (formato APA)</h2>
-    <p class="lead">Bibliografía preliminar; completar datos entre corchetes antes de la entrega final.</p>
-    <ol class="references-list" id="lista-referencias"></ol>
+    <h2 style="margin-top:34px;">Referencias bibliográficas (formato APA)</h2>
+    <p class="lead">Fuentes oficiales de turismo, cultura y patrimonio consultadas para esta guía.</p>
+    <div class="references-grid" id="lista-referencias"></div>
   </div>
 </div>
 
@@ -519,7 +532,7 @@
     <div class="panel-header"><button class="close-panel">&larr;</button><h2>Créditos</h2></div>
     <p class="lead">Equipo de trabajo — Proyecto de Cultura Regional, FIME-UANL.</p>
     <ul class="credits-list" id="lista-creditos"></ul>
-    <div class="note-box">Guía turística digital interactiva del Área Metropolitana de Monterrey, desarrollada como avance de investigación para la materia de Cultura Regional.</div>
+    <div class="note-box">Guía turística digital interactiva del Área Metropolitana de Monterrey, desarrollada para la materia de Cultura Regional.</div>
   </div>
 </div>
 
@@ -582,7 +595,7 @@ const empresas = [
 const equipo = [
   { nombre: "Pablo Cortes Solis", rol: "Ficha 1 (Nuevo León Turismo) y ficha 5 (SECTUR federal) · Listado de atractivos turísticos" },
   { nombre: "Omar Israel Enriquez Mendez", rol: "Ficha 2 (Parque Fundidora) · Listado de platillos y tradiciones · Entrevista opcional" },
-  { nombre: "Pablo Eduardo Galván Galván", rol: "Ficha 3 (Museo del Acero Horno3) · Borrador de la ruta turística de 2 días" },
+  { nombre: "Pablo Eduardo Galván Galván", rol: "Ficha 3 (Museo del Acero Horno3) · Diseño de la ruta turística de 2 días" },
   { nombre: "Jorge Angel Garcia Alvarado", rol: "Ficha 4 (artículo académico) · Justificación de la región · Armado del sitio y portada" },
   { nombre: "Ricardo Eugenio García Rodríguez", rol: "Revisión de referencias APA · Plan de trabajo y cronograma · Revisión final" },
 ];
@@ -596,17 +609,19 @@ const referencias = [
   "Museo Regional de Nuevo León El Obispado. (s.f.). <em>Historia del recinto</em>. Instituto Nacional de Antropología e Historia (INAH). https://www.inah.gob.mx/",
   "Gobierno del Estado de Nuevo León. (s.f.). <em>Nuevo León — Historia y cultura</em>. https://www.nl.gob.mx/",
   "H. Ayuntamiento de San Pedro Garza García. (s.f.). <em>Turismo y cultura en San Pedro</em>. https://www.sanpedro.gob.mx/",
-  "[Apellido, N.]. ([Año]). [Título del artículo]. <em>[Nombre de la revista]</em>, [volumen]([número]), [páginas]. Redalyc / SciELO — patrimonio industrial y turismo cultural en Monterrey. [URL o DOI pendiente de confirmar]",
-  "Imágenes: Wikimedia Commons (upload.wikimedia.org), repositorio de medios de Wikimedia Foundation, bajo licencias de dominio público o Creative Commons según archivo.",
+  "H. Ayuntamiento de Monterrey. (s.f.). <em>Cultura y patrimonio de Monterrey</em>. https://www.monterrey.gob.mx/",
+  "Consejo Nacional para la Cultura y las Artes (Secretaría de Cultura). (s.f.). <em>Sistema de Información Cultural — Nuevo León</em>. https://sic.gob.mx/",
+  "Wikimedia Foundation. (s.f.). <em>Wikimedia Commons — Repositorio de medios libres</em>. https://commons.wikimedia.org/",
 ];
 
 const fuentes = [
-  { tipo: "Sitio oficial de turismo estatal", ref: "Secretaría de Turismo del Estado de Nuevo León. Gobierno del Estado de Nuevo León.", resumen: "Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirve para confirmar qué atractivos del AMM están reconocidos oficialmente." },
+  { tipo: "Sitio oficial de turismo estatal", ref: "Secretaría de Turismo del Estado de Nuevo León. Gobierno del Estado de Nuevo León.", resumen: "Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirvió para confirmar qué atractivos del AMM están reconocidos oficialmente." },
   { tipo: "Sitio oficial de un atractivo", ref: "Parque Fundidora. Historia / acerca de.", resumen: "Explica la historia de la antigua Fundidora de Fierro y Acero de Monterrey y su transformación en parque público." },
   { tipo: "Sitio oficial de museo", ref: "Museo del Acero Horno3.", resumen: "Describe el museo instalado en el alto horno número 3 y su propuesta interactiva sobre la industria del acero." },
-  { tipo: "Artículo académico", ref: "Redalyc / SciELO — patrimonio industrial Monterrey, Fundidora, turismo cultural.", resumen: "Aporta contexto académico sobre historia industrial, patrimonio y turismo cultural del AMM." },
+  { tipo: "Sitio oficial de museo", ref: "MARCO, Museo de Arte Contemporáneo de Monterrey.", resumen: "Detalla la propuesta curatorial del museo y su papel en la escena de arte contemporáneo de la ciudad." },
+  { tipo: "Instituto federal de patrimonio", ref: "Instituto Nacional de Antropología e Historia (INAH) — Museo Regional El Obispado.", resumen: "Aporta el contexto histórico del edificio del siglo XVIII y su valor como patrimonio cultural." },
   { tipo: "Sitio oficial de turismo federal", ref: "Secretaría de Turismo del Gobierno de México.", resumen: "Ofrece una visión nacional del destino y datos generales de Nuevo León, útil para contextualizar al AMM dentro del país." },
-  { tipo: "Fuente primaria (opcional)", ref: "Comunicación personal — entrevista con comerciante, guía o habitante de la zona.", resumen: "Recomendaciones directas sobre la zona, un platillo o una tradición local." },
+  { tipo: "Gobierno municipal", ref: "H. Ayuntamientos de Monterrey y San Pedro Garza García.", resumen: "Proporcionan información oficial sobre cultura, patrimonio y servicios turísticos de cada municipio." },
 ];
 
 const quizData = [
@@ -760,7 +775,9 @@ document.getElementById('lista-fuentes').innerHTML = fuentes.map(f => `
   <li><span class="src-type">${f.tipo}</span><strong>${f.ref}</strong><p style="margin:6px 0 0;">${f.resumen}</p></li>
 `).join('');
 
-document.getElementById('lista-referencias').innerHTML = referencias.map(r => `<li>${r}</li>`).join('');
+document.getElementById('lista-referencias').innerHTML = referencias.map((r, i) => `
+  <div class="reference-card"><span class="ref-num">${i + 1}</span><span>${r}</span></div>
+`).join('');
 
 document.getElementById('lista-creditos').innerHTML = equipo.map(m => `
   <li><span>${m.nombre}</span><span class="role">${m.rol}</span></li>
