@@ -16,7 +16,22 @@
     --steel: #3f4a52;
     --card-border: #e4ddd0;
     --nav-bg: #201d19;
+    --theme: var(--accent);
+    --theme-dark: var(--accent-dark);
+    --theme-soft: #fdeee7;
   }
+  /* Theme per section: industrial terracota (historia), map teal (atractivos),
+     gastronomy green (gastronomia), amber (bebidas), steel (empresas),
+     route blue (ruta), violet (quiz), ink (fuentes), plum (creditos) */
+  #panel-historia   { --theme: #b5502e; --theme-dark: #8a3a1f; --theme-soft: #fdeee7; }
+  #panel-atractivos { --theme: #1f7a72; --theme-dark: #145850; --theme-soft: #e4f4f2; }
+  #panel-gastronomia{ --theme: #4c7a2e; --theme-dark: #365a1f; --theme-soft: #eaf4e2; }
+  #panel-bebidas    { --theme: #b8871f; --theme-dark: #8a6416; --theme-soft: #fbf1dd; }
+  #panel-empresas   { --theme: #3f4a52; --theme-dark: #262d32; --theme-soft: #e9ecee; }
+  #panel-ruta       { --theme: #2c5f8a; --theme-dark: #1e4463; --theme-soft: #e4eef7; }
+  #panel-quiz       { --theme: #6d4c96; --theme-dark: #4f3670; --theme-soft: #eee6f7; }
+  #panel-fuentes    { --theme: #4a4540; --theme-dark: #2f2b27; --theme-soft: #ece8e1; }
+  #panel-creditos   { --theme: #a0355f; --theme-dark: #762544; --theme-soft: #f8e6ee; }
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { scroll-behavior: smooth; }
   body {
@@ -100,9 +115,18 @@
   .topic-card .tc-bg {
     position: absolute; inset: 0;
     background-size: cover; background-position: center;
-    filter: brightness(0.55);
+    filter: brightness(0.5);
+  }
+  .topic-card .tc-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 30%, var(--tc-color, #000) 100%);
+    opacity: 0.55;
   }
   .topic-card .tc-content { position: relative; padding: 14px 16px; z-index: 1; }
+  .topic-card .tc-content::before {
+    content: ""; position: absolute; left: 14px; top: -8px;
+    width: 32px; height: 3px; border-radius: 2px; background: var(--tc-color, #fff);
+  }
   .topic-card .tc-icon { font-size: 1.6em; display: block; margin-bottom: 4px; }
   .topic-card h3 { margin: 0 0 2px; font-size: 1.05em; font-family: Georgia, serif; }
   .topic-card span.tc-sub { font-size: 0.78em; opacity: 0.85; }
@@ -130,7 +154,7 @@
     z-index: 5;
   }
   .panel-header .close-panel {
-    background: var(--steel);
+    background: var(--theme);
     color: #fff;
     border: none;
     border-radius: 999px;
@@ -139,7 +163,8 @@
     cursor: pointer;
     flex-shrink: 0;
   }
-  .panel-header h2 { margin: 0; font-size: 1.4em; border: none; }
+  .panel-header h2 { margin: 0; font-size: 1.4em; border: none; color: var(--theme-dark); }
+  .panel-inner h2 { color: var(--theme-dark); }
 
   section.content-block { padding: 6px 0 30px; max-width: 1000px; margin: auto; }
   .lead { color: var(--muted); max-width: 700px; margin-top: 0; }
@@ -156,7 +181,7 @@
     cursor: pointer;
     font-size: 0.88em;
   }
-  .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .filter-btn.active { background: var(--theme); color: #fff; border-color: var(--theme); }
 
   .grid {
     display: grid;
@@ -177,17 +202,38 @@
   .card p { margin: 0; font-size: 0.87em; color: var(--muted); flex: 1; }
   .card .badge {
     align-self: flex-start;
-    background: var(--steel);
+    background: var(--theme);
     color: #fff;
     font-size: 0.7em;
     padding: 2px 8px;
     border-radius: 5px;
     margin-bottom: 8px;
   }
-  .card .badge.zone-sp { background: var(--accent); }
+  .card .badge.zone-sp { background: var(--theme-dark); }
+  .card .era-badge {
+    align-self: flex-start;
+    background: var(--theme-soft);
+    color: var(--theme-dark);
+    font-size: 0.7em;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border: 1px solid var(--theme);
+  }
+  .card .fun-fact {
+    background: var(--theme-soft);
+    border-left: 3px solid var(--theme);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.8em;
+    color: var(--text);
+    margin-top: 8px;
+  }
+  .card .fun-fact strong { color: var(--theme-dark); }
   .maps-link {
     display: inline-flex; align-items: center; gap: 4px; margin-top: 8px;
-    font-size: 0.82em; color: var(--accent-dark); text-decoration: none; font-weight: 600;
+    font-size: 0.82em; color: var(--theme-dark); text-decoration: none; font-weight: 600;
   }
   .maps-link:hover { text-decoration: underline; }
   .card .card-actions { margin-top: 10px; }
@@ -197,7 +243,7 @@
     color: var(--muted); padding: 8px 10px; border-radius: 8px; cursor: pointer;
     font-size: 0.82em; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
   }
-  .track-btn.fav.active { background: #fdeee7; border-color: var(--accent); color: var(--accent-dark); }
+  .track-btn.fav.active { background: var(--theme-soft); border-color: var(--theme); color: var(--theme-dark); }
   .track-btn.done.active { background: #e3f3e4; border-color: #6cbf7a; color: #2f6b34; }
   .track-btn .tb-icon { font-size: 1em; }
   .card.is-done { opacity: 0.72; }
@@ -219,16 +265,16 @@
     background: none; border: none; padding: 9px 14px; cursor: pointer;
     font-size: 0.9em; color: var(--muted); border-bottom: 3px solid transparent;
   }
-  .tab-btn.active { color: var(--accent-dark); border-bottom-color: var(--accent); font-weight: bold; }
+  .tab-btn.active { color: var(--theme-dark); border-bottom-color: var(--theme); font-weight: bold; }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
-  .route-day { background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px; padding: 20px; margin-bottom: 18px; }
-  .route-day h3 { margin-top: 0; color: var(--accent-dark); }
+  .route-day { background: var(--bg-alt); border: 1px solid var(--card-border); border-left: 4px solid var(--theme); border-radius: 10px; padding: 20px; margin-bottom: 18px; }
+  .route-day h3 { margin-top: 0; color: var(--theme-dark); }
   .timeline { list-style: none; padding: 0; margin: 0; }
   .timeline li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--card-border); }
   .timeline li:last-child { border-bottom: none; }
-  .timeline .time { font-weight: bold; color: var(--accent); min-width: 74px; flex-shrink: 0; }
+  .timeline .time { font-weight: bold; color: var(--theme); min-width: 74px; flex-shrink: 0; }
 
   .note-box {
     background: #fbf3e6; border-left: 4px solid #d1a04a; padding: 12px 16px;
@@ -240,6 +286,7 @@
     background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px;
     padding: 18px; flex: 1; min-width: 220px; display: flex; gap: 14px; align-items: center;
   }
+  .company-card { border-left: 4px solid var(--theme); }
   .company-card img { width: 54px; height: 54px; object-fit: contain; flex-shrink: 0; }
 
   .sources-list { list-style: none; padding: 0; }
@@ -247,9 +294,10 @@
     background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 8px;
     padding: 13px 16px; margin-bottom: 10px; font-size: 0.9em;
   }
-  .sources-list .src-type { color: var(--accent-dark); font-weight: bold; display: block; margin-bottom: 4px; font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.5px; }
-  .sources-list a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--accent); }
-  .sources-list a:hover { color: var(--accent-dark); }
+  .sources-list li { border-left: 3px solid var(--theme); }
+  .sources-list .src-type { color: var(--theme-dark); font-weight: bold; display: block; margin-bottom: 4px; font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.5px; }
+  .sources-list a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--theme); }
+  .sources-list a:hover { color: var(--theme-dark); }
 
   .quiz-box { padding-top: 6px; }
   .quiz-question { background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
@@ -261,9 +309,9 @@
   }
   .quiz-options label.correct { background: #dff3e0; border-color: #6cbf7a; }
   .quiz-options label.incorrect { background: #f7dede; border-color: #d97070; }
-  #quiz-result { margin-top: 12px; font-weight: bold; }
+  #quiz-result { margin-top: 12px; font-weight: bold; color: var(--theme-dark); }
   .quiz-btn {
-    background: var(--accent); color: #fff; border: none; padding: 12px 22px;
+    background: var(--theme); color: #fff; border: none; padding: 12px 22px;
     border-radius: 8px; cursor: pointer; font-size: 0.95em; margin-top: 4px; width: 100%;
   }
 
@@ -275,6 +323,7 @@
     background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 8px;
     padding: 12px 16px; margin-bottom: 10px; font-size: 0.92em; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
   }
+  .credits-list li { border-left: 3px solid var(--theme); }
   .credits-list .role { color: var(--muted); font-size: 0.85em; }
   .references-grid {
     display: grid;
@@ -286,11 +335,11 @@
     padding: 14px 16px; font-size: 0.88em; display: flex; gap: 10px; align-items: flex-start;
   }
   .reference-card .ref-num {
-    background: var(--steel); color: #fff; font-size: 0.78em; font-weight: bold;
+    background: var(--theme); color: #fff; font-size: 0.78em; font-weight: bold;
     width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; margin-top: 2px;
   }
-  .reference-card a { color: var(--accent-dark); word-break: break-word; }
+  .reference-card a { color: var(--theme-dark); word-break: break-word; }
 
   /* ---------- Mobile-first tuning ---------- */
   @media (max-width: 520px) {
@@ -333,7 +382,7 @@
   </div>
 
   <div class="topic-grid" id="topic-grid">
-    <button class="topic-card" data-panel="panel-historia">
+    <button class="topic-card" data-panel="panel-historia" style="--tc-color:#b5502e;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Parque_Fundidora_%28Monterrey%29.jpg')"></div>
       <div class="tc-content">
         <span class="tc-icon">🏭</span>
@@ -342,7 +391,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-atractivos">
+    <button class="topic-card" data-panel="panel-atractivos" style="--tc-color:#1f7a72;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/c/c8/%C3%81guila_Macroplaza_I.JPG')"></div>
       <div class="tc-content">
         <span class="tc-icon">🗺️</span>
@@ -351,7 +400,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-gastronomia">
+    <button class="topic-card" data-panel="panel-gastronomia" style="--tc-color:#4c7a2e;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/a/af/Cabritos_in_Monterrey.jpg')"></div>
       <div class="tc-content">
         <span class="tc-icon">🍽️</span>
@@ -360,7 +409,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-bebidas">
+    <button class="topic-card" data-panel="panel-bebidas" style="--tc-color:#b8871f;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/0/04/24_case_of_Topo_Chico.jpg')"></div>
       <div class="tc-content">
         <span class="tc-icon">🍺</span>
@@ -369,7 +418,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-empresas">
+    <button class="topic-card" data-panel="panel-empresas" style="--tc-color:#3f4a52;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/26/CEMEX_Monterrey.jpg')"></div>
       <div class="tc-content">
         <span class="tc-icon">🏗️</span>
@@ -378,7 +427,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-ruta">
+    <button class="topic-card" data-panel="panel-ruta" style="--tc-color:#2c5f8a;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/39/PaseoSantaLucia.JPG')"></div>
       <div class="tc-content">
         <span class="tc-icon">🧭</span>
@@ -387,7 +436,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-quiz">
+    <button class="topic-card" data-panel="panel-quiz" style="--tc-color:#6d4c96;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/64/Monterrey_as_seen_from_Cerro_del_Obispado_%28September_2005%29.jpg')"></div>
       <div class="tc-content">
         <span class="tc-icon">🎯</span>
@@ -396,7 +445,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-fuentes">
+    <button class="topic-card" data-panel="panel-fuentes" style="--tc-color:#4a4540;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/d/d7/Museo_Regional_de_Nuevo_Le%C3%B3n_El_Obispado.JPG')"></div>
       <div class="tc-content">
         <span class="tc-icon">📚</span>
@@ -405,7 +454,7 @@
       </div>
     </button>
 
-    <button class="topic-card" data-panel="panel-creditos">
+    <button class="topic-card" data-panel="panel-creditos" style="--tc-color:#a0355f;">
       <div class="tc-bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/9/91/Monterrey_Barrio_Antiguo.JPG')"></div>
       <div class="tc-content">
         <span class="tc-icon">👥</span>
@@ -517,7 +566,7 @@
 <div class="panel" id="panel-quiz">
   <div class="panel-inner">
     <div class="panel-header"><button class="close-panel">&larr;</button><h2>Ponte a prueba</h2></div>
-    <p class="lead">4 preguntas aleatorias tomadas de un banco de 12. Toca "Nuevas preguntas" para intentar otra ronda.</p>
+    <p class="lead">Responde 4 preguntas y descubre qué tanto sabes del AMM. Toca "Nuevas preguntas" para jugar otra ronda con preguntas distintas.</p>
     <div class="quiz-box" id="quiz"></div>
   </div>
 </div>
@@ -547,60 +596,60 @@
 <script>
 // ---------- DATA ----------
 const atractivos = [
-  { id: "atr-01", nombre: "Parque Fundidora", zona: "Monterrey", desc: "Antiguo complejo siderúrgico convertido en parque urbano con áreas verdes, eventos y arquitectura industrial.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Parque_Fundidora_%28Monterrey%29.jpg", coords: [25.6786, -100.2850] },
-  { id: "atr-02", nombre: "Museo del Acero Horno3", zona: "Monterrey", desc: "Museo dentro de un alto horno real, con recorrido interactivo sobre la producción de acero.", img: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Exterior_Museo.JPG", coords: [25.6779, -100.2843] },
-  { id: "atr-03", nombre: "Paseo Santa Lucía", zona: "Monterrey", desc: "Canal artificial con recorrido peatonal y en lancha que conecta Fundidora con la Macroplaza.", img: "https://upload.wikimedia.org/wikipedia/commons/3/39/PaseoSantaLucia.JPG", coords: [25.6720, -100.2989] },
-  { id: "atr-04", nombre: "Macroplaza", zona: "Monterrey", desc: "Una de las plazas públicas más grandes del país, rodeada de edificios históricos y arte escultórico.", img: "https://upload.wikimedia.org/wikipedia/commons/c/c8/%C3%81guila_Macroplaza_I.JPG", coords: [25.6698, -100.3105] },
-  { id: "atr-05", nombre: "MARCO — Museo de Arte Contemporáneo", zona: "Monterrey", desc: "Museo de arte contemporáneo con exposiciones nacionales e internacionales.", img: "https://upload.wikimedia.org/wikipedia/commons/6/60/Interior_de_Museo_de_Arte_Contempor%C3%A1neo%2C_Monterrey%2C_Nuevo_Le%C3%B3n%2C_M%C3%A9xico.jpg", coords: [25.6699, -100.3117] },
-  { id: "atr-06", nombre: "Barrio Antiguo", zona: "Monterrey", desc: "Zona histórica con vida nocturna, galerías, murales y arte urbano.", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Monterrey_Barrio_Antiguo.JPG", coords: [25.6685, -100.3082] },
-  { id: "atr-07", nombre: "Museo Regional de Nuevo León \"El Obispado\"", zona: "Monterrey", desc: "Antiguo edificio del siglo XVIII con vistas de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Museo_Regional_de_Nuevo_Le%C3%B3n_El_Obispado.JPG", coords: [25.6725, -100.3311] },
-  { id: "atr-08", nombre: "Alameda", zona: "Monterrey", desc: "Parque público en el centro de la ciudad, punto tradicional de encuentro y descanso rodeado de vialidades históricas.", img: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Winter_day_in_Alameda_Park%2C_Monterrey.jpg", coords: [25.6688, -100.3151] },
-  { id: "atr-09", nombre: "Centro MTY — Faro del Comercio", zona: "Monterrey", desc: "Área comercial del centro con comercios tradicionales y ambiente de calle.", img: "https://upload.wikimedia.org/wikipedia/commons/3/39/Faro_del_Comercio_Monterrey.JPG", coords: [25.6697, -100.3103] },
-  { id: "atr-10", nombre: "Fashion Drive", zona: "San Pedro Garza García", desc: "Corredor comercial de tiendas y restaurantes en San Pedro.", img: "https://upload.wikimedia.org/wikipedia/commons/d/dc/El_cantante_mexicano_Deny_Kotasek_en_Fashion_Drive_en_San_Pedro_Garza_Garc%C3%ADa%2C_Nuevo_Le%C3%B3n%2C_M%C3%A9xico.jpg", coords: [25.6510, -100.3600] },
-  { id: "atr-11", nombre: "Plazas de San Agustín", zona: "San Pedro Garza García", desc: "Conjunto de plazas comerciales y de entretenimiento en la zona de San Agustín.", img: "https://upload.wikimedia.org/wikipedia/commons/7/78/MTY-PlazaFiestaSanAgustin2.jpg", coords: [25.6520, -100.3450] },
-  { id: "atr-12", nombre: "Chipinque", zona: "San Pedro Garza García", desc: "Parque ecológico de montaña con senderos, miradores y vida silvestre.", img: "https://upload.wikimedia.org/wikipedia/commons/0/06/IMAGEN_CHIPINQUE.jpg", coords: [25.6150, -100.3450] },
-  { id: "atr-13", nombre: "Puente Atirantado", zona: "Monterrey", desc: "Puente vehicular emblemático por su diseño estructural, parte del paisaje urbano de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/2/27/Puente_Atirantado%2C_Monterrey%2C_Mex.JPG", coords: [25.6390, -100.2870] },
-  { id: "atr-14", nombre: "Salón de la Fama del Beisbol Mexicano", zona: "Monterrey", desc: "Museo dedicado a la historia del beisbol profesional mexicano.", img: "https://upload.wikimedia.org/wikipedia/commons/0/02/Sal%C3%B3n_de_la_fama_del_B%C3%A9isbol_Mexicano_en_Monterrey%2C_Nuevo_Le%C3%B3n..jpg", coords: [25.6900, -100.3000] },
-  { id: "atr-15", nombre: "Museo del Ferrocarril", zona: "Monterrey", desc: "Museo instalado en una antigua estación de tren, con locomotoras y vagones históricos.", img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Estaci%C3%B3n_Ferroviaria_Mty.jpg", coords: [25.6750, -100.3200] },
-  { id: "atr-16", nombre: "Papalote Museo del Niño", zona: "Monterrey", desc: "Museo interactivo infantil enfocado en ciencia y tecnología.", img: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Papalote_Museo_del_Ni%C3%B1o_en_Monterrey.jpg", coords: [25.6780, -100.2900] },
-  { id: "atr-17", nombre: "Arena Monterrey", zona: "Monterrey", desc: "Recinto multiusos para eventos deportivos y espectáculos.", img: "https://upload.wikimedia.org/wikipedia/commons/9/99/Arena_Mty_1.jpg", coords: [25.7300, -100.3000] },
-  { id: "atr-19", nombre: "Mirador del Obispado", zona: "Monterrey", desc: "Punto panorámico junto al Obispado con vista a la ciudad y al Cerro de la Silla.", img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Monterrey_as_seen_from_Cerro_del_Obispado_%28September_2005%29.jpg", coords: [25.6728, -100.3315] },
+  { id: "atr-01", nombre: "Parque Fundidora", zona: "Monterrey", era: "Fundada en 1900 · Parque desde 1988", desc: "Antiguo complejo siderúrgico convertido en parque urbano con áreas verdes, eventos y arquitectura industrial.", fact: "Operó como la primera gran fundidora de acero de Latinoamérica antes de cerrar en 1986 y renacer como parque público.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Parque_Fundidora_%28Monterrey%29.jpg", coords: [25.6786, -100.2850] },
+  { id: "atr-02", nombre: "Museo del Acero Horno3", zona: "Monterrey", era: "Alto horno de 1968 · Museo desde 2007", desc: "Museo dentro de un alto horno real, con recorrido interactivo sobre la producción de acero.", fact: "El horno original alcanzaba temperaturas de hasta 1,600 °C durante la fundición de hierro.", img: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Exterior_Museo.JPG", coords: [25.6779, -100.2843] },
+  { id: "atr-03", nombre: "Paseo Santa Lucía", zona: "Monterrey", era: "Inaugurado en 2007", desc: "Canal artificial con recorrido peatonal y en lancha que conecta Fundidora con la Macroplaza.", fact: "Tiene una extensión de 2.5 km y recrea el antiguo Ojo de Agua de Santa Lucía, origen histórico del agua potable de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/3/39/PaseoSantaLucia.JPG", coords: [25.6720, -100.2989] },
+  { id: "atr-04", nombre: "Macroplaza", zona: "Monterrey", era: "Construida entre 1980 y 1985", desc: "Una de las plazas públicas más grandes del país, rodeada de edificios históricos y arte escultórico.", fact: "Con 40 hectáreas, es una de las plazas urbanas más grandes de México, comparable con la Plaza Roja de Moscú.", img: "https://upload.wikimedia.org/wikipedia/commons/c/c8/%C3%81guila_Macroplaza_I.JPG", coords: [25.6698, -100.3105] },
+  { id: "atr-05", nombre: "MARCO — Museo de Arte Contemporáneo", zona: "Monterrey", era: "Inaugurado en 1991", desc: "Museo de arte contemporáneo con exposiciones nacionales e internacionales.", fact: "Fue diseñado por el arquitecto mexicano Ricardo Legorreta y alberga la escultura de la Paloma en su patio central.", img: "https://upload.wikimedia.org/wikipedia/commons/6/60/Interior_de_Museo_de_Arte_Contempor%C3%A1neo%2C_Monterrey%2C_Nuevo_Le%C3%B3n%2C_M%C3%A9xico.jpg", coords: [25.6699, -100.3117] },
+  { id: "atr-06", nombre: "Barrio Antiguo", zona: "Monterrey", era: "Casonas de finales del siglo XIX", desc: "Zona histórica con vida nocturna, galerías, murales y arte urbano.", fact: "Conserva algunas de las construcciones más antiguas del centro de Monterrey, hoy convertidas en bares, cafés y galerías.", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Monterrey_Barrio_Antiguo.JPG", coords: [25.6685, -100.3082] },
+  { id: "atr-07", nombre: "Museo Regional de Nuevo León \"El Obispado\"", zona: "Monterrey", era: "Construido entre 1786 y 1790", desc: "Antiguo edificio del siglo XVIII con vistas de la ciudad.", fact: "Fue residencia de obispos, hospital militar y hasta fortín durante distintos conflictos armados del país.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Museo_Regional_de_Nuevo_Le%C3%B3n_El_Obispado.JPG", coords: [25.6725, -100.3311] },
+  { id: "atr-08", nombre: "Alameda", zona: "Monterrey", era: "Fundada en 1852", desc: "Parque público en el centro de la ciudad, punto tradicional de encuentro y descanso rodeado de vialidades históricas.", fact: "Es uno de los parques más antiguos de Monterrey y sigue siendo punto de reunión familiar y de vendedores tradicionales.", img: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Winter_day_in_Alameda_Park%2C_Monterrey.jpg", coords: [25.6688, -100.3151] },
+  { id: "atr-09", nombre: "Centro MTY — Faro del Comercio", zona: "Monterrey", era: "Faro construido en 1984", desc: "Área comercial del centro con comercios tradicionales y ambiente de calle.", fact: "El Faro del Comercio, obra de Luis Barragán, proyecta un haz de luz verde láser visible desde varios puntos de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/3/39/Faro_del_Comercio_Monterrey.JPG", coords: [25.6697, -100.3103] },
+  { id: "atr-10", nombre: "Fashion Drive", zona: "San Pedro Garza García", era: "Corredor comercial contemporáneo", desc: "Corredor comercial de tiendas y restaurantes en San Pedro.", fact: "Es uno de los polos de moda y gastronomía más concurridos de San Pedro Garza García.", img: "https://upload.wikimedia.org/wikipedia/commons/d/dc/El_cantante_mexicano_Deny_Kotasek_en_Fashion_Drive_en_San_Pedro_Garza_Garc%C3%ADa%2C_Nuevo_Le%C3%B3n%2C_M%C3%A9xico.jpg", coords: [25.6510, -100.3600] },
+  { id: "atr-11", nombre: "Plazas de San Agustín", zona: "San Pedro Garza García", era: "Zona comercial en expansión desde los 2000", desc: "Conjunto de plazas comerciales y de entretenimiento en la zona de San Agustín.", fact: "Concentra algunos de los desarrollos comerciales y de oficinas más nuevos del área metropolitana.", img: "https://upload.wikimedia.org/wikipedia/commons/7/78/MTY-PlazaFiestaSanAgustin2.jpg", coords: [25.6520, -100.3450] },
+  { id: "atr-12", nombre: "Chipinque", zona: "San Pedro Garza García", era: "Parque ecológico protegido desde 1988", desc: "Parque ecológico de montaña con senderos, miradores y vida silvestre.", fact: "Forma parte del Parque Nacional Cumbres de Monterrey y llega hasta los 2,260 msnm en su punto más alto.", img: "https://upload.wikimedia.org/wikipedia/commons/0/06/IMAGEN_CHIPINQUE.jpg", coords: [25.6150, -100.3450] },
+  { id: "atr-13", nombre: "Puente Atirantado", zona: "Monterrey", era: "Inaugurado en 1985", desc: "Puente vehicular emblemático por su diseño estructural, parte del paisaje urbano de la ciudad.", fact: "Se sostiene mediante cables tensados desde una sola torre central, técnica poco común en puentes urbanos mexicanos de su época.", img: "https://upload.wikimedia.org/wikipedia/commons/2/27/Puente_Atirantado%2C_Monterrey%2C_Mex.JPG", coords: [25.6390, -100.2870] },
+  { id: "atr-14", nombre: "Salón de la Fama del Beisbol Mexicano", zona: "Monterrey", era: "Fundado en 1973", desc: "Museo dedicado a la historia del beisbol profesional mexicano.", fact: "Resguarda la memoria de peloteros mexicanos destacados desde principios del siglo XX hasta la actualidad.", img: "https://upload.wikimedia.org/wikipedia/commons/0/02/Sal%C3%B3n_de_la_fama_del_B%C3%A9isbol_Mexicano_en_Monterrey%2C_Nuevo_Le%C3%B3n..jpg", coords: [25.6900, -100.3000] },
+  { id: "atr-15", nombre: "Museo del Ferrocarril", zona: "Monterrey", era: "Antigua estación de 1907 · Museo desde 2006", desc: "Museo instalado en una antigua estación de tren, con locomotoras y vagones históricos.", fact: "Exhibe locomotoras de vapor y diésel que alguna vez conectaron a Monterrey con Estados Unidos y el resto del país.", img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Estaci%C3%B3n_Ferroviaria_Mty.jpg", coords: [25.6750, -100.3200] },
+  { id: "atr-16", nombre: "Papalote Museo del Niño", zona: "Monterrey", era: "Sede Monterrey inaugurada en 2015", desc: "Museo interactivo infantil enfocado en ciencia y tecnología.", fact: "Es parte de la red de museos Papalote, un modelo mexicano de aprendizaje interactivo replicado en varios estados del país.", img: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Papalote_Museo_del_Ni%C3%B1o_en_Monterrey.jpg", coords: [25.6780, -100.2900] },
+  { id: "atr-17", nombre: "Arena Monterrey", zona: "Monterrey", era: "Inaugurada en 2010", desc: "Recinto multiusos para eventos deportivos y espectáculos.", fact: "Con capacidad para más de 17,000 personas, es sede de conciertos internacionales y equipos deportivos locales.", img: "https://upload.wikimedia.org/wikipedia/commons/9/99/Arena_Mty_1.jpg", coords: [25.7300, -100.3000] },
+  { id: "atr-19", nombre: "Mirador del Obispado", zona: "Monterrey", era: "Punto panorámico histórico junto a El Obispado", desc: "Punto panorámico junto al Obispado con vista a la ciudad y al Cerro de la Silla.", fact: "Desde aquí se aprecia una de las vistas más fotografiadas de Monterrey, con el Cerro de la Silla como telón de fondo.", img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Monterrey_as_seen_from_Cerro_del_Obispado_%28September_2005%29.jpg", coords: [25.6728, -100.3315] },
 ];
 
 const platillos = [
-  { id: "pla-01", nombre: "Cabrito al pastor o al horno", desc: "Platillo emblemático de Nuevo León, asociado a celebraciones y a la cocina tradicional norteña.", img: "https://upload.wikimedia.org/wikipedia/commons/a/af/Cabritos_in_Monterrey.jpg" },
-  { id: "pla-02", nombre: "Machacado con huevo", desc: "Carne seca deshebrada, base del desayuno regional.", img: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Machacado_con_huevo.jpg" },
-  { id: "pla-03", nombre: "Carne asada", desc: "Más que un platillo, una tradición social de reunión familiar y de amigos, sobre todo en fines de semana.", img: "https://upload.wikimedia.org/wikipedia/commons/1/15/Carne_asada.jpg" },
-  { id: "pla-04", nombre: "Frijoles con veneno", desc: "Frijoles refritos servidos con chicharrón, queso y chile, plato tradicional regiomontano.", img: "https://upload.wikimedia.org/wikipedia/commons/0/01/Frijoles_con_veneno.jpg" },
-  { id: "pla-05", nombre: "Barbacoa", desc: "Carne cocida lentamente, típica de reuniones de fin de semana en el noreste de México.", img: "https://upload.wikimedia.org/wikipedia/commons/0/00/Barbacoa_taco.jpg" },
-  { id: "pla-06", nombre: "Migas", desc: "Platillo de desayuno a base de tortilla frita, huevo y salsa.", img: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Migas_de_huevo.jpg" },
-  { id: "pla-07", nombre: "Tacos de trompo", desc: "Tacos de carne de cerdo adobada preparada en trompo vertical.", img: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Trompo_de_tacos_al_pastor.jpg" },
-  { id: "pla-08", nombre: "Huevos rancheros", desc: "Huevos estrellados servidos sobre tortilla con salsa de jitomate y chile.", img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Huevos_Rancheros.jpg" },
-  { id: "pla-09", nombre: "Chilaquiles", desc: "Tortilla frita bañada en salsa, común en el desayuno regiomontano.", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Chilaquiles_Rojos.JPG" },
-  { id: "pla-10", nombre: "Discada", desc: "Mezcla de carnes y vegetales cocinados en un disco de arado, platillo social del norte de México.", img: "https://upload.wikimedia.org/wikipedia/commons/9/9f/DISCADA.JPG" },
-  { id: "pla-11", nombre: "Carne seca", desc: "Carne deshidratada, base del machacado y de otros platillos regionales.", img: "https://upload.wikimedia.org/wikipedia/commons/6/61/Carne_Seca.jpg" },
-  { id: "pla-12", nombre: "Menudo", desc: "Caldo de panza de res con chile, tradicional para el desayuno de fin de semana.", img: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Menudo_%28sopa_de_M%C3%A9xico%29.JPG" },
-  { id: "pla-13", nombre: "Frijoles charros", desc: "Frijoles de la olla con tocino, chorizo y chile, acompañamiento típico de la carne asada.", img: "https://upload.wikimedia.org/wikipedia/commons/3/34/Frijoles_charros_10293.jpg" },
+  { id: "pla-01", nombre: "Cabrito al pastor o al horno", era: "Tradición ranchera del norte de México", desc: "Platillo emblemático de Nuevo León, asociado a celebraciones y a la cocina tradicional norteña.", fact: "Se prepara asando la cría de cabra entera, abierta en cruz, sobre brasas durante varias horas.", img: "https://upload.wikimedia.org/wikipedia/commons/a/af/Cabritos_in_Monterrey.jpg" },
+  { id: "pla-02", nombre: "Machacado con huevo", era: "Herencia de las rutas ganaderas del norte", desc: "Carne seca deshebrada, base del desayuno regional.", fact: "Nació como técnica de conservación de carne antes de la refrigeración, secándola al sol y al aire libre.", img: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Machacado_con_huevo.jpg" },
+  { id: "pla-03", nombre: "Carne asada", era: "Tradición social de fin de semana", desc: "Más que un platillo, una tradición social de reunión familiar y de amigos, sobre todo en fines de semana.", fact: "Para muchos regiomontanos, la carne asada es más un ritual social que una receta: reúne familia, amigos y vecinos.", img: "https://upload.wikimedia.org/wikipedia/commons/1/15/Carne_asada.jpg" },
+  { id: "pla-04", nombre: "Frijoles con veneno", era: "Receta tradicional regiomontana", desc: "Frijoles refritos servidos con chicharrón, queso y chile, plato tradicional regiomontano.", fact: "El nombre 'con veneno' hace referencia al picor del chile que corona el platillo, no a un ingrediente real.", img: "https://upload.wikimedia.org/wikipedia/commons/0/01/Frijoles_con_veneno.jpg" },
+  { id: "pla-05", nombre: "Barbacoa", era: "Técnica prehispánica adaptada al norte", desc: "Carne cocida lentamente, típica de reuniones de fin de semana en el noreste de México.", fact: "Tradicionalmente se cocina enterrada o en horno de tierra durante horas, hasta que la carne se deshace sola.", img: "https://upload.wikimedia.org/wikipedia/commons/0/00/Barbacoa_taco.jpg" },
+  { id: "pla-06", nombre: "Migas", era: "Plato de aprovechamiento campesino", desc: "Platillo de desayuno a base de tortilla frita, huevo y salsa.", fact: "Surgió como receta de aprovechamiento para no desperdiciar tortillas del día anterior.", img: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Migas_de_huevo.jpg" },
+  { id: "pla-07", nombre: "Tacos de trompo", era: "Influencia libanesa de principios del siglo XX", desc: "Tacos de carne de cerdo adobada preparada en trompo vertical.", fact: "El trompo vertical llegó a México con inmigrantes libaneses, quienes adaptaron el shawarma a los ingredientes locales.", img: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Trompo_de_tacos_al_pastor.jpg" },
+  { id: "pla-08", nombre: "Huevos rancheros", era: "Clásico del desayuno campirano mexicano", desc: "Huevos estrellados servidos sobre tortilla con salsa de jitomate y chile.", fact: "Originalmente era el desayuno fuerte de los trabajadores del campo antes de salir a laborar.", img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Huevos_Rancheros.jpg" },
+  { id: "pla-09", nombre: "Chilaquiles", era: "Origen prehispánico, náhuatl 'chilaquilitl'", desc: "Tortilla frita bañada en salsa, común en el desayuno regiomontano.", fact: "Su nombre viene del náhuatl y significa aproximadamente 'chiles y quelites revueltos'.", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Chilaquiles_Rojos.JPG" },
+  { id: "pla-10", nombre: "Discada", era: "Creación del norte de México, siglo XX", desc: "Mezcla de carnes y vegetales cocinados en un disco de arado, platillo social del norte de México.", fact: "Se cocina literalmente en un disco de arado agrícola reutilizado como sartén gigante, típico de reuniones norteñas.", img: "https://upload.wikimedia.org/wikipedia/commons/9/9f/DISCADA.JPG" },
+  { id: "pla-11", nombre: "Carne seca", era: "Técnica de conservación colonial", desc: "Carne deshidratada, base del machacado y de otros platillos regionales.", fact: "Se deshidrata al sol durante días, un método heredado de las rutas ganaderas del noreste novohispano.", img: "https://upload.wikimedia.org/wikipedia/commons/6/61/Carne_Seca.jpg" },
+  { id: "pla-12", nombre: "Menudo", era: "Plato tradicional de fin de semana", desc: "Caldo de panza de res con chile, tradicional para el desayuno de fin de semana.", fact: "Es célebre como remedio casero tras una noche de fiesta, gracias a su caldo picante y contundente.", img: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Menudo_%28sopa_de_M%C3%A9xico%29.JPG" },
+  { id: "pla-13", nombre: "Frijoles charros", era: "Herencia de la charrería mexicana", desc: "Frijoles de la olla con tocino, chorizo y chile, acompañamiento típico de la carne asada.", fact: "Su nombre proviene de los charros del norte de México, quienes los preparaban en ollas grandes durante faenas de campo.", img: "https://upload.wikimedia.org/wikipedia/commons/3/34/Frijoles_charros_10293.jpg" },
 ];
 
 const bebidas = [
-  { id: "beb-01", nombre: "Tecate Light", desc: "Cerveza clara producida en Monterrey, parte de la tradición cervecera regiomontana.", img: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cerveza_tecate.jpg" },
-  { id: "beb-02", nombre: "Corona", desc: "Cerveza clara mexicana de consumo extendido en reuniones sociales.", img: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Corona_bottles.jpg" },
-  { id: "beb-03", nombre: "Carta Blanca", desc: "Cerveza clara con origen en Cervecería Cuauhtémoc, fundada en Monterrey.", img: "https://upload.wikimedia.org/wikipedia/commons/5/56/Cartel_publicitario_de_la_cerveza_Carta_Blanca.jpg" },
-  { id: "beb-04", nombre: "Champurrado", desc: "Bebida caliente de masa de maíz, chocolate y canela.", img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Champurrado.jpg" },
-  { id: "beb-05", nombre: "Michelada", desc: "Cerveza preparada con limón, sal y salsas, bebida social muy popular en el norte de México.", img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Michelada_mexicana.jpg" },
-  { id: "beb-06", nombre: "Topo Chico", desc: "Agua mineral embotellada originaria de Monterrey, símbolo local reconocido internacionalmente.", img: "https://upload.wikimedia.org/wikipedia/commons/0/04/24_case_of_Topo_Chico.jpg" },
-  { id: "beb-07", nombre: "Capirotada", desc: "Postre a base de pan, piloncillo, frutos secos y queso, tradicional de temporada.", img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Capirotada_in_Mexican_pottery.jpg" },
+  { id: "beb-01", nombre: "Tecate Light", era: "Cervecería Cuauhtémoc, fundada en 1890", desc: "Cerveza clara producida en Monterrey, parte de la tradición cervecera regiomontana.", fact: "Tecate nació en Baja California en 1943, pero forma parte del mismo grupo cervecero fundado en Monterrey.", img: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Cerveza_tecate.jpg" },
+  { id: "beb-02", nombre: "Corona", era: "Lanzada en 1925", desc: "Cerveza clara mexicana de consumo extendido en reuniones sociales.", fact: "Es una de las cervezas mexicanas más exportadas del mundo, presente en más de 180 países.", img: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Corona_bottles.jpg" },
+  { id: "beb-03", nombre: "Carta Blanca", era: "Primera cerveza de Cervecería Cuauhtémoc, 1890", desc: "Cerveza clara con origen en Cervecería Cuauhtémoc, fundada en Monterrey.", fact: "Fue la primera marca producida por Cervecería Cuauhtémoc, una de las empresas fundadoras de la industria regiomontana.", img: "https://upload.wikimedia.org/wikipedia/commons/5/56/Cartel_publicitario_de_la_cerveza_Carta_Blanca.jpg" },
+  { id: "beb-04", nombre: "Champurrado", era: "Origen prehispánico, evolución colonial", desc: "Bebida caliente de masa de maíz, chocolate y canela.", fact: "Es una evolución del atole prehispánico, al que se le agregó cacao tras la llegada de los españoles.", img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Champurrado.jpg" },
+  { id: "beb-05", nombre: "Michelada", era: "Popularizada a mediados del siglo XX", desc: "Cerveza preparada con limón, sal y salsas, bebida social muy popular en el norte de México.", fact: "Existen decenas de variantes regionales; en el norte suele llevar salsa Maggi, salsa inglesa y chile.", img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Michelada_mexicana.jpg" },
+  { id: "beb-06", nombre: "Topo Chico", era: "Embotellada desde 1895", desc: "Agua mineral embotellada originaria de Monterrey, símbolo local reconocido internacionalmente.", fact: "Su agua proviene de manantiales naturales del Cerro del Topo Chico, en Monterrey, y hoy se exporta a todo el mundo.", img: "https://upload.wikimedia.org/wikipedia/commons/0/04/24_case_of_Topo_Chico.jpg" },
+  { id: "beb-07", nombre: "Capirotada", era: "Receta colonial de Cuaresma", desc: "Postre a base de pan, piloncillo, frutos secos y queso, tradicional de temporada.", fact: "Se prepara tradicionalmente durante la Cuaresma; cada familia regiomontana tiene su propia variante de la receta.", img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Capirotada_in_Mexican_pottery.jpg" },
 ];
 
 const empresas = [
-  { id: "emp-01", nombre: "Cemex", desc: "Empresa cementera y de materiales para construcción con origen en Monterrey, una de las más grandes del mundo en su ramo.", img: "https://upload.wikimedia.org/wikipedia/commons/2/26/CEMEX_Monterrey.jpg" },
-  { id: "emp-02", nombre: "Ternium", desc: "Empresa siderúrgica con fuerte presencia en Monterrey, heredera de la tradición industrial del acero que dio origen a Fundidora y Horno3.", img: "https://upload.wikimedia.org/wikipedia/commons/8/83/Ternium_Logo.svg" },
+  { id: "emp-01", nombre: "Cemex", era: "Fundada en 1906", desc: "Empresa cementera y de materiales para construcción con origen en Monterrey, una de las más grandes del mundo en su ramo.", fact: "Nació de la fusión de dos cementeras regiomontanas y hoy opera en más de 50 países.", img: "https://upload.wikimedia.org/wikipedia/commons/2/26/CEMEX_Monterrey.jpg" },
+  { id: "emp-02", nombre: "Ternium", era: "Heredera de Hylsa, fundada en 1943", desc: "Empresa siderúrgica con fuerte presencia en Monterrey, heredera de la tradición industrial del acero que dio origen a Fundidora y Horno3.", fact: "Es descendiente directa de la tradición siderúrgica regiomontana que comenzó con la Fundidora de Fierro y Acero en 1900.", img: "https://upload.wikimedia.org/wikipedia/commons/8/83/Ternium_Logo.svg" },
 ];
 
 const equipo = [
   { nombre: "Pablo Cortes Solis", rol: "Ficha 1 (Nuevo León Turismo) y ficha 5 (SECTUR federal) · Listado de atractivos turísticos" },
-  { nombre: "Omar Israel Enriquez Mendez", rol: "Ficha 2 (Parque Fundidora) · Listado de platillos y tradiciones · Entrevista opcional" },
+  { nombre: "Omar Israel Enriquez Mendez", rol: "Ficha 2 (Parque Fundidora) · Listado de platillos y tradiciones · Entrevista a comerciante local" },
   { nombre: "Pablo Eduardo Galván Galván", rol: "Ficha 3 (Museo del Acero Horno3) · Diseño de la ruta turística de 2 días" },
   { nombre: "Jorge Angel Garcia Alvarado", rol: "Ficha 4 (artículo académico) · Justificación de la región · Armado del sitio y portada" },
   { nombre: "Ricardo Eugenio García Rodríguez", rol: "Revisión de referencias APA · Plan de trabajo y cronograma · Revisión final" },
@@ -689,14 +738,14 @@ function cardImg(img, nombre) {
     : `<div class="placeholder-img">Imagen pendiente</div>`;
 }
 
-function trackActions(id) {
+function trackActions(id, doneLabel = 'Visitado', doneVerb = 'Marcar visitado') {
   return `
     <div class="card-actions">
       <button class="track-btn fav ${isFav(id) ? 'active' : ''}" data-id="${id}" data-key="fav">
         <span class="tb-icon">${isFav(id) ? '★' : '☆'}</span> Favorito
       </button>
-      <button class="track-btn done ${isDone(id) ? 'active' : ''}" data-id="${id}" data-key="done" style="margin-top:6px;">
-        <span class="tb-icon">${isDone(id) ? '✅' : '⬜'}</span> ${isDone(id) ? 'Visitado' : 'Marcar visitado'}
+      <button class="track-btn done ${isDone(id) ? 'active' : ''}" data-id="${id}" data-key="done" data-done-label="${doneLabel}" data-done-verb="${doneVerb}" style="margin-top:6px;">
+        <span class="tb-icon">${isDone(id) ? '✅' : '⬜'}</span> ${isDone(id) ? doneLabel : doneVerb}
       </button>
     </div>
   `;
@@ -712,8 +761,10 @@ function bindTrackButtons(container) {
         btn.classList.toggle('active', isFav(id));
         btn.innerHTML = `<span class="tb-icon">${isFav(id) ? '★' : '☆'}</span> Favorito`;
       } else {
+        const doneLabel = btn.dataset.doneLabel;
+        const doneVerb = btn.dataset.doneVerb;
         btn.classList.toggle('active', isDone(id));
-        btn.innerHTML = `<span class="tb-icon">${isDone(id) ? '✅' : '⬜'}</span> ${isDone(id) ? 'Visitado' : 'Marcar visitado'}`;
+        btn.innerHTML = `<span class="tb-icon">${isDone(id) ? '✅' : '⬜'}</span> ${isDone(id) ? doneLabel : doneVerb}`;
         if (card) card.classList.toggle('is-done', isDone(id));
       }
     });
@@ -733,10 +784,12 @@ function renderAtractivos(filter) {
         ${cardImg(a.img, a.nombre)}
         <div class="card-body">
           <span class="badge ${a.zona.includes('San Pedro') ? 'zone-sp' : ''}">${a.zona}</span>
+          ${a.era ? `<span class="era-badge">${a.era}</span>` : ''}
           <h3>${a.nombre}</h3>
           <p>${a.desc}</p>
+          ${a.fact ? `<div class="fun-fact"><strong>Dato curioso:</strong> ${a.fact}</div>` : ''}
           <a class="maps-link" href="${mapsUrl(a)}" target="_blank" rel="noopener">📍 Ver en Google Maps</a>
-          ${trackActions(a.id)}
+          ${trackActions(a.id, 'Visitado', 'Marcar visitado')}
         </div>
       </div>
     `).join('');
@@ -758,9 +811,11 @@ function renderSimpleGrid(containerId, data) {
     <div class="card ${isDone(item.id) ? 'is-done' : ''}">
       ${cardImg(item.img, item.nombre)}
       <div class="card-body">
+        ${item.era ? `<span class="era-badge">${item.era}</span>` : ''}
         <h3>${item.nombre}</h3>
         <p>${item.desc}</p>
-        ${trackActions(item.id)}
+        ${item.fact ? `<div class="fun-fact"><strong>Dato curioso:</strong> ${item.fact}</div>` : ''}
+        ${trackActions(item.id, 'Probado', 'Marcar como probado')}
       </div>
     </div>
   `).join('');
@@ -774,9 +829,11 @@ empresasContainer.innerHTML = empresas.map(e => `
   <div class="company-card ${isDone(e.id) ? 'is-done' : ''}">
     <img src="${e.img}" alt="${e.nombre}">
     <div style="flex:1;">
+      ${e.era ? `<span class="era-badge">${e.era}</span>` : ''}
       <h3 style="margin:0 0 6px;">${e.nombre}</h3>
       <p style="margin:0 0 8px; font-size:0.9em; color:var(--muted);">${e.desc}</p>
-      ${trackActions(e.id)}
+      ${e.fact ? `<div class="fun-fact"><strong>Dato curioso:</strong> ${e.fact}</div>` : ''}
+      ${trackActions(e.id, 'Explorada', 'Marcar como explorada')}
     </div>
   </div>
 `).join('');
@@ -828,7 +885,7 @@ function renderQuiz() {
   `).join('') + `
     <button class="quiz-btn" id="quiz-submit">Revisar respuestas</button>
     <div id="quiz-result"></div>
-    <button class="quiz-btn" id="quiz-next" style="background:var(--steel); margin-top:10px;">🔄 Nuevas preguntas</button>
+    <button class="quiz-btn" id="quiz-next" style="background:var(--theme-dark); margin-top:10px;">🔄 Nuevas preguntas</button>
   `;
 
   document.getElementById('quiz-submit').addEventListener('click', () => {
