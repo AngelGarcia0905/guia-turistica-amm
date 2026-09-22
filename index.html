@@ -185,6 +185,11 @@
     margin-bottom: 8px;
   }
   .card .badge.zone-sp { background: var(--accent); }
+  .maps-link {
+    display: inline-flex; align-items: center; gap: 4px; margin-top: 8px;
+    font-size: 0.82em; color: var(--accent-dark); text-decoration: none; font-weight: 600;
+  }
+  .maps-link:hover { text-decoration: underline; }
   .card .card-actions { margin-top: 10px; }
   .track-btn {
     display: flex; align-items: center; justify-content: center; gap: 6px;
@@ -243,6 +248,8 @@
     padding: 13px 16px; margin-bottom: 10px; font-size: 0.9em;
   }
   .sources-list .src-type { color: var(--accent-dark); font-weight: bold; display: block; margin-bottom: 4px; font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.5px; }
+  .sources-list a { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+  .sources-list a:hover { color: var(--accent-dark); }
 
   .quiz-box { padding-top: 6px; }
   .quiz-question { background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
@@ -547,17 +554,16 @@ const atractivos = [
   { id: "atr-05", nombre: "MARCO — Museo de Arte Contemporáneo", zona: "Monterrey", desc: "Museo de arte contemporáneo con exposiciones nacionales e internacionales.", img: "https://upload.wikimedia.org/wikipedia/commons/6/60/Interior_de_Museo_de_Arte_Contempor%C3%A1neo%2C_Monterrey%2C_Nuevo_Le%C3%B3n%2C_M%C3%A9xico.jpg", coords: [25.6699, -100.3117] },
   { id: "atr-06", nombre: "Barrio Antiguo", zona: "Monterrey", desc: "Zona histórica con vida nocturna, galerías, murales y arte urbano.", img: "https://upload.wikimedia.org/wikipedia/commons/9/91/Monterrey_Barrio_Antiguo.JPG", coords: [25.6685, -100.3082] },
   { id: "atr-07", nombre: "Museo Regional de Nuevo León \"El Obispado\"", zona: "Monterrey", desc: "Antiguo edificio del siglo XVIII con vistas de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Museo_Regional_de_Nuevo_Le%C3%B3n_El_Obispado.JPG", coords: [25.6725, -100.3311] },
-  { id: "atr-08", nombre: "Alameda", zona: "Monterrey", desc: "Parque público en el centro de la ciudad, punto tradicional de encuentro y descanso rodeado de vialidades históricas.", img: null, coords: [25.6688, -100.3151] },
+  { id: "atr-08", nombre: "Alameda", zona: "Monterrey", desc: "Parque público en el centro de la ciudad, punto tradicional de encuentro y descanso rodeado de vialidades históricas.", img: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Winter_day_in_Alameda_Park%2C_Monterrey.jpg", coords: [25.6688, -100.3151] },
   { id: "atr-09", nombre: "Centro MTY — Faro del Comercio", zona: "Monterrey", desc: "Área comercial del centro con comercios tradicionales y ambiente de calle.", img: "https://upload.wikimedia.org/wikipedia/commons/3/39/Faro_del_Comercio_Monterrey.JPG", coords: [25.6697, -100.3103] },
-  { id: "atr-10", nombre: "Fashion Drive", zona: "San Pedro Garza García", desc: "Corredor comercial de tiendas y restaurantes en San Pedro.", img: null, coords: [25.6510, -100.3600] },
-  { id: "atr-11", nombre: "Plazas de San Agustín", zona: "San Pedro Garza García", desc: "Conjunto de plazas comerciales y de entretenimiento en la zona de San Agustín.", img: null, coords: [25.6520, -100.3450] },
+  { id: "atr-10", nombre: "Fashion Drive", zona: "San Pedro Garza García", desc: "Corredor comercial de tiendas y restaurantes en San Pedro.", img: "https://upload.wikimedia.org/wikipedia/commons/d/dc/El_cantante_mexicano_Deny_Kotasek_en_Fashion_Drive_en_San_Pedro_Garza_Garc%C3%ADa%2C_Nuevo_Le%C3%B3n%2C_M%C3%A9xico.jpg", coords: [25.6510, -100.3600] },
+  { id: "atr-11", nombre: "Plazas de San Agustín", zona: "San Pedro Garza García", desc: "Conjunto de plazas comerciales y de entretenimiento en la zona de San Agustín.", img: "https://upload.wikimedia.org/wikipedia/commons/7/78/MTY-PlazaFiestaSanAgustin2.jpg", coords: [25.6520, -100.3450] },
   { id: "atr-12", nombre: "Chipinque", zona: "San Pedro Garza García", desc: "Parque ecológico de montaña con senderos, miradores y vida silvestre.", img: "https://upload.wikimedia.org/wikipedia/commons/0/06/IMAGEN_CHIPINQUE.jpg", coords: [25.6150, -100.3450] },
   { id: "atr-13", nombre: "Puente Atirantado", zona: "Monterrey", desc: "Puente vehicular emblemático por su diseño estructural, parte del paisaje urbano de la ciudad.", img: "https://upload.wikimedia.org/wikipedia/commons/2/27/Puente_Atirantado%2C_Monterrey%2C_Mex.JPG", coords: [25.6390, -100.2870] },
-  { id: "atr-14", nombre: "Salón de la Fama del Beisbol Mexicano", zona: "Monterrey", desc: "Museo dedicado a la historia del beisbol profesional mexicano.", img: null, coords: [25.6900, -100.3000] },
+  { id: "atr-14", nombre: "Salón de la Fama del Beisbol Mexicano", zona: "Monterrey", desc: "Museo dedicado a la historia del beisbol profesional mexicano.", img: "https://upload.wikimedia.org/wikipedia/commons/0/02/Sal%C3%B3n_de_la_fama_del_B%C3%A9isbol_Mexicano_en_Monterrey%2C_Nuevo_Le%C3%B3n..jpg", coords: [25.6900, -100.3000] },
   { id: "atr-15", nombre: "Museo del Ferrocarril", zona: "Monterrey", desc: "Museo instalado en una antigua estación de tren, con locomotoras y vagones históricos.", img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Estaci%C3%B3n_Ferroviaria_Mty.jpg", coords: [25.6750, -100.3200] },
   { id: "atr-16", nombre: "Papalote Museo del Niño", zona: "Monterrey", desc: "Museo interactivo infantil enfocado en ciencia y tecnología.", img: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Papalote_Museo_del_Ni%C3%B1o_en_Monterrey.jpg", coords: [25.6780, -100.2900] },
   { id: "atr-17", nombre: "Arena Monterrey", zona: "Monterrey", desc: "Recinto multiusos para eventos deportivos y espectáculos.", img: "https://upload.wikimedia.org/wikipedia/commons/9/99/Arena_Mty_1.jpg", coords: [25.7300, -100.3000] },
-  { id: "atr-18", nombre: "Virgen de Acero", zona: "Monterrey", desc: "Escultura monumental de la Virgen elaborada en acero, referencia del paisaje industrial de la ciudad.", img: null, coords: [25.6600, -100.2600] },
   { id: "atr-19", nombre: "Mirador del Obispado", zona: "Monterrey", desc: "Punto panorámico junto al Obispado con vista a la ciudad y al Cerro de la Silla.", img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Monterrey_as_seen_from_Cerro_del_Obispado_%28September_2005%29.jpg", coords: [25.6728, -100.3315] },
 ];
 
@@ -601,27 +607,27 @@ const equipo = [
 ];
 
 const referencias = [
-  "Secretaría de Turismo del Estado de Nuevo León. (s.f.). <em>Nuevo León Turismo — Destinos y experiencias</em>. Gobierno del Estado de Nuevo León. https://www.turismo.nl.gob.mx/",
-  "Secretaría de Turismo del Gobierno de México. (s.f.). <em>Nuevo León</em>. Gobierno de México. https://www.gob.mx/sectur",
-  "Parque Fundidora. (s.f.). <em>Historia del Parque Fundidora</em>. https://www.parquefundidora.org/",
-  "Museo del Acero Horno3. (s.f.). <em>Acerca del museo</em>. Fundidora de Fierro y Acero de Monterrey. https://www.horno3.org/",
-  "MARCO, Museo de Arte Contemporáneo de Monterrey. (s.f.). <em>Acerca de MARCO</em>. https://www.marco.org.mx/",
-  "Museo Regional de Nuevo León El Obispado. (s.f.). <em>Historia del recinto</em>. Instituto Nacional de Antropología e Historia (INAH). https://www.inah.gob.mx/",
-  "Gobierno del Estado de Nuevo León. (s.f.). <em>Nuevo León — Historia y cultura</em>. https://www.nl.gob.mx/",
-  "H. Ayuntamiento de San Pedro Garza García. (s.f.). <em>Turismo y cultura en San Pedro</em>. https://www.sanpedro.gob.mx/",
-  "H. Ayuntamiento de Monterrey. (s.f.). <em>Cultura y patrimonio de Monterrey</em>. https://www.monterrey.gob.mx/",
-  "Consejo Nacional para la Cultura y las Artes (Secretaría de Cultura). (s.f.). <em>Sistema de Información Cultural — Nuevo León</em>. https://sic.gob.mx/",
-  "Wikimedia Foundation. (s.f.). <em>Wikimedia Commons — Repositorio de medios libres</em>. https://commons.wikimedia.org/",
+  { text: "Secretaría de Turismo del Estado de Nuevo León. (s.f.). <em>Nuevo León Turismo — Destinos y experiencias</em>. Gobierno del Estado de Nuevo León.", url: "https://www.turismo.nl.gob.mx/" },
+  { text: "Secretaría de Turismo del Gobierno de México. (s.f.). <em>Nuevo León</em>. Gobierno de México.", url: "https://www.gob.mx/sectur" },
+  { text: "Parque Fundidora. (s.f.). <em>Historia del Parque Fundidora</em>.", url: "https://www.parquefundidora.org/" },
+  { text: "Museo del Acero Horno3. (s.f.). <em>Acerca del museo</em>. Fundidora de Fierro y Acero de Monterrey.", url: "https://www.horno3.org/" },
+  { text: "MARCO, Museo de Arte Contemporáneo de Monterrey. (s.f.). <em>Acerca de MARCO</em>.", url: "https://www.marco.org.mx/" },
+  { text: "Instituto Nacional de Antropología e Historia (INAH). (s.f.). <em>Museo Regional de Nuevo León El Obispado</em>.", url: "https://www.inah.gob.mx/red-de-museos/museo-regional-de-nuevo-leon-el-obispado" },
+  { text: "Gobierno del Estado de Nuevo León. (s.f.). <em>Nuevo León — Historia y cultura</em>.", url: "https://www.nl.gob.mx/" },
+  { text: "H. Ayuntamiento de San Pedro Garza García. (s.f.). <em>Turismo y cultura en San Pedro</em>.", url: "https://www.sanpedro.gob.mx/" },
+  { text: "H. Ayuntamiento de Monterrey. (s.f.). <em>Cultura y patrimonio de Monterrey</em>.", url: "https://www.monterrey.gob.mx/" },
+  { text: "Secretaría de Cultura. (s.f.). <em>Sistema de Información Cultural — Nuevo León</em>.", url: "https://sic.gob.mx/ficha.php?table=entidad&table_id=19" },
+  { text: "Wikimedia Foundation. (s.f.). <em>Wikimedia Commons — Repositorio de medios libres</em>.", url: "https://commons.wikimedia.org/" },
 ];
 
 const fuentes = [
-  { tipo: "Sitio oficial de turismo estatal", ref: "Secretaría de Turismo del Estado de Nuevo León. Gobierno del Estado de Nuevo León.", resumen: "Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirvió para confirmar qué atractivos del AMM están reconocidos oficialmente." },
-  { tipo: "Sitio oficial de un atractivo", ref: "Parque Fundidora. Historia / acerca de.", resumen: "Explica la historia de la antigua Fundidora de Fierro y Acero de Monterrey y su transformación en parque público." },
-  { tipo: "Sitio oficial de museo", ref: "Museo del Acero Horno3.", resumen: "Describe el museo instalado en el alto horno número 3 y su propuesta interactiva sobre la industria del acero." },
-  { tipo: "Sitio oficial de museo", ref: "MARCO, Museo de Arte Contemporáneo de Monterrey.", resumen: "Detalla la propuesta curatorial del museo y su papel en la escena de arte contemporáneo de la ciudad." },
-  { tipo: "Instituto federal de patrimonio", ref: "Instituto Nacional de Antropología e Historia (INAH) — Museo Regional El Obispado.", resumen: "Aporta el contexto histórico del edificio del siglo XVIII y su valor como patrimonio cultural." },
-  { tipo: "Sitio oficial de turismo federal", ref: "Secretaría de Turismo del Gobierno de México.", resumen: "Ofrece una visión nacional del destino y datos generales de Nuevo León, útil para contextualizar al AMM dentro del país." },
-  { tipo: "Gobierno municipal", ref: "H. Ayuntamientos de Monterrey y San Pedro Garza García.", resumen: "Proporcionan información oficial sobre cultura, patrimonio y servicios turísticos de cada municipio." },
+  { tipo: "Sitio oficial de turismo estatal", ref: "Secretaría de Turismo del Estado de Nuevo León. Gobierno del Estado de Nuevo León.", resumen: "Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirvió para confirmar qué atractivos del AMM están reconocidos oficialmente.", url: "https://www.turismo.nl.gob.mx/" },
+  { tipo: "Sitio oficial de un atractivo", ref: "Parque Fundidora. Historia / acerca de.", resumen: "Explica la historia de la antigua Fundidora de Fierro y Acero de Monterrey y su transformación en parque público.", url: "https://www.parquefundidora.org/" },
+  { tipo: "Sitio oficial de museo", ref: "Museo del Acero Horno3.", resumen: "Describe el museo instalado en el alto horno número 3 y su propuesta interactiva sobre la industria del acero.", url: "https://www.horno3.org/" },
+  { tipo: "Sitio oficial de museo", ref: "MARCO, Museo de Arte Contemporáneo de Monterrey.", resumen: "Detalla la propuesta curatorial del museo y su papel en la escena de arte contemporáneo de la ciudad.", url: "https://www.marco.org.mx/" },
+  { tipo: "Instituto federal de patrimonio", ref: "Instituto Nacional de Antropología e Historia (INAH) — Museo Regional El Obispado.", resumen: "Aporta el contexto histórico del edificio del siglo XVIII y su valor como patrimonio cultural.", url: "https://www.inah.gob.mx/red-de-museos/museo-regional-de-nuevo-leon-el-obispado" },
+  { tipo: "Sitio oficial de turismo federal", ref: "Secretaría de Turismo del Gobierno de México.", resumen: "Ofrece una visión nacional del destino y datos generales de Nuevo León, útil para contextualizar al AMM dentro del país.", url: "https://www.gob.mx/sectur" },
+  { tipo: "Gobierno municipal", ref: "H. Ayuntamientos de Monterrey y San Pedro Garza García.", resumen: "Proporcionan información oficial sobre cultura, patrimonio y servicios turísticos de cada municipio.", url: "https://www.monterrey.gob.mx/" },
 ];
 
 const quizData = [
@@ -714,6 +720,10 @@ function bindTrackButtons(container) {
   });
 }
 
+function mapsUrl(a) {
+  return `https://www.google.com/maps/search/?api=1&query=${a.coords[0]},${a.coords[1]}`;
+}
+
 function renderAtractivos(filter) {
   const grid = document.getElementById('grid-atractivos');
   grid.innerHTML = atractivos
@@ -725,6 +735,7 @@ function renderAtractivos(filter) {
           <span class="badge ${a.zona.includes('San Pedro') ? 'zone-sp' : ''}">${a.zona}</span>
           <h3>${a.nombre}</h3>
           <p>${a.desc}</p>
+          <a class="maps-link" href="${mapsUrl(a)}" target="_blank" rel="noopener">📍 Ver en Google Maps</a>
           ${trackActions(a.id)}
         </div>
       </div>
@@ -772,11 +783,11 @@ empresasContainer.innerHTML = empresas.map(e => `
 bindTrackButtons(empresasContainer);
 
 document.getElementById('lista-fuentes').innerHTML = fuentes.map(f => `
-  <li><span class="src-type">${f.tipo}</span><strong>${f.ref}</strong><p style="margin:6px 0 0;">${f.resumen}</p></li>
+  <li><span class="src-type">${f.tipo}</span><strong><a href="${f.url}" target="_blank" rel="noopener">${f.ref}</a></strong><p style="margin:6px 0 0;">${f.resumen}</p></li>
 `).join('');
 
 document.getElementById('lista-referencias').innerHTML = referencias.map((r, i) => `
-  <div class="reference-card"><span class="ref-num">${i + 1}</span><span>${r}</span></div>
+  <div class="reference-card"><span class="ref-num">${i + 1}</span><span>${r.text} <a href="${r.url}" target="_blank" rel="noopener">${r.url}</a></span></div>
 `).join('');
 
 document.getElementById('lista-creditos').innerHTML = equipo.map(m => `
@@ -850,7 +861,7 @@ function initMapa() {
   }).addTo(mapa);
   atractivos.forEach(a => {
     L.marker(a.coords).addTo(mapa)
-      .bindPopup(`<b>${a.nombre}</b><br>${a.desc}`);
+      .bindPopup(`<b>${a.nombre}</b><br>${a.desc}<br><a href="${mapsUrl(a)}" target="_blank" rel="noopener">📍 Abrir en Google Maps</a>`);
   });
   setTimeout(() => mapa.invalidateSize(), 300);
 }
