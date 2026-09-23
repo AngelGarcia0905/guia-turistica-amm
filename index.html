@@ -923,27 +923,61 @@ function initMapa() {
   setTimeout(() => mapa.invalidateSize(), 300);
 }
 
-// ---------- Accordion navigation ----------
+// ---------- Accordion navigation (with browser back-button support) ----------
 const homeView = document.getElementById('home-view');
 const backBtn = document.getElementById('back-btn');
 const panels = document.querySelectorAll('.panel');
 
-function openPanel(id) {
+function showPanel(id) {
   homeView.style.display = 'none';
   panels.forEach(p => p.classList.remove('open'));
   const target = document.getElementById(id);
-  target.classList.add('open');
+  if (target) target.classList.add('open');
   backBtn.classList.add('visible');
   window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
   if (id === 'panel-historia') initMapa();
 }
 
-function closeAllPanels() {
+function showHome() {
   panels.forEach(p => p.classList.remove('open'));
   homeView.style.display = '';
   backBtn.classList.remove('visible');
   window.scrollTo({ top: 0 });
 }
+
+function openPanel(id) {
+  // Push a history entry so the browser/device back button (and gesture)
+  // closes the panel instead of leaving the page entirely.
+  history.pushState({ panel: id }, '', `#${id}`);
+  showPanel(id);
+}
+
+function closeAllPanels() {
+  if (history.state && history.state.panel) {
+    history.back();
+  } else {
+    showHome();
+  }
+}
+
+window.addEventListener('popstate', (event) => {
+  if (event.state && event.state.panel) {
+    showPanel(event.state.panel);
+  } else {
+    showHome();
+  }
+});
+
+// Deep-link support: opening the page with a #panel-xxx hash goes straight there.
+(function initFromHash() {
+  const hashId = window.location.hash.replace('#', '');
+  if (hashId && document.getElementById(hashId) && document.getElementById(hashId).classList.contains('panel')) {
+    history.replaceState({ panel: hashId }, '', `#${hashId}`);
+    showPanel(hashId);
+  } else {
+    history.replaceState({ panel: null }, '', window.location.pathname);
+  }
+})();
 
 document.querySelectorAll('.topic-card').forEach(card => {
   card.addEventListener('click', () => openPanel(card.dataset.panel));
