@@ -249,6 +249,43 @@
   .card.is-done { opacity: 0.72; }
   .card.is-done img, .card.is-done .placeholder-img { filter: grayscale(0.4); }
 
+  .review-toggle {
+    width: 100%; margin-top: 6px; background: none; border: none;
+    color: var(--theme-dark); font-size: 0.8em; cursor: pointer;
+    padding: 6px 0 2px; text-align: center; text-decoration: underline;
+  }
+  .review-panel {
+    display: none; margin-top: 8px; padding: 10px; background: var(--bg);
+    border: 1px dashed var(--card-border); border-radius: 8px;
+  }
+  .review-panel.open { display: block; }
+  .review-panel .my-photo-preview {
+    width: 100%; height: 100px; object-fit: cover; border-radius: 6px; margin-bottom: 8px; display: none;
+  }
+  .review-panel .my-photo-preview.has-photo { display: block; }
+  .review-panel label.upload-btn {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    border: 1px solid var(--card-border); background: var(--bg-alt); color: var(--muted);
+    padding: 7px 10px; border-radius: 8px; font-size: 0.8em; cursor: pointer; margin-bottom: 8px;
+  }
+  .review-panel label.upload-btn:hover { border-color: var(--theme); color: var(--theme-dark); }
+  .review-panel input[type="file"] { display: none; }
+  .review-panel textarea {
+    width: 100%; min-height: 56px; border: 1px solid var(--card-border); border-radius: 8px;
+    padding: 8px; font-size: 0.82em; font-family: inherit; resize: vertical; box-sizing: border-box;
+  }
+  .review-panel .review-save-row { display: flex; gap: 8px; margin-top: 8px; align-items: center; }
+  .review-panel .review-save-btn {
+    background: var(--theme); color: #fff; border: none; padding: 7px 14px;
+    border-radius: 8px; font-size: 0.8em; cursor: pointer;
+  }
+  .review-panel .review-saved-note { font-size: 0.75em; color: var(--muted); }
+  .card .my-note {
+    margin-top: 8px; padding: 8px 10px; background: var(--theme-soft); border-radius: 6px;
+    font-size: 0.8em; color: var(--text);
+  }
+  .card .my-note strong { color: var(--theme-dark); }
+
   .progress-bar-wrap { background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 999px; height: 10px; overflow: hidden; margin: 4px 0 18px; }
   .progress-bar-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; }
   .progress-label { font-size: 0.8em; color: var(--muted); margin-bottom: 4px; }
@@ -713,12 +750,21 @@ let trackState = loadTrackState();
 
 function isFav(id) { return !!(trackState[id] && trackState[id].fav); }
 function isDone(id) { return !!(trackState[id] && trackState[id].done); }
+function myPhoto(id) { return (trackState[id] && trackState[id].photo) || null; }
+function myNote(id) { return (trackState[id] && trackState[id].note) || ''; }
 
 function toggleTrack(id, key) {
   if (!trackState[id]) trackState[id] = {};
   trackState[id][key] = !trackState[id][key];
   saveTrackState(trackState);
   updateProgress();
+}
+
+function saveReview(id, photoDataUrl, note) {
+  if (!trackState[id]) trackState[id] = {};
+  if (photoDataUrl) trackState[id].photo = photoDataUrl;
+  trackState[id].note = note;
+  saveTrackState(trackState);
 }
 
 function updateProgress() {
@@ -732,13 +778,43 @@ function updateProgress() {
 }
 
 // ---------- RENDER helpers ----------
-function cardImg(img, nombre) {
+function cardImg(img, nombre, id) {
+  const photo = id ? myPhoto(id) : null;
+  if (photo) {
+    return `<img src="${photo}" alt="Foto propia de ${nombre}" loading="lazy">`;
+  }
   return img
     ? `<img src="${img}" alt="${nombre}" loading="lazy">`
     : `<div class="placeholder-img">Imagen pendiente</div>`;
 }
 
-function trackActions(id, doneLabel = 'Visitado', doneVerb = 'Marcar visitado') {
+function myNoteBlock(id, label) {
+  const note = myNote(id);
+  if (!note) return '';
+  return `<div class="my-note" data-my-note="${id}"><strong>Tu reseña${label ? ` de ${label}` : ''}:</strong> ${note}</div>`;
+}
+
+function reviewPanelBlock(id, photoLabel, noteLabel) {
+  const photo = myPhoto(id);
+  const note = myNote(id);
+  return `
+    <button class="review-toggle" data-review-toggle="${id}">📷 Agregar tu foto y reseña</button>
+    <div class="review-panel" data-review-panel="${id}">
+      <img class="my-photo-preview ${photo ? 'has-photo' : ''}" data-my-photo-preview="${id}" src="${photo || ''}" alt="Tu foto de ${photoLabel}">
+      <label class="upload-btn">
+        📸 Subir foto de tu ${photoLabel}
+        <input type="file" accept="image/*" data-photo-input="${id}">
+      </label>
+      <textarea data-note-input="${id}" placeholder="Escribe tu reseña o comentario personal...">${note}</textarea>
+      <div class="review-save-row">
+        <button class="review-save-btn" data-save-review="${id}">Guardar</button>
+        <span class="review-saved-note" data-saved-note="${id}"></span>
+      </div>
+    </div>
+  `;
+}
+
+function trackActions(id, doneLabel = 'Visitado', doneVerb = 'Marcar visitado', photoLabel = 'lugar') {
   return `
     <div class="card-actions">
       <button class="track-btn fav ${isFav(id) ? 'active' : ''}" data-id="${id}" data-key="fav">
@@ -747,6 +823,7 @@ function trackActions(id, doneLabel = 'Visitado', doneVerb = 'Marcar visitado') 
       <button class="track-btn done ${isDone(id) ? 'active' : ''}" data-id="${id}" data-key="done" data-done-label="${doneLabel}" data-done-verb="${doneVerb}" style="margin-top:6px;">
         <span class="tb-icon">${isDone(id) ? '✅' : '⬜'}</span> ${isDone(id) ? doneLabel : doneVerb}
       </button>
+      ${reviewPanelBlock(id, photoLabel)}
     </div>
   `;
 }
@@ -769,6 +846,62 @@ function bindTrackButtons(container) {
       }
     });
   });
+
+  container.querySelectorAll('[data-review-toggle]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.reviewToggle;
+      const panel = container.querySelector(`[data-review-panel="${id}"]`);
+      if (panel) panel.classList.toggle('open');
+    });
+  });
+
+  container.querySelectorAll('[data-photo-input]').forEach(input => {
+    input.addEventListener('change', () => {
+      const id = input.dataset.photoInput;
+      const file = input.files && input.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const preview = container.querySelector(`[data-my-photo-preview="${id}"]`);
+        if (preview) {
+          preview.src = reader.result;
+          preview.classList.add('has-photo');
+        }
+        input.dataset.pendingPhoto = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+
+  container.querySelectorAll('[data-save-review]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.saveReview;
+      const textarea = container.querySelector(`[data-note-input="${id}"]`);
+      const photoInput = container.querySelector(`[data-photo-input="${id}"]`);
+      const note = textarea ? textarea.value.trim() : '';
+      const pendingPhoto = photoInput ? photoInput.dataset.pendingPhoto : null;
+      saveReview(id, pendingPhoto, note);
+      const savedNote = container.querySelector(`[data-saved-note="${id}"]`);
+      if (savedNote) {
+        savedNote.textContent = '✅ Guardado';
+        setTimeout(() => { savedNote.textContent = ''; }, 2500);
+      }
+      const card = btn.closest('.card') || btn.closest('.company-card');
+      if (card) {
+        const existingNote = card.querySelector('.my-note');
+        if (note) {
+          if (existingNote) {
+            existingNote.innerHTML = `<strong>Tu reseña:</strong> ${note}`;
+          } else {
+            const actions = card.querySelector('.card-actions');
+            if (actions) actions.insertAdjacentHTML('beforebegin', `<div class="my-note"><strong>Tu reseña:</strong> ${note}</div>`);
+          }
+        } else if (existingNote) {
+          existingNote.remove();
+        }
+      }
+    });
+  });
 }
 
 function mapsUrl(a) {
@@ -781,7 +914,7 @@ function renderAtractivos(filter) {
     .filter(a => filter === 'todos' || a.zona === filter)
     .map(a => `
       <div class="card ${isDone(a.id) ? 'is-done' : ''}">
-        ${cardImg(a.img, a.nombre)}
+        ${cardImg(a.img, a.nombre, a.id)}
         <div class="card-body">
           <span class="badge ${a.zona.includes('San Pedro') ? 'zone-sp' : ''}">${a.zona}</span>
           ${a.era ? `<span class="era-badge">${a.era}</span>` : ''}
@@ -789,7 +922,8 @@ function renderAtractivos(filter) {
           <p>${a.desc}</p>
           ${a.fact ? `<div class="fun-fact"><strong>Dato curioso:</strong> ${a.fact}</div>` : ''}
           <a class="maps-link" href="${mapsUrl(a)}" target="_blank" rel="noopener">📍 Ver en Google Maps</a>
-          ${trackActions(a.id, 'Visitado', 'Marcar visitado')}
+          ${myNoteBlock(a.id)}
+          ${trackActions(a.id, 'Visitado', 'Marcar visitado', 'visita')}
         </div>
       </div>
     `).join('');
@@ -805,35 +939,37 @@ document.querySelectorAll('#filtros-atractivos .filter-btn').forEach(btn => {
   });
 });
 
-function renderSimpleGrid(containerId, data) {
+function renderSimpleGrid(containerId, data, photoLabel) {
   const container = document.getElementById(containerId);
   container.innerHTML = data.map(item => `
     <div class="card ${isDone(item.id) ? 'is-done' : ''}">
-      ${cardImg(item.img, item.nombre)}
+      ${cardImg(item.img, item.nombre, item.id)}
       <div class="card-body">
         ${item.era ? `<span class="era-badge">${item.era}</span>` : ''}
         <h3>${item.nombre}</h3>
         <p>${item.desc}</p>
         ${item.fact ? `<div class="fun-fact"><strong>Dato curioso:</strong> ${item.fact}</div>` : ''}
-        ${trackActions(item.id, 'Probado', 'Marcar como probado')}
+        ${myNoteBlock(item.id)}
+        ${trackActions(item.id, 'Probado', 'Marcar como probado', photoLabel)}
       </div>
     </div>
   `).join('');
   bindTrackButtons(container);
 }
-renderSimpleGrid('grid-platillos', platillos);
-renderSimpleGrid('grid-bebidas', bebidas);
+renderSimpleGrid('grid-platillos', platillos, 'platillo');
+renderSimpleGrid('grid-bebidas', bebidas, 'bebida');
 
 const empresasContainer = document.getElementById('lista-empresas');
 empresasContainer.innerHTML = empresas.map(e => `
   <div class="company-card ${isDone(e.id) ? 'is-done' : ''}">
-    <img src="${e.img}" alt="${e.nombre}">
+    <img src="${myPhoto(e.id) || e.img}" alt="${e.nombre}">
     <div style="flex:1;">
       ${e.era ? `<span class="era-badge">${e.era}</span>` : ''}
       <h3 style="margin:0 0 6px;">${e.nombre}</h3>
       <p style="margin:0 0 8px; font-size:0.9em; color:var(--muted);">${e.desc}</p>
       ${e.fact ? `<div class="fun-fact"><strong>Dato curioso:</strong> ${e.fact}</div>` : ''}
-      ${trackActions(e.id, 'Explorada', 'Marcar como explorada')}
+      ${myNoteBlock(e.id)}
+      ${trackActions(e.id, 'Explorada', 'Marcar como explorada', 'visita')}
     </div>
   </div>
 `).join('');
