@@ -244,7 +244,11 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
     ![Frijoles charros](https://upload.wikimedia.org/wikipedia/commons/3/34/Frijoles_charros_10293.jpg)
     Frijoles de la olla con tocino, chorizo y chile, acompañamiento típico de la carne asada. Su nombre hace referencia a los charros del norte de México, jinetes y trabajadores de rancho que preparaban este guiso en ollas grandes durante largas jornadas de trabajo en el campo, usando ingredientes disponibles como frijol, tocino y embutidos. Hoy es el acompañamiento casi obligado de cualquier carne asada en Monterrey, reforzando el vínculo entre la gastronomía y la vida social del área metropolitana.
 
-### Bebidas y preparaciones tradicionales
+14. **Capirotada**
+    ![Capirotada](https://upload.wikimedia.org/wikipedia/commons/3/3f/Capirotada_in_Mexican_pottery.jpg)
+    Postre a base de pan, piloncillo, frutos secos y queso, tradicional de temporada. Tiene origen en recetas coloniales de aprovechamiento de pan duro, y se prepara tradicionalmente durante la Cuaresma como parte de las costumbres católicas mexicanas, ya que sustituye a postres con ingredientes prohibidos en esa temporada litúrgica. Cada familia regiomontana suele tener su propia variante de la receta, con distintas combinaciones de frutos secos, pasas y quesos.
+
+### Bebidas tradicionales
 
 1. **Tecate Light**
    ![Tecate Light](https://upload.wikimedia.org/wikipedia/commons/2/2b/Cerveza_tecate.jpg)
@@ -270,9 +274,9 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
    ![Topo Chico](https://upload.wikimedia.org/wikipedia/commons/0/04/24_case_of_Topo_Chico.jpg)
    Agua mineral embotellada originaria de Monterrey, símbolo local reconocido internacionalmente. Se embotella desde 1895 con agua proveniente de manantiales naturales del Cerro del Topo Chico, al norte de la ciudad, lo que la convierte en una de las marcas de agua mineral más antiguas de América Latina en producción continua. Hoy se exporta a Estados Unidos y otros países, y es frecuentemente citada como una de las exportaciones culturales más reconocibles de Monterrey junto con el cabrito y la industria cervecera.
 
-7. **Capirotada**
-   ![Capirotada](https://upload.wikimedia.org/wikipedia/commons/3/3f/Capirotada_in_Mexican_pottery.jpg)
-   Postre a base de pan, piloncillo, frutos secos y queso, tradicional de temporada. Tiene origen en recetas coloniales de aprovechamiento de pan duro, y se prepara tradicionalmente durante la Cuaresma como parte de las costumbres católicas mexicanas, ya que sustituye a postres con ingredientes prohibidos en esa temporada litúrgica. Cada familia regiomontana suele tener su propia variante de la receta, con distintas combinaciones de frutos secos, pasas y quesos.
+7. **Tepache**
+   ![Tepache](https://upload.wikimedia.org/wikipedia/commons/4/40/Tepache.jpg)
+   Bebida fermentada de cáscara y pulpa de piña, endulzada con piloncillo, de origen prehispánico. Su nombre proviene del náhuatl "tepiātl" ("bebida de maíz"), y tradicionalmente se deja fermentar durante algunos días en un recipiente de barro antes de servirse bien frío. Es una bebida popular en puestos callejeros y reuniones familiares del norte de México, y forma parte de la tradición de bebidas fermentadas artesanales heredada de la época prehispánica.
 
 ---
 
