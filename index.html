@@ -358,10 +358,21 @@
   .credits-list { list-style: none; padding: 0; }
   .credits-list li {
     background: var(--bg-alt); border: 1px solid var(--card-border); border-radius: 8px;
-    padding: 12px 16px; margin-bottom: 10px; font-size: 0.92em; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    padding: 12px 16px; margin-bottom: 10px; font-size: 0.92em; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
   }
   .credits-list li { border-left: 3px solid var(--theme); }
   .credits-list .role { color: var(--muted); font-size: 0.85em; }
+  .credits-list .matricula { color: var(--muted); font-size: 0.78em; font-weight: 400; }
+  .credits-list .member { display: flex; align-items: center; gap: 12px; }
+  .credits-list .avatar {
+    width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+    border: 2px solid var(--theme);
+  }
+  .credits-list .avatar-placeholder {
+    width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+    background: var(--theme); color: #fff; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.9em; border: 2px solid var(--theme-dark);
+  }
   .references-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -686,11 +697,11 @@ const empresas = [
 ];
 
 const equipo = [
-  { nombre: "Pablo Cortes Solis", rol: "Ficha 1 (Nuevo León Turismo) y ficha 5 (SECTUR federal) · Listado de atractivos turísticos" },
-  { nombre: "Omar Israel Enriquez Mendez", rol: "Ficha 2 (Parque Fundidora) · Listado de platillos y tradiciones · Entrevista a comerciante local" },
-  { nombre: "Pablo Eduardo Galván Galván", rol: "Ficha 3 (Museo del Acero Horno3) · Diseño de la ruta turística de 2 días" },
-  { nombre: "Jorge Angel Garcia Alvarado", rol: "Ficha 4 (artículo académico) · Justificación de la región · Armado del sitio y portada" },
-  { nombre: "Ricardo Eugenio García Rodríguez", rol: "Revisión de referencias APA · Plan de trabajo y cronograma · Revisión final" },
+  { nombre: "Pablo Cortes Solis", rol: "Ficha 1 (Nuevo León Turismo) y ficha 5 (SECTUR federal) · Listado de atractivos turísticos", matricula: "1796503 · IMA · 7.º semestre" },
+  { nombre: "Omar Israel Enriquez Mendez", rol: "Ficha 2 (Parque Fundidora) · Listado de platillos y tradiciones · Entrevista a comerciante local", matricula: "2132331 · IMC · 8.º semestre", foto: "equipo/omar-israel-enriquez-mendez.jpeg" },
+  { nombre: "Pablo Eduardo Galván Galván", rol: "Ficha 3 (Museo del Acero Horno3) · Diseño de la ruta turística de 2 días", matricula: "1998042 · IMC · 7.º semestre", foto: "equipo/pablo-eduardo-galvan-galvan.jpeg" },
+  { nombre: "Jorge Angel Garcia Alvarado", rol: "Ficha 4 (artículo académico) · Justificación de la región · Armado del sitio y portada", matricula: "2068683 · IMC · 7.º semestre", foto: "equipo/jorge-angel-garcia-alvarado.jpg" },
+  { nombre: "Ricardo Eugenio García Rodríguez", rol: "Revisión de referencias APA · Plan de trabajo y cronograma · Revisión final", matricula: "2115151 · IAE · 7.º semestre", foto: "equipo/ricardo-eugenio-garcia-rodriguez.jpeg" },
 ];
 
 const referencias = [
@@ -984,9 +995,20 @@ document.getElementById('lista-referencias').innerHTML = referencias.map((r, i) 
   <div class="reference-card"><span class="ref-num">${i + 1}</span><span>${r.text} <a href="${r.url}" target="_blank" rel="noopener">${r.url}</a></span></div>
 `).join('');
 
-document.getElementById('lista-creditos').innerHTML = equipo.map(m => `
-  <li><span>${m.nombre}</span><span class="role">${m.rol}</span></li>
-`).join('');
+document.getElementById('lista-creditos').innerHTML = equipo.map(m => {
+  const iniciales = m.nombre.split(' ').filter(Boolean).slice(0, 2).map(p => p[0]).join('').toUpperCase();
+  const avatar = m.foto
+    ? `<img class="avatar" src="${m.foto}" alt="${m.nombre}">`
+    : `<span class="avatar-placeholder">${iniciales}</span>`;
+  const nombreBlock = m.matricula
+    ? `<span>${m.nombre}<br><span class="matricula">${m.matricula}</span></span>`
+    : `<span>${m.nombre}</span>`;
+  return `
+  <li>
+    <span class="member">${avatar}${nombreBlock}</span>
+    <span class="role">${m.rol}</span>
+  </li>`;
+}).join('');
 
 updateProgress();
 
