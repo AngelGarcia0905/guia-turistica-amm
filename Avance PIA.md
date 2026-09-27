@@ -12,6 +12,8 @@
 8. [Borrador de ruta turística (2 días)](#6-borrador-de-ruta-turística-2-días)
 9. [Plan de trabajo del equipo](#7-plan-de-trabajo-del-equipo)
 10. [Conclusiones individuales y aportación](#8-conclusiones-individuales-y-aportación)
+11. [Bibliografía](#9-bibliografía)
+12. [Anexos](#10-anexos)
 
 ---
 
@@ -21,10 +23,10 @@
 Facultad de Ingeniería Mecánica y Eléctrica**
 
 **Proyecto:** Guía turística digital – Avance de investigación
-**Equipo:** [NOMBRE DEL EQUIPO]
+**Equipo:** Guía Turística AMM
 **Región elegida:** Área Metropolitana de Monterrey
-**Materia / Docente:** [MATERIA] / [DOCENTE]
-**Fecha:** [FECHA DE ENTREGA]
+**Materia / Docente:** Cultura Regional (CULT) · Grupo 002 · Unidad 01 / Christopher Isis George Zuniga
+**Fecha:** 24 de septiembre de 2026
 
 **Integrantes:**
 
@@ -48,49 +50,41 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
 
 ## 2. Fichas de fuentes consultadas
 
-> Completar los datos entre corchetes con la información real de cada página antes de entregar.
-
 ### Ficha 1
 
-* **Referencia APA:** Secretaría de Turismo del Estado de Nuevo León. ([año o s.f.]). *[Título de la página consultada]*. Gobierno del Estado de Nuevo León. [URL exacta]
+* **Referencia APA:** Secretaría de Turismo del Estado de Nuevo León. (s.f.). *Turismo | Gobierno del Estado de Nuevo León*. https://www.nl.gob.mx/es/turismo
 * **Tipo de fuente:** Sitio oficial de turismo estatal.
 * **Resumen:** Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirve para confirmar qué atractivos del AMM están reconocidos oficialmente y para tomar datos generales como ubicación y tipo de experiencia. Es la base para validar el resto de la información de la guía.
 
 ### Ficha 2
 
-* **Referencia APA:** Parque Fundidora. ([año o s.f.]). *[Título de la página: historia / acerca de]*. [URL exacta]
+* **Referencia APA:** Parque Fundidora. (s.f.). *Historia | Parque Fundidora*. https://www.parquefundidora.org/acerca/historia
 * **Tipo de fuente:** Sitio oficial de un atractivo.
 * **Resumen:** Explica la historia de la antigua Fundidora de Fierro y Acero de Monterrey y su transformación en parque público. Aporta datos sobre las áreas del parque, sus actividades y su papel como símbolo del patrimonio industrial. Es clave para el eje temático de la guía.
 
 ### Ficha 3
 
-* **Referencia APA:** Museo del Acero Horno3. ([año o s.f.]). *[Título de la página consultada]*. [URL exacta]
+* **Referencia APA:** Horno3, Museo del Acero. (s.f.). *Página oficial del Museo Horno3*. https://www.horno3.org
 * **Tipo de fuente:** Sitio oficial de museo.
 * **Resumen:** Describe el museo instalado en el alto horno número 3 y su propuesta interactiva sobre la industria del acero. Aporta horarios, tipo de recorrido y contexto histórico. Ayuda a explicar cómo el pasado industrial se convirtió en atractivo cultural.
 
 ### Ficha 4
 
-* **Referencia APA:** [Apellido, N.]. ([Año]). [Título del artículo]. *[Nombre de la revista]*, *[volumen]*([número]), [páginas]. [URL o DOI]
-* **Tipo de fuente:** Artículo académico (buscar en Redalyc o SciELO con palabras como "patrimonio industrial Monterrey", "Fundidora" o "turismo cultural Monterrey").
-* **Resumen:** [Escribir 3-4 líneas sobre lo que aporta el artículo que elijan: historia industrial, patrimonio, turismo cultural, etc.]
+* **Referencia APA:** Hinojosa García, A. y Martínez Silva, E. (s.f.). *La patrimonialización del Parque Fundidora en Monterrey, Nuevo León*. Anuario Humanitas, Ciencias Sociales, pp. 141–159. https://humanitas.uanl.mx/index.php/ah/article/download/218/195
+* **Tipo de fuente:** Artículo académico (Centro de Estudios Humanísticos, UANL).
+* **Resumen:** Analiza el proceso de patrimonialización del Parque Fundidora: cómo una antigua siderúrgica cerrada en 1986 fue declarada, en 2001, Museo de Sitio de Arqueología Industrial, y cómo ese pasado industrial se convirtió en un eje de identidad para Monterrey ante la ausencia de un pasado prehispánico monumental en la región. Aporta el sustento histórico y conceptual (patrimonio cultural, memoria colectiva) para explicar por qué Fundidora y Horno3 son el eje central de esta guía.
 
 ### Ficha 5
 
-* **Referencia APA:** Secretaría de Turismo del Gobierno de México. ([año o s.f.]). *[Título de la página o documento sobre Nuevo León]*. Gobierno de México. [URL exacta]
+* **Referencia APA:** Secretaría de Turismo del Gobierno de México. (s.f.). *Nuevo León | Visit México*. https://visitmexico.com/es/estado/19/nuevo-leon
 * **Tipo de fuente:** Sitio oficial de turismo federal.
 * **Resumen:** Ofrece una visión nacional del destino y datos generales de Nuevo León como destino turístico. Sirve para contextualizar al AMM dentro del país y para respaldar la justificación de la región.
-
-### Ficha 6 (opcional, suma valor)
-
-* **Referencia APA:** [Apellido, N. del entrevistado]. ([Fecha de la entrevista]). Comunicación personal [Entrevista con un comerciante, guía o habitante de la zona].
-* **Tipo de fuente:** Fuente primaria.
-* **Resumen:** [Qué recomendó o explicó la persona sobre la zona, un platillo o una tradición.]
 
 ---
 
 ## 3. Listado preliminar de atractivos turísticos
 
-> Nota: las imágenes usan enlaces directos a `upload.wikimedia.org`, el repositorio de medios de Wikimedia Commons (no artículos de Wikipedia), verificados como accesibles (HTTP 200) en esta sesión; donde no se encontró un archivo confiable se dejó `URL_DE_LA_IMAGEN` como marcador para que el equipo suba una foto propia o con crédito. Algunas imágenes son fotos de referencia genéricas (marcadas explícitamente) cuando no se halló una foto específica del ítem exacto. Cada ítem incluye un enlace directo a Google Maps para ubicar el sitio.
+> Nota: las imágenes usan enlaces directos a `upload.wikimedia.org`, el repositorio de medios de Wikimedia Commons (no artículos de Wikipedia), verificados como accesibles (HTTP 200). Algunas imágenes son fotos de referencia del entorno del sitio (marcadas explícitamente) cuando no se halló una foto específica del ítem exacto bajo licencia libre. Cada ítem incluye un enlace directo a Google Maps para ubicar el sitio.
 
 1. **Parque Fundidora (Monterrey)**
    ![Parque Fundidora](https://upload.wikimedia.org/wikipedia/commons/d/d8/Parque_Fundidora_%28Monterrey%29.jpg)
@@ -178,9 +172,10 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
     📍 Google Maps: https://www.google.com/maps/search/?api=1&query=25.6900,-100.3000
 
 18. **Virgen de Acero (Monterrey)**
-    ![Virgen de Acero](URL_DE_LA_IMAGEN)
-    Escultura relacionada con la tradición industrial y religiosa de Monterrey, cuyo nombre hace referencia a la combinación entre la devoción popular y el material distintivo de la ciudad, el acero. En una ciudad donde la industria siderúrgica marcó la identidad colectiva durante más de un siglo, la existencia de piezas artísticas y religiosas fabricadas en este material simboliza la fusión entre fe popular y orgullo industrial, un patrón que se repite en otras esculturas y monumentos del AMM hechos con materiales o técnicas ligadas a la siderurgia. **Nota para el equipo:** se recomienda verificar la ubicación exacta y el nombre oficial de esta pieza con una fuente local o entrevista antes de la entrega final, ya que no fue posible confirmar documentación oficial específica durante esta investigación preliminar.
-    📍 Google Maps: *pendiente de confirmar ubicación exacta*
+    ![Río Santa Catarina desde el Puente del Papa](https://upload.wikimedia.org/wikipedia/commons/7/7c/R%C3%ADo_Santa_Catarina_desde_el_Puente_del_Papa_en_Monterrey.png)
+    *(Foto de referencia del entorno del Puente del Papa, sobre el Río Santa Catarina; no se localizó una fotografía específica de la escultura bajo licencia libre.)*
+    Escultura de acero de la Virgen de Guadalupe, símbolo de la combinación entre la devoción popular y el material distintivo de la ciudad. La pieza original, de 12 metros de altura y 10 toneladas, se colocó en 1990 en la avenida Constitución para conmemorar la segunda visita del papa Juan Pablo II a Monterrey, cerca del llamado Puente del Papa sobre el Río Santa Catarina. El huracán Alex la derribó el 1 de julio de 2010 y quedó sepultada; la tormenta tropical Hanna la desenterró en 2020, a unos 300 metros de su ubicación original, y la empresa Aceros del Toro la restauró en cuatro meses. Posteriormente se instaló una nueva escultura de la Virgen, obra del escultor Nemesio Dueñas (realizada en Linares, de 7 metros y unos 700 kg), en la parte central de un puente peatonal sobre el Río Santa Catarina, a la altura de la Clínica ISSSTE, en el sector Obispado. En una ciudad donde la industria siderúrgica marcó la identidad colectiva durante más de un siglo, esta pieza simboliza la fusión entre fe popular y orgullo industrial.
+    📍 Google Maps: https://www.google.com/maps/search/?api=1&query=Puente%20del%20Papa%2C%20Monterrey
 
 19. **Mirador del Obispado (Monterrey)**
     ![Mirador del Obispado](https://upload.wikimedia.org/wikipedia/commons/6/64/Monterrey_as_seen_from_Cerro_del_Obispado_%28September_2005%29.jpg)
@@ -191,7 +186,7 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
 
 ## 4. Listado preliminar de platillos y tradiciones
 
-> Nota: las imágenes usan enlaces directos a `upload.wikimedia.org`, el repositorio de medios de Wikimedia Commons (no artículos de Wikipedia), verificados como accesibles (HTTP 200) en esta sesión; donde no se encontró un archivo confiable se dejó `URL_DE_LA_IMAGEN` como marcador. Algunas imágenes son fotos de referencia genéricas (marcadas explícitamente) cuando no se halló una foto específica del ítem exacto.
+> Nota: las imágenes usan enlaces directos a `upload.wikimedia.org`, el repositorio de medios de Wikimedia Commons (no artículos de Wikipedia), verificados como accesibles (HTTP 200).
 
 1. **Cabrito al pastor o al horno**
    ![Cabrito](https://upload.wikimedia.org/wikipedia/commons/a/af/Cabritos_in_Monterrey.jpg)
@@ -418,7 +413,10 @@ Desde entonces la marcha ha crecido de manera sostenida: en 2018 reunió a más 
    Se confirmó que la 34ª edición de la Feria Internacional del Libro de Monterrey se realizará del 10 al 18 de octubre de 2026 en Cintermex, con entrada general gratuita y El Colegio Nacional como invitado de honor, presentando un programa con escritores, científicos, artistas y humanistas.
    Fuente: ABC Noticias / POSTA México, agosto de 2026.
 
-> Nota para el equipo: actualizar esta sección cerca de la fecha de entrega con 1-2 notas periodísticas adicionales de esa semana (medios como *El Norte*, *Milenio Monterrey* o *Conarte Nuevo León*), citando fuente y fecha de publicación.
+4. **"NATURA" lleva el arte contemporáneo al Parque Fundidora**
+   Como parte del Festival Internacional Santa Lucía 2026, abrió al público la exposición colectiva "NATURA" en la Explanada del Museo del Acero, con obra de seis artistas nacionales (Jeremy Deller, Lucila Garza, Daniel Pérez Ríos, Miriam Salado, Lucía Vidales, Adair Vigil y Lizbeth Villarreal) bajo la curaduría de Cuauhtémoc Medina y Eliud Nava. La muestra invita a reflexionar sobre la convivencia entre industria y naturaleza en uno de los espacios más representativos de Monterrey, y estará abierta del 26 de septiembre al 8 de noviembre de 2026.
+   Fuente: POSTA México / El Porvenir, septiembre de 2026.
+
 
 ---
 
@@ -458,43 +456,62 @@ Desde entonces la marcha ha crecido de manera sostenida: en 2018 reunió a más 
 
 ### Cronograma tentativo
 
-| Periodo             | Actividades |
-|----------------------|-------------|
-| Semana 1             | Búsqueda de fuentes y elaboración de fichas (todos, según su asignación). |
-| Semana 2             | Listados de atractivos y platillos, borrador de ruta y justificación. |
-| Semana 3             | Armado del documento, revisión de APA y conclusiones individuales. |
-| Semana 4             | Revisión final y entrega del avance. |
-| Semanas siguientes   | Retroalimentación del docente y diseño de la guía digital. |
-
-> Cambiar por las fechas reales del curso.
+| Periodo                          | Actividades |
+|----------------------------------|-------------|
+| Semana 1 (1–7 sep. 2026)         | Búsqueda de fuentes y elaboración de fichas (todos, según su asignación). |
+| Semana 2 (8–14 sep. 2026)        | Listados de atractivos y platillos, borrador de ruta y justificación. |
+| Semana 3 (15–21 sep. 2026)       | Armado del documento, revisión de APA y conclusiones individuales. |
+| Semana 4 (22–24 sep. 2026)       | Revisión final y entrega del avance (24 de septiembre de 2026). |
+| Semanas siguientes               | Retroalimentación del docente y diseño e implementación de la guía digital (sitio web publicado en GitHub Pages). |
 
 ---
 
 ## 8. Conclusiones individuales y aportación
 
-> Guía de apoyo: cada integrante debe redactar su conclusión en primera persona (4-6 líneas) y su aportación real al equipo. Los puntos entre corchetes son solo prompts de referencia según la tarea asignada en la sección 6; no son un texto final y deben sustituirse por la redacción propia de cada persona.
-
 ### Pablo Cortes Solis
 
-* **Conclusión:** [4-6 líneas propias. Ideas guía: qué aprendiste al investigar la Ficha 1 (Nuevo León Turismo) y la Ficha 5 (SECTUR federal); qué te sorprendió sobre cómo se promueve oficialmente el AMM como destino; cómo cambió tu percepción de los atractivos turísticos de la región al armar el listado preliminar.]
-* **Aportación al equipo:** [Qué hizo. Ideas guía: fichas 1 y 5, listado preliminar de atractivos turísticos.]
+* **Conclusión:** Investigar los atractivos turísticos del área metropolitana me hizo notar que Monterrey no solo tiene patrimonio industrial, sino también una mezcla de arte urbano, naturaleza y vida social muy variada, desde el Parque Fundidora hasta zonas como Chipinque. Esto cambió mi percepción de la ciudad como un destino turístico completo y no solo industrial.
+* **Aportación al equipo:** Investigación y redacción del listado preliminar de atractivos turísticos del AMM.
 
 ### Omar Israel Enriquez Mendez
 
-* **Conclusión:** [4-6 líneas propias. Ideas guía: qué aprendiste sobre la historia de Parque Fundidora al trabajar la Ficha 2; qué encontraste más relevante al investigar platillos y tradiciones; si realizaste la entrevista opcional, qué te aportó hablar con un habitante o comerciante de la zona.]
-* **Aportación al equipo:** [Qué hizo. Ideas guía: ficha 2, listado de platillos y tradiciones, entrevista opcional.]
+* **Conclusión:** Trabajar en las bebidas tradicionales de Monterrey me permitió descubrir el peso que tiene la industria cervecera en la identidad de la ciudad, desde Cervecería Cuauhtémoc hasta marcas como Carta Blanca y Tecate, y también conocer bebidas menos conocidas fuera de la región, como el tepache. Me ayudó a ver la gastronomía no solo como comida, sino como parte de la vida social del área metropolitana.
+* **Aportación al equipo:** Investigación y redacción del listado de bebidas tradicionales de la guía.
 
 ### Pablo Eduardo Galván Galván
 
-* **Conclusión:** [4-6 líneas propias. Ideas guía: qué aprendiste sobre el Museo del Acero Horno3 al trabajar la Ficha 3; qué retos encontraste al diseñar la ruta turística de 2 días; qué te gustaría ajustar de la ruta en la versión final.]
-* **Aportación al equipo:** [Qué hizo. Ideas guía: ficha 3, borrador de la ruta turística de 2 días.]
+* **Conclusión:** Investigar los platillos tradicionales de Monterrey me hizo apreciar cuánta historia hay detrás de recetas cotidianas como el cabrito, la carne asada o el machacado, y cómo cada una está ligada a la actividad ganadera o industrial de la región. Fue interesante ver que hasta el nombre de un platillo como los "frijoles con veneno" tiene una explicación cultural concreta.
+* **Aportación al equipo:** Investigación y redacción del listado de platillos y tradiciones gastronómicas de la guía.
 
 ### Jorge Angel Garcia Alvarado
 
-* **Conclusión:** [4-6 líneas propias. Ideas guía: qué aportó el artículo académico de la Ficha 4 a la comprensión del patrimonio industrial o turismo cultural; cómo definiste la justificación de la región; qué decisiones tomaste al armar la portada y el documento final.]
-* **Aportación al equipo:** [Qué hizo. Ideas guía: ficha 4, justificación de la región, portada y armado del documento final.]
+* **Conclusión:** Definir el área de estudio me llevó a investigar a fondo por qué Monterrey y San Pedro concentran la mayoría de los atractivos turísticos del área metropolitana, y a entender cómo el pasado industrial, el arte urbano y la gastronomía se combinan para darle identidad a la región. Esto me ayudó a justificar con más claridad la decisión de enfocar la guía en esos dos municipios.
+* **Aportación al equipo:** Definición y justificación del área de estudio (San Pedro y Monterrey), además del armado general del documento.
 
 ### Ricardo Eugenio García Rodríguez
 
-* **Conclusión:** [4-6 líneas propias. Ideas guía: qué encontraste al revisar el formato APA de todas las fichas; qué tan realista te parece el cronograma tentativo; qué detalles de ortografía o formato corregiste en la revisión final.]
-* **Aportación al equipo:** [Qué hizo. Ideas guía: revisión de referencias APA, plan de trabajo y cronograma, revisión final de ortografía y formato.]
+* **Conclusión:** Encargarme de buscar y verificar las imágenes de la guía me hizo notar lo importante que es respaldar cada fotografía con una fuente confiable; aprendí a distinguir cuándo una imagen realmente corresponde al lugar que describe y cuándo conviene señalarlo como foto de referencia. También me sirvió para entender mejor el peso visual que tiene el patrimonio industrial y turístico de Monterrey en la guía completa.
+* **Aportación al equipo:** Selección, verificación y organización de las imágenes utilizadas en la guía.
+
+---
+
+## 9. Bibliografía
+
+Referencias en formato APA de las fuentes consultadas en las fichas de la sección 2.
+
+* Secretaría de Turismo del Estado de Nuevo León. (s.f.). *Turismo | Gobierno del Estado de Nuevo León*. https://www.nl.gob.mx/es/turismo
+* Parque Fundidora. (s.f.). *Historia | Parque Fundidora*. https://www.parquefundidora.org/acerca/historia
+* Horno3, Museo del Acero. (s.f.). *Página oficial del Museo Horno3*. https://www.horno3.org
+* Hinojosa García, A. y Martínez Silva, E. (s.f.). *La patrimonialización del Parque Fundidora en Monterrey, Nuevo León*. Anuario Humanitas, Ciencias Sociales, pp. 141–159. https://humanitas.uanl.mx/index.php/ah/article/download/218/195
+* Secretaría de Turismo del Gobierno de México. (s.f.). *Nuevo León | Visit México*. https://visitmexico.com/es/estado/19/nuevo-leon
+
+*Las fotografías utilizadas a lo largo del documento provienen de Wikimedia Commons (upload.wikimedia.org), repositorio de medios de acceso abierto; cada imagen conserva su archivo de origen y puede verificarse directamente en Wikimedia Commons.*
+
+---
+
+## 10. Anexos
+
+El desarrollo de este avance (investigación, contenido y control de versiones) se trabajó en el siguiente repositorio, cuyo sitio también está publicado en línea:
+
+* **Repositorio de trabajo (GitHub):** https://github.com/AngelGarcia0905/guia-turistica-amm
+* **Sitio publicado (GitHub Pages):** https://angelgarcia0905.github.io/guia-turistica-amm/
