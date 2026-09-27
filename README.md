@@ -5,7 +5,7 @@ Guía turística digital interactiva del Área Metropolitana de Monterrey, Nuevo
 
 | # | Foto | Nombre | Matrícula | Carrera | Semestre |
 |---|------|--------|-----------|---------|----------|
-| 1 | — | Pablo Cortes Solis | 1796503 | IMA | 7.º |
+| 1 | <img src="equipo/pablo-cortes-solis.jpeg" width="80" alt="Pablo Cortes Solis"> | Pablo Cortes Solis | 1796503 | IMA | 7.º |
 | 2 | <img src="equipo/omar-israel-enriquez-mendez.jpeg" width="80" alt="Omar Israel Enriquez Mendez"> | Omar Israel Enriquez Mendez | 2132331 | IMC | 8.º |
 | 3 | <img src="equipo/pablo-eduardo-galvan-galvan.jpeg" width="80" alt="Pablo Eduardo Galván Galván"> | Pablo Eduardo Galván Galván | 1998042 | IMC | 7.º |
 | 4 | <img src="equipo/jorge-angel-garcia-alvarado.jpg" width="80" alt="Jorge Ángel García Alvarado"> | Jorge Angel Garcia Alvarado | 2068683 | IMC | 7.º |
