@@ -8,9 +8,10 @@
 4. [Listado preliminar de atractivos turísticos](#3-listado-preliminar-de-atractivos-turísticos)
 5. [Listado preliminar de platillos y tradiciones](#4-listado-preliminar-de-platillos-y-tradiciones)
 6. [Empresas que levantaron a Monterrey o representativas](#empresas-que-levantaron-a-monterrey-o-representativas)
-7. [Borrador de ruta turística (2 días)](#5-borrador-de-ruta-turística-2-días)
-8. [Plan de trabajo del equipo](#6-plan-de-trabajo-del-equipo)
-9. [Conclusiones individuales y aportación](#7-conclusiones-individuales-y-aportación)
+7. [Manifestaciones culturales y construcción de identidad](#5-manifestaciones-culturales-y-construcción-de-identidad)
+8. [Borrador de ruta turística (2 días)](#6-borrador-de-ruta-turística-2-días)
+9. [Plan de trabajo del equipo](#7-plan-de-trabajo-del-equipo)
+10. [Conclusiones individuales y aportación](#8-conclusiones-individuales-y-aportación)
 
 ---
 
@@ -294,7 +295,66 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
 
 ---
 
-## 5. Borrador de ruta turística (2 días)
+## 5. Manifestaciones culturales y construcción de identidad
+
+### Leyendas
+
+1. **La leyenda del Cerro de la Silla**
+   ![Cerro de la Silla](https://upload.wikimedia.org/wikipedia/commons/a/a9/Cerro_de_la_Silla%2C_Monterrey%2C_N.L.jpg)
+   El Cerro de la Silla, símbolo natural de Monterrey, debe su nombre a su silueta, que recuerda una montura de caballo vista desde la ciudad. Entre las tradiciones orales regiomontanas circula la leyenda de que la formación representa a un jinete o guerrero convertido en piedra por los dioses como castigo o como protector eterno de la ciudad, vigilando el valle desde sus más de 1,800 msnm. La leyenda se transmite generacionalmente entre familias regiomontanas y es citada con frecuencia en materiales turísticos y escolares como parte de la identidad simbólica de la ciudad.
+
+2. **La leyenda del Callejón del Diablo (Barrio Antiguo)**
+   ![Barrio Antiguo](https://upload.wikimedia.org/wikipedia/commons/9/91/Monterrey_Barrio_Antiguo.JPG)
+   En el Barrio Antiguo, la zona de casonas coloniales y porfirianas del centro de Monterrey, se cuenta la historia de un callejón donde por las noches se aparecía una figura oscura que asustaba a los transeúntes que caminaban solos después de cierta hora. La leyenda, típica de barrios antiguos mexicanos con arquitectura del siglo XIX, se ha usado en recorridos nocturnos y actividades culturales del barrio como forma de revivir el imaginario popular ligado a sus calles empedradas y fachadas históricas.
+
+3. **La leyenda de "La Carreta Fantasma" del Camino Real**
+   Ligada a las antiguas rutas de comercio del noreste novohispano que conectaban Monterrey con Saltillo y el sur de Texas, esta leyenda narra la aparición de una carreta tirada por mulas fantasmales que recorre de noche los antiguos caminos rurales, como recordatorio de los peligros que enfrentaban los comerciantes y arrieros coloniales ante asaltantes y el clima árido de la región. Es una leyenda típica del folclore ranchero del noreste de México, transmitida oralmente en comunidades rurales cercanas al AMM.
+
+### Música regional
+
+![Acordeonista](https://upload.wikimedia.org/wikipedia/commons/6/62/Acordeonista_Mexicano.jpg)
+
+La música regional del noreste de México, y en particular del AMM, está dominada por la **música norteña**, un género nacido de la fusión entre las polkas y corridos europeos —traídos por inmigrantes alemanes y checos que se asentaron en el norte de México y Texas en el siglo XIX— y las tradiciones rancheras mexicanas. Sus instrumentos característicos son el acordeón diatónico y el bajo sexto, y sus temas suelen narrar historias de vida rural, amor, migración y, en variantes más recientes, el llamado "narcocorrido". Grupos originarios o con fuerte arraigo en Nuevo León han popularizado el género a nivel nacional e internacional. Además de la música norteña, el AMM cuenta con una escena de **rock regiomontano** activa desde los años ochenta y noventa (con bandas como Plastilina Mosh y Control Machete, surgidas en Monterrey), lo que refleja una identidad musical dual: por un lado rural y tradicional, por otro urbana y contemporánea, ambas coexistiendo en la vida social de la ciudad.
+
+### Religión
+
+![Catedral de Monterrey](https://upload.wikimedia.org/wikipedia/commons/0/05/Monterrey_-_Catedral_de_la_Inmaculada_Concepci%C3%B3n_-_4.jpg)
+
+La religión predominante en el AMM es el catolicismo, heredado de la evangelización novohispana desde la fundación de Monterrey en 1596. La **Catedral Metropolitana de Nuestra Señora de Monterrey**, ubicada en el centro histórico junto a la Macroplaza, es la sede de la Arquidiócesis de Monterrey y uno de los edificios religiosos más antiguos de la ciudad, con elementos barrocos y neoclásicos producto de sucesivas remodelaciones desde el siglo XVIII. La religiosidad popular regiomontana se expresa también en celebraciones como las peregrinaciones a la Virgen de Guadalupe cada diciembre y en fiestas patronales de los municipios del AMM, que combinan procesiones, ferias y actividades familiares. En las últimas décadas, además, el crecimiento de iglesias cristianas no católicas (evangélicas y protestantes) ha diversificado el mapa religioso de la ciudad, reflejando cambios sociales más amplios del norte de México.
+
+### Literatura
+
+![Alfonso Reyes](https://upload.wikimedia.org/wikipedia/commons/0/03/Alfonso_Reyes_Ochoa.jpg)
+
+Monterrey es cuna de **Alfonso Reyes** (1889–1959), uno de los escritores, ensayistas y diplomáticos más influyentes de la literatura mexicana del siglo XX, considerado una de las figuras centrales del humanismo latinoamericano; en su honor existe la Capilla Alfonsina, su antigua biblioteca personal convertida en centro de estudios literarios en Ciudad de México, y múltiples instituciones culturales regiomontanas llevan su nombre. La ciudad también es sede de la **Feria Internacional del Libro de Monterrey (FIL Monterrey)**, uno de los encuentros literarios más relevantes del norte del país, que reúne anualmente a editoriales, escritores nacionales e internacionales y actividades de fomento a la lectura. A nivel académico, la UANL mantiene una tradición de publicaciones y revistas literarias regionales que documentan la producción de autores del noreste mexicano.
+
+### Vestido
+
+![Traje de charro](https://upload.wikimedia.org/wikipedia/commons/6/6e/Charro_Mexicano_%281828%29.jpg)
+
+La vestimenta tradicional asociada al norte de México combina la herencia de la charrería —traje de charro, sombrero de ala ancha, botas y cinturón piteado, usado en eventos formales, charreadas y fiestas patrias— con el atuendo ranchero cotidiano derivado de la vida ganadera del noreste: sombrero vaquero, camisa de manga larga, botas de trabajo y hebilla grande, prendas funcionales frente al clima semidesértico y hoy asociadas a la identidad "norteña" en la moda regional. En contextos urbanos y contemporáneos del AMM, esta estética convive con la moda casual influenciada por la cercanía con Estados Unidos, visible en corredores comerciales como Fashion Drive en San Pedro Garza García.
+
+### Fiesta
+
+La vida festiva del AMM combina celebraciones cívico-religiosas con eventos de identidad más reciente. Entre las principales están las **fiestas patronales** de los distintos municipios metropolitanos (cada uno con su santo patrono y feria anual asociada), las celebraciones de **Independencia de México** cada septiembre, con el Grito en la Macroplaza, y las peregrinaciones guadalupanas de diciembre. A esto se suma un calendario de festivales culturales contemporáneos como el **Festival Internacional Santa Lucía** (artes escénicas y musicales en espacios públicos del centro) y la ya mencionada FIL Monterrey, que combinan la tradición popular con una oferta cultural más cosmopolita. La **carne asada de fin de semana**, aunque no es una fiesta cívica, funciona socialmente como el ritual de convivencia más extendido entre familias regiomontanas, al grado de que Nuevo León ha promovido oficialmente el "Día Estatal de la Carne Asada".
+
+### Construcción de identidad
+
+**Identidad indígena.** Antes de la fundación española de Monterrey en 1596, el valle donde hoy se asienta el AMM estaba habitado por grupos nómadas y seminómadas conocidos genéricamente como **coahuiltecos** y por comunidades **huachichiles**, cazadores-recolectores del noreste que fueron progresivamente desplazados o asimilados durante la colonización y las llamadas "guerras chichimecas". Hoy, la presencia indígena en el AMM es sobre todo producto de migración interna reciente: comunidades nahuas, otomíes, mixtecas y de otros pueblos originarios de estados como Veracruz, Oaxaca o San Luis Potosí se han asentado en la zona metropolitana por motivos laborales, manteniendo lenguas, gastronomía y organización comunitaria propias dentro del tejido urbano regiomontano.
+
+**Identidad juvenil.** El **Barrio Antiguo** y el **Paseo Santa Lucía** concentran buena parte de la vida cultural juvenil del AMM: bares, música en vivo, arte urbano y colectivos de muralismo que usan fachadas y espacios públicos como medio de expresión. La escena universitaria —con instituciones como la UANL y el Tecnológico de Monterrey— alimenta también una identidad juvenil ligada a la música (rock regiomontano, escena under), el deporte y movimientos estudiantiles, visibles en eventos culturales dentro y fuera de los campus.
+
+**Identidad étnica.** Además de la migración indígena interna, el AMM tiene una fuerte huella de migración **libanesa y de Medio Oriente** llegada a principios del siglo XX, que introdujo platillos como los tacos de trompo (adaptación local del shawarma) y que hoy forma parte de familias empresariales y profesionales prominentes de la ciudad. También existe presencia histórica de comunidades chinas y de otras nacionalidades asociadas a distintas olas migratorias laborales y comerciales del siglo XX.
+
+**Identidad de género y sexualidad.** Como en otras grandes ciudades mexicanas, el AMM ha visto crecer en las últimas dos décadas espacios y eventos vinculados a la comunidad LGBTQ+, incluida una marcha anual del orgullo en Monterrey y bares y puntos de encuentro concentrados principalmente en el Barrio Antiguo. Estos espacios conviven con una sociedad regiomontana tradicionalmente conservadora, lo que hace de la diversidad sexual un tema activo dentro de la construcción de identidad contemporánea de la ciudad.
+
+### Noticias culturales y sociales
+
+> Nota: esta sección debe actualizarse cerca de la fecha de entrega con 2-3 notas periodísticas recientes (medios como *El Norte*, *Milenio Monterrey* o *Conarte Nuevo León*) sobre agenda cultural del AMM (exposiciones en el MARCO, cartelera de la FIL Monterrey, festivales en Parque Fundidora, etc.), citando fuente y fecha de publicación.
+
+---
+
+## 6. Borrador de ruta turística (2 días)
 
 ### Día 1: Patrimonio industrial y ciudad
 
@@ -314,7 +374,7 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
 
 ---
 
-## 6. Plan de trabajo del equipo
+## 7. Plan de trabajo del equipo
 
 ### Distribución de tareas
 
@@ -342,7 +402,7 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
 
 ---
 
-## 7. Conclusiones individuales y aportación
+## 8. Conclusiones individuales y aportación
 
 > Guía de apoyo: cada integrante debe redactar su conclusión en primera persona (4-6 líneas) y su aportación real al equipo. Los puntos entre corchetes son solo prompts de referencia según la tarea asignada en la sección 6; no son un texto final y deben sustituirse por la redacción propia de cada persona.
 
