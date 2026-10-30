@@ -1,6 +1,10 @@
 # guia-turistica-amm
 Guía turística digital interactiva del Área Metropolitana de Monterrey, Nuevo León. Proyecto de Culura Regional, FIME-UANL.
 
+## Entregable AF3 PIA
+
+**AF3 PIA – Proyecto por región (Guía turística digital): información general y manifestaciones culturales.** El documento de evidencia (`Avance PIA.md` y su versión en Word/PDF) sigue la estructura Portada, Introducción, Desarrollo, Conclusiones individuales y Bibliografía; la ruta turística, el plan de trabajo y las fichas de fuentes están en los anexos. El sitio (`index.html`) incluye los paneles de información general, recetas y tips para el visitante.
+
 ## Equipo
 
 | # | Foto | Nombre | Matrícula | Carrera | Semestre |

@@ -1,19 +1,18 @@
-# Guía turística digital: Avance de investigación
+# AF3 PIA – Proyecto por región (Guía turística digital): información general y manifestaciones culturales
 
 ## Tabla de contenido
 
-1. [Portada](#portada)
-2. [Justificación de la región](#1-justificación-de-la-región)
-3. [Fichas de fuentes consultadas](#2-fichas-de-fuentes-consultadas)
-4. [Listado preliminar de atractivos turísticos](#3-listado-preliminar-de-atractivos-turísticos)
-5. [Listado preliminar de platillos y tradiciones](#4-listado-preliminar-de-platillos-y-tradiciones)
-6. [Empresas que levantaron a Monterrey o representativas](#empresas-que-levantaron-a-monterrey-o-representativas)
-7. [Manifestaciones culturales y construcción de identidad](#5-manifestaciones-culturales-y-construcción-de-identidad)
-8. [Borrador de ruta turística (2 días)](#6-borrador-de-ruta-turística-2-días)
-9. [Plan de trabajo del equipo](#7-plan-de-trabajo-del-equipo)
-10. [Conclusiones individuales y aportación](#8-conclusiones-individuales-y-aportación)
-11. [Bibliografía](#9-bibliografía)
-12. [Anexos](#10-anexos)
+1. [Introducción](#1-introducción)
+2. [Desarrollo](#2-desarrollo)
+   1. [Identificación de la región](#21-identificación-de-la-región)
+   2. [Información general de la región](#22-información-general-de-la-región)
+   3. [Sitios turísticos, arquitectura y tips para el visitante](#23-sitios-turísticos-arquitectura-y-tips-para-el-visitante)
+   4. [Gastronomía, recetas y bebidas](#24-gastronomía-recetas-y-bebidas)
+   5. [Empresas que levantaron a Monterrey](#25-empresas-que-levantaron-a-monterrey)
+   6. [Manifestaciones culturales y construcción de identidad](#26-manifestaciones-culturales-y-construcción-de-identidad)
+3. [Conclusiones individuales y aportación](#3-conclusiones-individuales-y-aportación)
+4. [Bibliografía](#4-bibliografía)
+5. [Anexos](#5-anexos) (fichas de fuentes, ruta turística, plan de trabajo y repositorio)
 
 ---
 
@@ -22,11 +21,12 @@
 **Universidad Autónoma de Nuevo León
 Facultad de Ingeniería Mecánica y Eléctrica**
 
-**Proyecto:** Guía turística digital – Avance de investigación
+**Actividad:** AF3 PIA – Proyecto por región (Guía turística digital)
+**Tema:** Información general y manifestaciones culturales
 **Equipo:** Guía Turística AMM
-**Región elegida:** Área Metropolitana de Monterrey
+**Región asignada:** Nuevo León · **Municipios elegidos:** Monterrey y San Pedro Garza García (Área Metropolitana de Monterrey)
 **Materia / Docente:** Cultura Regional (CULT) · Grupo 002 · Unidad 01 / Christopher Isis George Zuniga
-**Fecha:** 24 de septiembre de 2026
+**Fecha:** octubre de 2026
 
 **Integrantes:**
 
@@ -40,49 +40,63 @@ Facultad de Ingeniería Mecánica y Eléctrica**
 
 ---
 
-## 1. Justificación de la región
+## 1. Introducción
+
+Este documento corresponde a la actividad **AF3 PIA – Proyecto por región**, de la materia Cultura Regional (FIME, UANL). Su propósito es presentar los **datos generales de la región asignada y sus manifestaciones culturales**, mostrando el contexto social en el que se producen, por medio de una **guía turística digital**.
+
+La región asignada por el docente es **Nuevo León**. Dentro de ella, el equipo documenta dos municipios del Área Metropolitana de Monterrey (AMM): **Monterrey**, capital del estado, y **San Pedro Garza García**. Se eligieron porque concentran la mayor parte de los sitios turísticos del área y porque permiten comparar dos realidades sociales distintas: el centro histórico e industrial de Monterrey y el municipio residencial y corporativo de San Pedro.
+
+El desarrollo del documento sigue este orden. Primero se identifica la región y se presenta su información general (ubicación, historia, población, clima, economía y contexto social). Después se recorren las manifestaciones culturales: sitios turísticos y arquitectura, gastronomía con recetas y bebidas, empresas emblemáticas, leyendas, música regional, religión, literatura, vestido, fiestas, construcción de identidad (indígena, étnica, juvenil y de género y sexualidad) y noticias culturales y sociales recientes. Cada apartado incluye imágenes y, cuando aplica, enlaces de ubicación.
+
+La guía se presenta además como un **sitio web interactivo** (ver Anexos), que permite explorar los mismos temas, marcar lugares visitados y poner a prueba lo aprendido con un quiz. Al final se incluyen las conclusiones individuales de cada integrante, su aportación al equipo y la bibliografía en formato APA.
+
+---
+
+## 2. Desarrollo
+
+### 2.1 Identificación de la región
+
+**Región asignada:** el estado de **Nuevo León**, ubicado en el noreste de México. Nuevo León se organiza en 51 municipios y se agrupa en las siguientes zonas geográficas: el área metropolitana de Monterrey, su periferia, el norte, la zona citrícola (Montemorelos, Allende, Linares) y el sur o altiplano (por ejemplo Galeana y Doctor Arroyo).
+
+**Ubicación del área de estudio dentro de la región:** el **Área Metropolitana de Monterrey (AMM)** es la zona urbana central del estado y reúne municipios como Monterrey, San Pedro Garza García, Guadalupe, San Nicolás de los Garza, Santa Catarina, Apodaca, General Escobedo, García y Juárez. De todos ellos, el equipo trabajará con **Monterrey y San Pedro Garza García**.
+
+#### Justificación del área de estudio
 
 El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del noreste de México y reúne municipios como Monterrey, San Pedro Garza García, Guadalupe, San Nicolás de los Garza, Santa Catarina, Apodaca, General Escobedo, García y Juárez. Su relevancia turística y cultural se explica por la combinación de tres elementos. Primero, su pasado industrial, que puso a Monterrey como "la Sultana del Norte" y hoy se conserva en espacios reconvertidos como el Parque Fundidora y el Museo del Acero Horno3. Segundo, una escena de arte urbano y contemporáneo que crece en zonas como el Barrio Antiguo, el Paseo Santa Lucía y el MARCO. Tercero, una identidad gastronómica muy marcada, con el cabrito, el machacado y la carne asada como parte de la vida social regional. Por eso el AMM permite construir una guía digital que muestre una ciudad moderna que no ha perdido sus raíces, con un eje en el patrimonio industrial, el arte urbano, la gastronomía y la vida cultural.
 
-### Nos centraremos solo en San Pedro y Monterrey al ser los lugares que tienden a tener más zonas turísticas
+Nos centraremos en Monterrey y San Pedro Garza García por ser los municipios que concentran más zonas turísticas.
 
----
+### 2.2 Información general de la región
 
-## 2. Fichas de fuentes consultadas
+#### Datos generales
 
-### Ficha 1
+| Dato | Nuevo León | Monterrey | San Pedro Garza García |
+|------|------------|-----------|------------------------|
+| Tipo | Estado del noreste de México | Municipio y capital del estado | Municipio del AMM |
+| Población (Censo 2020, INEGI) | 5,784,442 habitantes (7.º lugar nacional) | 1,142,994 habitantes (19.8 % del estado) | 132,169 habitantes (2.3 % del estado) |
+| Entorno geográfico | Colinda con Tamaulipas, Coahuila, San Luis Potosí, Zacatecas y Texas (EE. UU.) | Valle rodeado por la Sierra Madre Oriental, el Cerro de la Silla y el Cerro del Obispado | Al pie de la Sierra Madre Oriental; incluye el Parque Ecológico Chipinque |
+| Fundación / origen | Antiguo Reino del Nuevo León (siglo XVI) | Fundada el 20 de septiembre de 1596 por Diego de Montemayor | Municipio residencial y corporativo del AMM |
+| Vocación económica | Manufactura, siderurgia, cemento, vidrio, cerveza, servicios financieros y comercio | Industria, servicios, cultura y turismo urbano | Corporativos, comercio de alto nivel, vivienda residencial y ecoturismo |
 
-* **Referencia APA:** Secretaría de Turismo del Estado de Nuevo León. (s.f.). *Turismo | Gobierno del Estado de Nuevo León*. https://www.nl.gob.mx/es/turismo
-* **Tipo de fuente:** Sitio oficial de turismo estatal.
-* **Resumen:** Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirve para confirmar qué atractivos del AMM están reconocidos oficialmente y para tomar datos generales como ubicación y tipo de experiencia. Es la base para validar el resto de la información de la guía.
+> Las cifras de población provienen del Censo de Población y Vivienda 2020 del INEGI (ver bibliografía). Las demás descripciones son de carácter general.
 
-### Ficha 2
+#### Historia breve
 
-* **Referencia APA:** Parque Fundidora. (s.f.). *Historia | Parque Fundidora*. https://www.parquefundidora.org/acerca/historia
-* **Tipo de fuente:** Sitio oficial de un atractivo.
-* **Resumen:** Explica la historia de la antigua Fundidora de Fierro y Acero de Monterrey y su transformación en parque público. Aporta datos sobre las áreas del parque, sus actividades y su papel como símbolo del patrimonio industrial. Es clave para el eje temático de la guía.
+La región estuvo habitada antes de la llegada de los españoles por grupos nómadas y seminómadas de cazadores-recolectores conocidos de forma genérica como coahuiltecos y por comunidades como los huachichiles. La ciudad actual se fundó formalmente el 20 de septiembre de 1596 como la Ciudad Metropolitana de Nuestra Señora de Monterrey. Durante la época colonial funcionó como punto de paso del Camino Real hacia Saltillo y Texas, con economía ganadera y agrícola. A partir de finales del siglo XIX y, sobre todo, en el siglo XX, la llegada del ferrocarril, la Cervecería Cuauhtémoc, la Fundidora de Fierro y Acero (1900) y empresas como Cemex, Vitro y FEMSA convirtieron a Monterrey en el principal polo industrial del norte del país y le dieron el apodo de "la Sultana del Norte".
 
-### Ficha 3
+#### Clima y geografía
 
-* **Referencia APA:** Horno3, Museo del Acero. (s.f.). *Página oficial del Museo Horno3*. https://www.horno3.org
-* **Tipo de fuente:** Sitio oficial de museo.
-* **Resumen:** Describe el museo instalado en el alto horno número 3 y su propuesta interactiva sobre la industria del acero. Aporta horarios, tipo de recorrido y contexto histórico. Ayuda a explicar cómo el pasado industrial se convirtió en atractivo cultural.
+El clima es semiárido y cálido: los veranos son muy calurosos, con temperaturas que con frecuencia superan los 35 °C, y los inviernos son templados con frentes fríos ocasionales. El paisaje urbano está rodeado de montañas de la Sierra Madre Oriental, entre ellas el Cerro de la Silla, símbolo de la ciudad, y las zonas protegidas del Parque Nacional Cumbres de Monterrey, de las que forma parte Chipinque en San Pedro. Por el clima, las mejores épocas para recorrer la ciudad a pie son otoño, invierno y primavera.
 
-### Ficha 4
+#### Contexto social
 
-* **Referencia APA:** Hinojosa García, A. y Martínez Silva, E. (s.f.). *La patrimonialización del Parque Fundidora en Monterrey, Nuevo León*. Anuario Humanitas, Ciencias Sociales, pp. 141–159. https://humanitas.uanl.mx/index.php/ah/article/download/218/195
-* **Tipo de fuente:** Artículo académico (Centro de Estudios Humanísticos, UANL).
-* **Resumen:** Analiza el proceso de patrimonialización del Parque Fundidora: cómo una antigua siderúrgica cerrada en 1986 fue declarada, en 2001, Museo de Sitio de Arqueología Industrial, y cómo ese pasado industrial se convirtió en un eje de identidad para Monterrey ante la ausencia de un pasado prehispánico monumental en la región. Aporta el sustento histórico y conceptual (patrimonio cultural, memoria colectiva) para explicar por qué Fundidora y Horno3 son el eje central de esta guía.
+- **Cultura del trabajo y herencia industrial:** la identidad regiomontana se construyó alrededor de la industria. Fundidora, Horno3 y las empresas fundadoras no son solo atractivos turísticos; fueron fuente de empleo para miles de familias y moldearon la idea de "ciudad trabajadora".
+- **Inmigración y mezcla cultural:** inmigrantes alemanes y checos influyeron en la música norteña y la cerveza; la migración libanesa introdujo los tacos de trompo y el kibbeh; y migrantes colombianos trajeron la cumbia, que dio origen a la cumbia rebajada y a la subcultura de los cholombianos en la colonia Independencia.
+- **Contrastes sociales dentro del AMM:** conviven el centro histórico y las colonias populares de Monterrey con desarrollos de alto poder adquisitivo como los de San Pedro Garza García, que suele ubicarse entre los municipios de mayor ingreso del país. La guía muestra ambas caras: el patrimonio obrero e industrial y la vida cosmopolita.
+- **Diversidad e identidades:** la ciudad alberga comunidades juveniles (skaters, cholombianos), expresiones indígenas migrantes y un movimiento LGBT+ con marcha anual desde 2001, aspectos que se desarrollan en la sección de construcción de identidad.
+- **Vida cultural y social actual:** festivales como el Santa Lucía, la FIL Monterrey y la agenda del MARCO muestran una ciudad con oferta cultural creciente (ver noticias culturales y sociales).
 
-### Ficha 5
-
-* **Referencia APA:** Secretaría de Turismo del Gobierno de México. (s.f.). *Nuevo León | Visit México*. https://visitmexico.com/es/estado/19/nuevo-leon
-* **Tipo de fuente:** Sitio oficial de turismo federal.
-* **Resumen:** Ofrece una visión nacional del destino y datos generales de Nuevo León como destino turístico. Sirve para contextualizar al AMM dentro del país y para respaldar la justificación de la región.
-
----
-
-## 3. Listado preliminar de atractivos turísticos
+### 2.3 Sitios turísticos, arquitectura y tips para el visitante
 
 > Nota: las imágenes usan enlaces directos a `upload.wikimedia.org`, el repositorio de medios de Wikimedia Commons (no artículos de Wikipedia), verificados como accesibles (HTTP 200). Algunas imágenes son fotos de referencia del entorno del sitio (marcadas explícitamente) cuando no se halló una foto específica del ítem exacto bajo licencia libre. Cada ítem incluye un enlace directo a Google Maps para ubicar el sitio.
 
@@ -182,9 +196,27 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
     Punto panorámico junto al Obispado con vista a la ciudad y al Cerro de la Silla. Ubicado en la misma loma donde se construyó el edificio colonial de El Obispado, este mirador ofrece una de las vistas más fotografiadas y reconocidas de Monterrey, con el perfil urbano de la ciudad en primer plano y la silueta del Cerro de la Silla —símbolo natural de Monterrey— de fondo. Es un punto de visita habitual al atardecer y forma parte de casi todos los recorridos turísticos que incluyen el centro histórico, ya que combina en un solo lugar patrimonio histórico, naturaleza urbana y una perspectiva completa de la ciudad.
     📍 Google Maps: https://www.google.com/maps/search/?api=1&query=25.6728,-100.3315
 
----
+#### Arquitectura como manifestación cultural
 
-## 4. Listado preliminar de platillos y tradiciones
+La arquitectura del AMM resume sus etapas históricas:
+
+- **Virreinal y religiosa:** el Museo Regional El Obispado (1786–1790) es uno de los edificios más antiguos de la ciudad; la Catedral Metropolitana, junto a la Macroplaza, representa la herencia religiosa de la fundación; y las casonas del Barrio Antiguo conservan fachadas de finales del siglo XIX y principios del XX.
+- **Industrial:** el Parque Fundidora y el Museo del Acero Horno3 (una torre de más de 70 metros) son ejemplo de reconversión de patrimonio industrial; el sitio fue declarado Museo de Sitio de Arqueología Industrial en 2001.
+- **Moderna y contemporánea:** la Macroplaza (1980–1985) concentra edificios cívicos y esculturas monumentales; el Faro del Comercio (Luis Barragán, 1984) y el MARCO (Ricardo Legorreta, 1991) son referentes de la arquitectura mexicana moderna; el Puente Atirantado y el Paseo Santa Lucía (2007) muestran la obra pública reciente; y Fashion Drive y las Plazas de San Agustín, en San Pedro, representan el desarrollo comercial contemporáneo.
+
+![Faro del Comercio, Macroplaza](https://upload.wikimedia.org/wikipedia/commons/3/39/Faro_del_Comercio_Monterrey.JPG)
+
+#### Tips para el visitante
+
+- **Clima:** de mayo a septiembre el calor es intenso; usa protector solar, lleva agua y programa las caminatas largas (Fundidora, Paseo Santa Lucía, Chipinque) para la mañana o la tarde.
+- **Un día en el centro:** la Macroplaza, el MARCO, el Barrio Antiguo y la Alameda se pueden recorrer a pie en una sola jornada; el Paseo Santa Lucía conecta Fundidora con la Macroplaza y permite hacerlo caminando o en lancha.
+- **Fundidora completa:** combina Parque Fundidora, Museo del Acero Horno3 y Paseo Santa Lucía en el mismo día; hay mucho espacio abierto y poca sombra en ciertas zonas.
+- **Chipinque (San Pedro):** llega temprano, usa calzado de montaña y revisa en el sitio oficial el acceso, las reglas del parque y las condiciones de los senderos.
+- **Barrio Antiguo:** es más vistoso de noche y en fin de semana, cuando hay música y vida nocturna; de día es mejor para ver fachadas y murales con calma.
+- **Museos:** muchos cierran un día a la semana (con frecuencia el lunes) y tienen horarios y tarifas que cambian; verifica siempre en el sitio oficial antes de ir.
+- **Moverse:** el Metro (Metrorrey) conecta varias zonas del centro y el oriente; para San Pedro y las zonas de montaña suele ser más práctico el transporte por aplicación o el auto.
+
+### 2.4 Gastronomía, recetas y bebidas
 
 > Nota: las imágenes usan enlaces directos a `upload.wikimedia.org`, el repositorio de medios de Wikimedia Commons (no artículos de Wikipedia), verificados como accesibles (HTTP 200).
 
@@ -244,7 +276,73 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
     ![Capirotada](https://upload.wikimedia.org/wikipedia/commons/3/3f/Capirotada_in_Mexican_pottery.jpg)
     Postre a base de pan, piloncillo, frutos secos y queso, tradicional de temporada. Tiene origen en recetas coloniales de aprovechamiento de pan duro, y se prepara tradicionalmente durante la Cuaresma como parte de las costumbres católicas mexicanas, ya que sustituye a postres con ingredientes prohibidos en esa temporada litúrgica. Cada familia regiomontana suele tener su propia variante de la receta, con distintas combinaciones de frutos secos, pasas y quesos.
 
-### Bebidas tradicionales
+#### Recetas de comida típica
+
+Las siguientes recetas son adaptaciones elaboradas por el equipo a partir de la preparación tradicional descrita en los platillos anteriores; cada familia regiomontana tiene su propia variante. Rinden para 4 personas, salvo que se indique otra cosa.
+
+**1. Machacado con huevo**
+
+![Machacado con huevo](https://upload.wikimedia.org/wikipedia/commons/1/1a/Machacado_con_huevo.jpg)
+
+*Ingredientes:* 100 g de carne seca (machacado), 4 huevos, 1 jitomate picado, ¼ de cebolla picada, 1 chile serrano picado, 2 cucharadas de aceite, sal al gusto y tortillas de harina para acompañar.
+
+*Preparación:*
+
+1. Remoja el machacado en agua tibia unos 10 minutos si está muy salado, escúrrelo y exprímelo.
+2. Calienta el aceite en un sartén y acitrona la cebolla con el chile serrano.
+3. Agrega el jitomate y cocina 3 minutos, hasta que suelte su jugo.
+4. Incorpora el machacado y cocina 5 minutos moviendo para que se dore ligeramente.
+5. Bate los huevos, viértelos sobre la mezcla y revuelve hasta que cuajen. Rectifica la sal y sirve caliente con frijoles y tortillas de harina.
+
+**2. Frijoles charros**
+
+![Frijoles charros](https://upload.wikimedia.org/wikipedia/commons/3/34/Frijoles_charros_10293.jpg)
+
+*Ingredientes:* 500 g de frijol pinto o bayo, 150 g de tocino picado, 150 g de chorizo, 100 g de jamón o salchicha picada, ½ cebolla, 2 jitomates, 2 chiles serranos, 2 dientes de ajo, cilantro y sal al gusto.
+
+*Preparación:*
+
+1. Cuece los frijoles en una olla con agua, ½ cebolla y el ajo hasta que estén suaves (1½ a 2 horas, o 40 minutos en olla exprés). Sazona con sal al final.
+2. En un sartén fríe el tocino hasta que suelte su grasa; agrega el chorizo y cocina 5 minutos.
+3. Añade el jamón o la salchicha y el jitomate, la cebolla restante y los chiles picados; cocina 5 minutos más.
+4. Incorpora esta mezcla a la olla de frijoles y deja hervir a fuego bajo 15 minutos para que se integren los sabores.
+5. Sirve caliente, con cilantro picado, como acompañamiento de la carne asada.
+
+**3. Carne asada regiomontana**
+
+![Carne asada](https://upload.wikimedia.org/wikipedia/commons/1/15/Carne_asada.jpg)
+
+*Ingredientes:* 1 kg de arrachera o diezmillo, sal gruesa, jugo de 2 limones, cebollitas de cambray, chiles toreados, tortillas de harina, salsa y frijoles charros.
+
+*Preparación:*
+
+1. Retira el exceso de grasa de la carne y deja reposar con el jugo de limón unos 20 minutos.
+2. Enciende el carbón y espera a que quede en brasa con ceniza blanca, a fuego medio-alto.
+3. Sazona la carne con sal gruesa y ásala 4 a 6 minutos por lado, según el grosor y el término deseado.
+4. Asa al mismo tiempo las cebollitas y los chiles toreados.
+5. Deja reposar la carne 5 minutos antes de picarla. Sirve con tortillas de harina, salsa y frijoles charros. La convivencia alrededor de la parrilla es parte esencial de la receta.
+
+**4. Capirotada (postre de Cuaresma)**
+
+![Capirotada](https://upload.wikimedia.org/wikipedia/commons/3/3f/Capirotada_in_Mexican_pottery.jpg)
+
+*Ingredientes:* 6 bolillos o teleras duros, 300 g de piloncillo, 1 raja de canela, 4 clavos de olor, 1½ litros de agua, 100 g de pasas, 100 g de nueces o cacahuates, 150 g de queso fresco o asadero rallado, 2 cucharadas de mantequilla.
+
+*Preparación:*
+
+1. Hierve el agua con el piloncillo, la canela y los clavos 15 minutos para formar un almíbar; cuela.
+2. Rebana el pan y dóralo en el horno a 180 °C por 10 minutos o fríelo ligeramente en mantequilla.
+3. En un molde engrasado coloca una capa de pan, otra de pasas, nueces y queso, y repite hasta terminar con queso.
+4. Baña poco a poco con el almíbar hasta que el pan lo absorba sin quedar encharcado.
+5. Hornea tapado a 180 °C por 20 a 25 minutos. Se come tibio o frío.
+
+**5. Michelada (bebida)**
+
+*Ingredientes:* 1 cerveza clara bien fría, jugo de 2 limones, sal para escarchar el vaso, hielo, unas gotas de salsa inglesa, salsa picante y salsa Maggi (al gusto).
+
+*Preparación:* escarcha el borde de un vaso con limón y sal, agrega hielo, el jugo de limón y las salsas; completa con la cerveza y mezcla suavemente. Variantes locales añaden jugo de tomate o clamato.
+
+#### Bebidas tradicionales
 
 1. **Tecate Light**
    ![Tecate Light](https://upload.wikimedia.org/wikipedia/commons/2/2b/Cerveza_tecate.jpg)
@@ -274,9 +372,7 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
    ![Tepache](https://upload.wikimedia.org/wikipedia/commons/4/40/Tepache.jpg)
    Bebida fermentada de cáscara y pulpa de piña, endulzada con piloncillo, de origen prehispánico. Su nombre proviene del náhuatl "tepiātl" ("bebida de maíz"), y tradicionalmente se deja fermentar durante algunos días en un recipiente de barro antes de servirse bien frío. Es una bebida popular en puestos callejeros y reuniones familiares del norte de México, y forma parte de la tradición de bebidas fermentadas artesanales heredada de la época prehispánica.
 
----
-
-## Empresas que levantaron a Monterrey o representativas
+### 2.5 Empresas que levantaron a Monterrey
 
 * **Cemex**
   ![Cemex](https://upload.wikimedia.org/wikipedia/commons/2/26/CEMEX_Monterrey.jpg)
@@ -288,36 +384,34 @@ El Área Metropolitana de Monterrey (AMM) es el centro económico y cultural del
   Empresa siderúrgica con fuerte presencia en Monterrey, heredera de la tradición industrial del acero que dio origen a Fundidora y Horno3. Ternium desciende de Hylsa, fundada en 1943 como parte del mismo tejido industrial regiomontano que ya producía acero desde 1900 con la Fundidora de Fierro y Acero de Monterrey. Actualmente es una de las siderúrgicas más grandes de América Latina, y su historia conecta directamente con el eje de patrimonio industrial de esta guía, ya que representa la continuidad de la vocación acerera de la ciudad más allá del cierre de la planta original que hoy es el Parque Fundidora.
   📍 Google Maps: https://www.google.com/maps/search/?api=1&query=Ternium%20Monterrey
 
----
+### 2.6 Manifestaciones culturales y construcción de identidad
 
-## 5. Manifestaciones culturales y construcción de identidad
-
-### Leyendas
+#### Leyendas
 
 1. **La leyenda del Cerro de la Silla**
    ![Cerro de la Silla](https://upload.wikimedia.org/wikipedia/commons/a/a9/Cerro_de_la_Silla%2C_Monterrey%2C_N.L.jpg)
    El Cerro de la Silla, símbolo natural de Monterrey, debe su nombre a su silueta, que recuerda una montura de caballo vista desde la ciudad. Entre las tradiciones orales regiomontanas circula la leyenda de que la formación representa a un jinete o guerrero convertido en piedra por los dioses como castigo o como protector eterno de la ciudad, vigilando el valle desde sus más de 1,800 msnm. La leyenda se transmite generacionalmente entre familias regiomontanas y es citada con frecuencia en materiales turísticos y escolares como parte de la identidad simbólica de la ciudad.
 
-2. **La leyenda del Callejón del Diablo (Barrio Antiguo)**
+2. **La leyenda del Rincón del Diablo (centro de Monterrey)**
    ![Barrio Antiguo](https://upload.wikimedia.org/wikipedia/commons/9/91/Monterrey_Barrio_Antiguo.JPG)
-   En el Barrio Antiguo, la zona de casonas coloniales y porfirianas del centro de Monterrey, se cuenta la historia de un callejón donde por las noches se aparecía una figura oscura que asustaba a los transeúntes que caminaban solos después de cierta hora. La leyenda, típica de barrios antiguos mexicanos con arquitectura del siglo XIX, se ha usado en recorridos nocturnos y actividades culturales del barrio como forma de revivir el imaginario popular ligado a sus calles empedradas y fachadas históricas.
+   En el centro de Monterrey, en el cruce de las calles Platón Sánchez y González Ortega, se ubica el Rincón del Diablo. Según historiadores y vecinos, el lugar fue una posición defensiva durante el ataque estadounidense de 1846, donde se levantó una fortificación para impedir que el ejército invasor cruzara el arroyo de Santa Lucía; también se dice que sus callejones fueron punto de reunión de los primeros grupos masónicos de la ciudad. La versión más conocida cuenta que un hombre que caminaba por ahí de madrugada se topó con una figura alta, vestida de negro y de ojos brillantes; la apuñaló varias veces sin lograr herirla y poco después se desvaneció. El relato aparece en el libro *Leyendas de Nuevo León* (Villanueva Cavazos, 1980) y se recuerda en recorridos nocturnos por el centro.
 
 3. **La leyenda de "La Carreta Fantasma" del Camino Real**
    Ligada a las antiguas rutas de comercio del noreste novohispano que conectaban Monterrey con Saltillo y el sur de Texas, esta leyenda narra la aparición de una carreta tirada por mulas fantasmales que recorre de noche los antiguos caminos rurales, como recordatorio de los peligros que enfrentaban los comerciantes y arrieros coloniales ante asaltantes y el clima árido de la región. Es una leyenda típica del folclore ranchero del noreste de México, transmitida oralmente en comunidades rurales cercanas al AMM.
 
 4. **Agapito Treviño "Caballo Blanco" y la Cueva de la Boca**
-   El bandido social Agapito Treviño, conocido como "Caballo Blanco", es una de las figuras legendarias más citadas del noreste de México: se cuenta que asaltaba a las diligencias y comerciantes adinerados del siglo XIX para repartir parte del botín entre los pobres, al estilo de un Robin Hood norteño, y que escondía su tesoro en la Cueva de la Boca, en el municipio de Santiago, muy cerca del AMM. La leyenda señala que al atardecer, cuando cientos de miles de murciélagos salen en enjambre de la cueva, es un recordatorio del espíritu del bandido que aún la custodia.
+   El bandido social Agapito Treviño, conocido como "Caballo Blanco", es una de las figuras legendarias más citadas del noreste de México: se cuenta que asaltaba a las diligencias y comerciantes adinerados del siglo XIX para repartir parte del botín entre los pobres, al estilo de un Robin Hood norteño, y que escondía su tesoro en la Cueva de la Boca, en el municipio de Santiago, muy cerca del AMM. La leyenda señala que al atardecer, cuando cientos de miles de murciélagos salen en enjambre de la cueva, es un recordatorio del espíritu del bandido que aún la custodia. Cabe aclarar que se trata de folclore: no se localizó un registro histórico confiable que confirme su existencia ni la del tesoro, y la figura también se difundió por el corrido y por el cine mexicano de los años cuarenta.
 
 5. **El Hombre Emplumado**
    Desde la década de 1980 circula entre habitantes de Monterrey el relato de avistamientos de una criatura de casi tres metros de altura, cubierta de plumas oscuras y con ojos rojos brillantes en la noche, generalmente asociada a zonas boscosas o poco iluminadas de los cerros que rodean la ciudad. Es una leyenda urbana contemporánea, comparada por algunos investigadores del folclore local con relatos similares de otras regiones de México.
 
 6. **La Casa de los Tubos**
-   En la localidad de La Escondida, cerca del AMM, se conserva una construcción en ruinas conocida popularmente como "la Casa de los Tubos": según la tradición oral, fue edificada por un padre para su hija con discapacidad que usaba silla de ruedas, con rampas y tubos conectando los distintos niveles de la casa para que ella pudiera desplazarse con libertad. Hoy es un punto de visita para quienes buscan historias con tintes de misterio en los alrededores de Monterrey.
+   En el límite entre Monterrey y Guadalupe se encuentra la vivienda conocida popularmente como "la Casa de los Tubos" (remodelada hacia 2018): según la tradición oral, fue edificada por un padre para su hija con discapacidad que usaba silla de ruedas, con rampas y tubos conectando los distintos niveles de la casa para que ella pudiera desplazarse con libertad. Hoy sigue siendo un punto de curiosidad para quienes buscan historias con tintes de misterio en el AMM.
 
 7. **La Casa Aramberri**
    Ubicada en una calle del centro de Monterrey, esta casona porfiriana es señalada como una de las construcciones más "embrujadas" de la ciudad: la leyenda local relata la muerte trágica de dos mujeres en el inmueble, hecho que —según la tradición oral— dejó una presencia que aún se manifiesta a quienes se acercan al lugar por la noche.
 
-### Música regional
+#### Música regional
 
 ![Acordeonista](https://upload.wikimedia.org/wikipedia/commons/6/62/Acordeonista_Mexicano.jpg)
 
@@ -327,7 +421,7 @@ Un fenómeno musical propio y único del AMM es la **cumbia rebajada**, surgida 
 
 Además de la música norteña y la cumbia rebajada, el AMM cuenta con una escena de **rock regiomontano** activa desde los años ochenta y noventa (con bandas como Plastilina Mosh y Control Machete, surgidas en Monterrey), lo que refleja una identidad musical múltiple: rural y tradicional, popular urbana, y alternativa contemporánea, todas coexistiendo en la vida social de la ciudad.
 
-### Religión
+#### Religión
 
 ![Catedral de Monterrey](https://upload.wikimedia.org/wikipedia/commons/0/05/Monterrey_-_Catedral_de_la_Inmaculada_Concepci%C3%B3n_-_4.jpg)
 
@@ -339,7 +433,7 @@ La religiosidad popular regiomontana se expresa en un calendario anual de celebr
 
 En las últimas décadas, además, el crecimiento de iglesias cristianas no católicas (evangélicas, pentecostales y otras denominaciones protestantes) ha diversificado el mapa religioso de la ciudad, en buena medida por la cercanía e intercambio cultural con Estados Unidos y por procesos de conversión religiosa observados en distintas zonas populares del AMM. Persisten también expresiones de religiosidad popular sincrética y devociones locales menores (cruces de camino, capillas de barrio, mandas y promesas) que conviven con la estructura eclesiástica oficial de la Arquidiócesis de Monterrey.
 
-### Literatura
+#### Literatura
 
 ![Alfonso Reyes](https://upload.wikimedia.org/wikipedia/commons/0/03/Alfonso_Reyes_Ochoa.jpg)
 
@@ -349,9 +443,9 @@ La tradición literaria nuevoleonesa antecede y sucede a Reyes con otras figuras
 
 ![FIL Monterrey](https://upload.wikimedia.org/wikipedia/commons/b/b2/Liliana_Blum_%26_Rodrigo_Bastidas_-_FIL_Monterrey_2025_01.jpg)
 
-La ciudad es también sede de la **Feria Internacional del Libro de Monterrey (FIL Monterrey)**, uno de los encuentros literarios más relevantes del norte del país, realizada en el centro de convenciones Cintermex; su edición 34 está programada del 10 al 18 de octubre de 2026, con entrada general gratuita y El Colegio Nacional como invitado de honor, en un programa que reúne a escritores, científicos, artistas y humanistas nacionales e internacionales. A nivel académico, la UANL mantiene además la feria universitaria del libro "UANLeer" y una tradición de publicaciones y revistas literarias regionales que documentan la producción de autores del noreste mexicano, mientras que el gobierno estatal reconoce anualmente la trayectoria literaria a través del ya mencionado Premio Nuevo León Alfonso Reyes.
+La ciudad es también sede de la **Feria Internacional del Libro de Monterrey (FIL Monterrey)**, uno de los encuentros literarios más relevantes del norte del país, realizada en el centro de convenciones Cintermex; su edición 34 se realizó del 10 al 18 de octubre de 2026, con entrada general gratuita y El Colegio Nacional como invitado de honor, en un programa que reúne a escritores, científicos, artistas y humanistas nacionales e internacionales. A nivel académico, la UANL mantiene además la feria universitaria del libro "UANLeer" y una tradición de publicaciones y revistas literarias regionales que documentan la producción de autores del noreste mexicano, mientras que el gobierno estatal reconoce anualmente la trayectoria literaria a través del ya mencionado Premio Nuevo León Alfonso Reyes.
 
-### Vestido
+#### Vestido
 
 ![Traje de charro](https://upload.wikimedia.org/wikipedia/commons/6/6e/Charro_Mexicano_%281828%29.jpg)
 
@@ -361,17 +455,17 @@ A esta base rural se suma la estética urbana de subculturas propias del AMM, co
 
 En contextos urbanos y contemporáneos del AMM, todas estas estéticas conviven con la moda casual influenciada por la cercanía con Estados Unidos —jeans, sudaderas de marca, tenis deportivos— visible en corredores comerciales como Fashion Drive y Plazas de San Agustín en San Pedro Garza García, que concentran boutiques de diseñador y marcas internacionales, en contraste con los mercados y tianguis populares donde predomina la ropa de uso diario más económica.
 
-### Fiesta
+#### Fiesta
 
 ![Festival Internacional Santa Lucía](https://upload.wikimedia.org/wikipedia/commons/7/70/MTY-FestIntSantaLucia02.jpg)
 
 La vida festiva del AMM combina celebraciones cívico-religiosas con eventos de identidad más reciente. Entre las principales están las **fiestas patronales** de los distintos municipios metropolitanos (cada uno con su santo patrono y feria anual asociada), las celebraciones de **Independencia de México** cada septiembre, con el tradicional Grito en la Macroplaza acompañado de fuegos artificiales y verbena popular; las **Posadas y la Navidad** de diciembre, con piñatas, ponche y pastorelas en escuelas, iglesias y vecindarios; las peregrinaciones guadalupanas del día 12 de ese mismo mes; y el **Día de Muertos** a inicios de noviembre, con ofrendas familiares que en el norte de México conviven con la influencia de Halloween por la cercanía fronteriza.
 
-A esto se suma un calendario de festivales culturales contemporáneos de gran escala: el **Festival Internacional Santa Lucía**, que se realiza a lo largo del Paseo Santa Lucía y otros espacios del centro y que en su edición más reciente presentó 190 expresiones artísticas y culturales a lo largo de 32 días, con 96 espectáculos, 30 exposiciones, 20 diálogos, 21 funciones de cine y la participación de más de 800 artistas de 19 países; la **FIL Monterrey**, ya descrita en la sección de literatura; el festival de arte urbano **Callegenera**, descrito en la sección de identidad juvenil; y el programa **"Noches de Verano" del MARCO**, que en 2026 se realizará los viernes del 12 de junio al 3 de julio en sintonía con los partidos de la Copa Mundial de la FIFA que se jugarán en Monterrey ese año, buscando convertir al museo en punto de encuentro para visitantes locales e internacionales durante el torneo.
+A esto se suma un calendario de festivales culturales contemporáneos de gran escala: el **Festival Internacional Santa Lucía**, que se realiza a lo largo del Paseo Santa Lucía y otros espacios del centro y que en su edición más reciente presentó 190 expresiones artísticas y culturales a lo largo de 32 días, con 96 espectáculos, 30 exposiciones, 20 diálogos, 21 funciones de cine y la participación de más de 800 artistas de 19 países; la **FIL Monterrey**, ya descrita en la sección de literatura; el festival de arte urbano **Callegenera**, descrito en la sección de identidad juvenil; y el programa **"Noches de Verano" del MARCO**, que en 2026 se realizó los viernes del 12 de junio al 3 de julio en sintonía con los partidos de la Copa Mundial de la FIFA que se jugarán en Monterrey ese año, buscando convertir al museo en punto de encuentro para visitantes locales e internacionales durante el torneo.
 
 La **carne asada de fin de semana**, aunque no es una fiesta cívica ni religiosa, funciona socialmente como el ritual de convivencia más extendido entre familias regiomontanas —reuniendo generaciones distintas en patios y jardines los sábados y domingos—, al grado de que Nuevo León ha promovido oficialmente el "Día Estatal de la Carne Asada" como una celebración institucional de esta costumbre.
 
-### Construcción de identidad
+#### Construcción de identidad
 
 ![Letrero bilingüe en hñähñu (otomí)](https://upload.wikimedia.org/wikipedia/commons/a/a7/Letrero_en_h%C3%B1%C3%A4h%C3%B1u_%28otom%C3%AD%29_I.jpg)
 
@@ -397,12 +491,12 @@ El Barrio Antiguo y el Paseo Santa Lucía concentran además buena parte de la v
 
 Desde entonces la marcha ha crecido de manera sostenida: en 2018 reunió a más de 30,000 personas, y en las ediciones de 2023 y 2024 se estima una asistencia de entre 90,000 y 100,000 personas, consolidándose como una de las marchas del orgullo más grandes y significativas del país, con un recorrido que suele partir de la Explanada de los Héroes o zonas cercanas a la Macroplaza. Alrededor de esta fecha se ha desarrollado también una red de bares, colectivos y espacios de encuentro para la comunidad LGBTQ+, concentrados principalmente en el Barrio Antiguo, así como organizaciones civiles dedicadas a la defensa de derechos y la atención a la salud sexual. Estos espacios de visibilidad conviven con una sociedad regiomontana tradicionalmente conservadora y de fuerte arraigo religioso y empresarial, lo que hace de la diversidad sexual un tema activo, visible y en constante negociación dentro de la construcción de identidad contemporánea de la ciudad.
 
-### Noticias culturales y sociales
+#### Noticias culturales y sociales
 
 ![Fachada del MARCO, Monterrey](https://upload.wikimedia.org/wikipedia/commons/8/80/Fachada_MARCO.jpg)
 
 1. **MARCO celebra 35 años y presenta su agenda 2026 ligada al Mundial**
-   El Museo de Arte Contemporáneo de Monterrey (MARCO) presentó su programa cultural para 2026, año en el que celebra su 35 aniversario y busca posicionarse como referente cultural global aprovechando que Monterrey será sede de la Copa Mundial de la FIFA. Entre sus actividades destaca una exposición conjunta por el 50 aniversario de la Colección FEMSA y el programa "Noches de Verano", que este año se realizará los viernes del 12 de junio al 3 de julio en paralelo a los partidos del Mundial en la ciudad.
+   El Museo de Arte Contemporáneo de Monterrey (MARCO) presentó su programa cultural para 2026, año en el que celebra su 35 aniversario y busca posicionarse como referente cultural global aprovechando que Monterrey será sede de la Copa Mundial de la FIFA. Entre sus actividades destaca una exposición conjunta por el 50 aniversario de la Colección FEMSA y el programa "Noches de Verano", que este año se realizó los viernes del 12 de junio al 3 de julio en paralelo a los partidos del Mundial en la ciudad.
    Fuente: Grupo Milenio / Proceso, enero de 2026.
 
 2. **El Festival Internacional Santa Lucía inicia su edición 2026 con la exposición "Natura"**
@@ -410,63 +504,15 @@ Desde entonces la marcha ha crecido de manera sostenida: en 2018 reunió a más 
    Fuente: Gobierno del Estado de Nuevo León / Grupo Milenio.
 
 3. **Confirman fechas de la FIL Monterrey 2026**
-   Se confirmó que la 34ª edición de la Feria Internacional del Libro de Monterrey se realizará del 10 al 18 de octubre de 2026 en Cintermex, con entrada general gratuita y El Colegio Nacional como invitado de honor, presentando un programa con escritores, científicos, artistas y humanistas.
+   Se confirmó que la 34ª edición de la Feria Internacional del Libro de Monterrey se realizó del 10 al 18 de octubre de 2026 en Cintermex, con entrada general gratuita y El Colegio Nacional como invitado de honor, presentando un programa con escritores, científicos, artistas y humanistas.
    Fuente: ABC Noticias / POSTA México, agosto de 2026.
 
 4. **"NATURA" lleva el arte contemporáneo al Parque Fundidora**
-   Como parte del Festival Internacional Santa Lucía 2026, abrió al público la exposición colectiva "NATURA" en la Explanada del Museo del Acero, con obra de seis artistas nacionales (Jeremy Deller, Lucila Garza, Daniel Pérez Ríos, Miriam Salado, Lucía Vidales, Adair Vigil y Lizbeth Villarreal) bajo la curaduría de Cuauhtémoc Medina y Eliud Nava. La muestra invita a reflexionar sobre la convivencia entre industria y naturaleza en uno de los espacios más representativos de Monterrey, y estará abierta del 26 de septiembre al 8 de noviembre de 2026.
+   Como parte del Festival Internacional Santa Lucía 2026, abrió al público la exposición colectiva "NATURA" en la Parque Fundidora, con obra de seis artistas nacionales (Jeremy Deller, Lucila Garza, Daniel Pérez Ríos, Miriam Salado, Lucía Vidales, Adair Vigil y Lizbeth Villarreal) bajo la curaduría de Cuauhtémoc Medina y Eliud Nava. La muestra invita a reflexionar sobre la convivencia entre industria y naturaleza en uno de los espacios más representativos de Monterrey, y estará abierta del 26 de septiembre al 8 de noviembre de 2026.
    Fuente: POSTA México / El Porvenir, septiembre de 2026.
-
-
 ---
 
-## 6. Borrador de ruta turística (2 días)
-
-### Día 1: Patrimonio industrial y ciudad
-
-* **Mañana:** Parque Fundidora y Museo del Acero Horno3.
-* **Mediodía:** comida de cabrito o machacado en un restaurante tradicional.
-* **Tarde:** recorrido por el Paseo Santa Lucía hasta la Macroplaza.
-* **Noche:** cena y paseo por el Barrio Antiguo.
-
-### Día 2: Arte, historia y vida cultural
-
-* **Mañana:** visita al MARCO.
-* **Mediodía:** comida en la zona centro.
-* **Tarde:** Museo Regional El Obispado y mirador de la ciudad.
-* **Noche:** carne asada o cena típica y cierre de la ruta.
-
-> Los horarios y costos se confirmarán en la versión final.
-
----
-
-## 7. Plan de trabajo del equipo
-
-### Distribución de tareas
-
-| Integrante                       | Tareas asignadas |
-|-----------------------------------|-------------------|
-| Pablo Cortes Solis                | Ficha 1 (Nuevo León Turismo) y ficha 5 (SECTUR federal). Listado preliminar de atractivos turísticos. |
-| Omar Israel Enriquez Mendez       | Ficha 2 (Parque Fundidora). Listado de platillos y tradiciones. Entrevista opcional a un habitante o comerciante. |
-| Pablo Eduardo Galván Galván       | Ficha 3 (Museo del Acero Horno3). Borrador de la ruta turística de 2 días. |
-| Jorge Angel Garcia Alvarado       | Ficha 4 (artículo académico de Redalyc o SciELO). Justificación de la región. Portada y armado del documento final. |
-| Ricardo Eugenio García Rodríguez  | Revisión de todas las referencias en formato APA. Plan de trabajo y cronograma. Revisión final de ortografía y formato. |
-
-**Tarea de todos:** escribir su conclusión individual y su aportación al equipo.
-
-### Cronograma tentativo
-
-| Periodo                          | Actividades |
-|----------------------------------|-------------|
-| Semana 1 (1–7 sep. 2026)         | Búsqueda de fuentes y elaboración de fichas (todos, según su asignación). |
-| Semana 2 (8–14 sep. 2026)        | Listados de atractivos y platillos, borrador de ruta y justificación. |
-| Semana 3 (15–21 sep. 2026)       | Armado del documento, revisión de APA y conclusiones individuales. |
-| Semana 4 (22–24 sep. 2026)       | Revisión final y entrega del avance (24 de septiembre de 2026). |
-| Semanas siguientes               | Retroalimentación del docente y diseño e implementación de la guía digital (sitio web publicado en GitHub Pages). |
-
----
-
-## 8. Conclusiones individuales y aportación
+## 3. Conclusiones individuales y aportación
 
 ### Pablo Cortes Solis
 
@@ -492,24 +538,111 @@ Desde entonces la marcha ha crecido de manera sostenida: en 2018 reunió a más 
 
 * **Conclusión:** Encargarme de buscar y verificar las imágenes de la guía me hizo notar lo importante que es respaldar cada fotografía con una fuente confiable; aprendí a distinguir cuándo una imagen realmente corresponde al lugar que describe y cuándo conviene señalarlo como foto de referencia. También me sirvió para entender mejor el peso visual que tiene el patrimonio industrial y turístico de Monterrey en la guía completa.
 * **Aportación al equipo:** Selección, verificación y organización de las imágenes utilizadas en la guía.
-
 ---
 
-## 9. Bibliografía
+## 4. Bibliografía
 
-Referencias en formato APA de las fuentes consultadas en las fichas de la sección 2.
+Referencias en formato APA 7 de las fuentes consultadas. Las fotografías provienen de Wikimedia Commons (upload.wikimedia.org), repositorio de medios de acceso abierto; cada imagen conserva su archivo de origen y puede verificarse directamente con su enlace.
 
-* Secretaría de Turismo del Estado de Nuevo León. (s.f.). *Turismo | Gobierno del Estado de Nuevo León*. https://www.nl.gob.mx/es/turismo
-* Parque Fundidora. (s.f.). *Historia | Parque Fundidora*. https://www.parquefundidora.org/acerca/historia
-* Horno3, Museo del Acero. (s.f.). *Página oficial del Museo Horno3*. https://www.horno3.org
+* Diario de México. (2026). *Arte a la calle, siempre y me cuando la calle tenga permiso*. El Turista del Apocalipsis. https://www.diariodemexico.com/blogs/el-turista-del-apocalipsis/arte-calle-siempre-me-cuando-calle-tenga-permiso
 * Hinojosa García, A. y Martínez Silva, E. (s.f.). *La patrimonialización del Parque Fundidora en Monterrey, Nuevo León*. Anuario Humanitas, Ciencias Sociales, pp. 141–159. https://humanitas.uanl.mx/index.php/ah/article/download/218/195
+* Horno3, Museo del Acero. (s.f.). *Página oficial del Museo Horno3*. https://www.horno3.org
+* Instituto Nacional de Estadística y Geografía. (2021). *Censo de Población y Vivienda 2020: Principales resultados, Nuevo León*. INEGI. https://www.inegi.org.mx/contenidos/programas/ccpv/2020/doc/cpv2020_pres_res_nl.pdf
+* Líder Empresarial. (2026). *FIL Monterrey 2026: nueve días para celebrar las letras*. https://www.liderempresarial.com/fil-monterrey-2026-nueve-dias-para-celebrar-las-letras/
+* México Desconocido. (s.f.). *La leyenda de la Casa de los Tubos*. https://www.mexicodesconocido.com.mx/la-casa-de-los-tubos.html
+* Mexico News Daily. (s.f.). *Cumbia rebajada: Monterrey's accidental music genre*. https://mexiconewsdaily.com/culture/cumbia-rebajada-monterreys-accidental-music-genre
+* Milenio. (s.f.). *Tras remodelación, la Casa de los Tubos de Monterrey conserva un área llena de misterio*. https://amp.milenio.com/sociedad/casa-tubos-monterrey-tragica-historia-luce
+* Milenio. (s.f.). *Marcha de la Diversidad en Monterrey será única, dicen organizadores*. https://www.milenio.com/politica/comunidad/lgbt-marcha-diversidad-monterrey-unica-organizadores
+* POSTA México. (2026). *Mundial 2026: Noches de Verano en MARCO se suman a la fiesta futbolera*. https://www.posta.com.mx/nuevo-leon/noches-de-verano-en-marco-y-mundial-2026/vl2211384
+* POSTA México. (s.f.). *¿Conoces la leyenda del Rincón del Diablo? Está en pleno centro de Monterrey*. https://www.posta.com.mx/nuevoleon/conoces-la-leyenda-del-rincon-del-diablo-esta-en-pleno-centro-de-monterrey/v-vl1515114
+* Proceso. (2026). *MARCO presenta su programa expositivo 2026; contará con "Noches de Verano" por Mundial de Fútbol*. https://cms.proceso.com.mx/temas/monterrey-525.html
+* Parque Fundidora. (s.f.). *Historia | Parque Fundidora*. https://www.parquefundidora.org/acerca/historia
+* Secretaría de Economía. (s.f.). *Data México: San Pedro Garza García, Nuevo León*. https://www.economia.gob.mx/en/profile/geo/19019
+* Secretaría de Turismo del Estado de Nuevo León. (s.f.). *Turismo | Gobierno del Estado de Nuevo León*. https://www.nl.gob.mx/es/turismo
 * Secretaría de Turismo del Gobierno de México. (s.f.). *Nuevo León | Visit México*. https://visitmexico.com/es/estado/19/nuevo-leon
-
-*Las fotografías utilizadas a lo largo del documento provienen de Wikimedia Commons (upload.wikimedia.org), repositorio de medios de acceso abierto; cada imagen conserva su archivo de origen y puede verificarse directamente en Wikimedia Commons.*
+* Vanguardia. (s.f.). *Suma más de 100 mil participantes la Marcha de la Diversidad en Monterrey*. https://vanguardia.com.mx/noticias/suma-mas-de-100-mil-participantes-la-marcha-de-la-diversidad-en-monterrey-JN16399541
+* Villanueva Cavazos, L. E. (1980). *Leyendas de Nuevo León*. (Citado en POSTA México, s.f.).
+* Zona Turística. (s.f.). *Cueva de la Boca, Santiago, Nuevo León*. https://www.zonaturistica.com/que-hacer/nuevo-leon/santiago/cueva-de-la-boca
 
 ---
 
-## 10. Anexos
+## 5. Anexos
+
+### Anexo A. Fichas de fuentes consultadas
+
+#### Ficha 1
+
+* **Referencia APA:** Secretaría de Turismo del Estado de Nuevo León. (s.f.). *Turismo | Gobierno del Estado de Nuevo León*. https://www.nl.gob.mx/es/turismo
+* **Tipo de fuente:** Sitio oficial de turismo estatal.
+* **Resumen:** Aporta información oficial sobre los destinos, eventos y rutas turísticas del estado. Sirve para confirmar qué atractivos del AMM están reconocidos oficialmente y para tomar datos generales como ubicación y tipo de experiencia. Es la base para validar el resto de la información de la guía.
+
+#### Ficha 2
+
+* **Referencia APA:** Parque Fundidora. (s.f.). *Historia | Parque Fundidora*. https://www.parquefundidora.org/acerca/historia
+* **Tipo de fuente:** Sitio oficial de un atractivo.
+* **Resumen:** Explica la historia de la antigua Fundidora de Fierro y Acero de Monterrey y su transformación en parque público. Aporta datos sobre las áreas del parque, sus actividades y su papel como símbolo del patrimonio industrial. Es clave para el eje temático de la guía.
+
+#### Ficha 3
+
+* **Referencia APA:** Horno3, Museo del Acero. (s.f.). *Página oficial del Museo Horno3*. https://www.horno3.org
+* **Tipo de fuente:** Sitio oficial de museo.
+* **Resumen:** Describe el museo instalado en el alto horno número 3 y su propuesta interactiva sobre la industria del acero. Aporta horarios, tipo de recorrido y contexto histórico. Ayuda a explicar cómo el pasado industrial se convirtió en atractivo cultural.
+
+#### Ficha 4
+
+* **Referencia APA:** Hinojosa García, A. y Martínez Silva, E. (s.f.). *La patrimonialización del Parque Fundidora en Monterrey, Nuevo León*. Anuario Humanitas, Ciencias Sociales, pp. 141–159. https://humanitas.uanl.mx/index.php/ah/article/download/218/195
+* **Tipo de fuente:** Artículo académico (Centro de Estudios Humanísticos, UANL).
+* **Resumen:** Analiza el proceso de patrimonialización del Parque Fundidora: cómo una antigua siderúrgica cerrada en 1986 fue declarada, en 2001, Museo de Sitio de Arqueología Industrial, y cómo ese pasado industrial se convirtió en un eje de identidad para Monterrey ante la ausencia de un pasado prehispánico monumental en la región. Aporta el sustento histórico y conceptual (patrimonio cultural, memoria colectiva) para explicar por qué Fundidora y Horno3 son el eje central de esta guía.
+
+#### Ficha 5
+
+* **Referencia APA:** Secretaría de Turismo del Gobierno de México. (s.f.). *Nuevo León | Visit México*. https://visitmexico.com/es/estado/19/nuevo-leon
+* **Tipo de fuente:** Sitio oficial de turismo federal.
+* **Resumen:** Ofrece una visión nacional del destino y datos generales de Nuevo León como destino turístico. Sirve para contextualizar al AMM dentro del país y para respaldar la justificación de la región.
+
+### Anexo B. Borrador de ruta turística (2 días)
+
+#### Día 1: Patrimonio industrial y ciudad
+
+* **Mañana:** Parque Fundidora y Museo del Acero Horno3.
+* **Mediodía:** comida de cabrito o machacado en un restaurante tradicional.
+* **Tarde:** recorrido por el Paseo Santa Lucía hasta la Macroplaza.
+* **Noche:** cena y paseo por el Barrio Antiguo.
+
+#### Día 2: Arte, historia y vida cultural
+
+* **Mañana:** visita al MARCO.
+* **Mediodía:** comida en la zona centro.
+* **Tarde:** Museo Regional El Obispado y mirador de la ciudad.
+* **Noche:** carne asada o cena típica y cierre de la ruta.
+
+> Los horarios y costos se confirmarán en la versión final.
+
+### Anexo C. Plan de trabajo del equipo
+
+#### Distribución de tareas
+
+| Integrante                        | Tareas asignadas |
+|-----------------------------------|-------------------|
+| Pablo Cortes Solis                | Fichas de fuentes 1 (Nuevo León Turismo) y 5 (SECTUR federal). Listado de atractivos turísticos. |
+| Omar Israel Enriquez Mendez       | Ficha 2 (Parque Fundidora). Bebidas tradicionales. Entrevista opcional a un habitante o comerciante. |
+| Pablo Eduardo Galván Galván       | Ficha 3 (Museo del Acero Horno3). Platillos y tradiciones gastronómicas. Borrador de la ruta turística de 2 días. |
+| Jorge Angel Garcia Alvarado       | Ficha 4 (artículo académico). Definición y justificación del área de estudio. Portada y armado del documento final. |
+| Ricardo Eugenio García Rodríguez  | Selección y verificación de imágenes. Revisión de referencias en formato APA. Plan de trabajo y cronograma. Revisión final de ortografía y formato. |
+
+**Tarea de todos:** escribir su conclusión individual y su aportación al equipo.
+
+#### Cronograma tentativo
+
+| Periodo                          | Actividades |
+|----------------------------------|-------------|
+| Semana 1 (1–7 sep. 2026)         | Búsqueda de fuentes y elaboración de fichas (todos, según su asignación). |
+| Semana 2 (8–14 sep. 2026)        | Listados de atractivos y platillos, borrador de ruta y justificación. |
+| Semana 3 (15–21 sep. 2026)       | Armado del documento, revisión de APA y conclusiones individuales. |
+| Semana 4 (22–24 sep. 2026)       | Revisión final y entrega del avance (24 de septiembre de 2026). |
+| Semanas siguientes               | Retroalimentación del docente y diseño e implementación de la guía digital (sitio web publicado en GitHub Pages). |
+
+### Anexo D. Repositorio y sitio publicado
 
 El desarrollo de este avance (investigación, contenido y control de versiones) se trabajó en el siguiente repositorio, cuyo sitio también está publicado en línea:
 
