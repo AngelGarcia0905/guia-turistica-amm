@@ -12,7 +12,14 @@
    6. [Manifestaciones culturales y construcción de identidad](#26-manifestaciones-culturales-y-construcción-de-identidad)
 3. [Conclusiones individuales y aportación](#3-conclusiones-individuales-y-aportación)
 4. [Bibliografía](#4-bibliografía)
-5. [Anexos](#5-anexos) (fichas de fuentes, ruta turística, plan de trabajo y repositorio)
+5. [Anexos](#5-anexos) (fichas de fuentes, ruta turística y plan de trabajo)
+
+**Repositorio y sitio publicado**
+
+El desarrollo de este avance (investigación, contenido y control de versiones) se trabajó en el siguiente repositorio, cuyo sitio también está publicado en línea:
+
+* **Repositorio de trabajo (GitHub):** https://github.com/AngelGarcia0905/guia-turistica-amm
+* **Sitio publicado (GitHub Pages):** https://angelgarcia0905.github.io/guia-turistica-amm/
 
 ---
 
@@ -48,7 +55,7 @@ La región asignada por el docente es **Nuevo León**. Dentro de ella, el equipo
 
 El desarrollo del documento sigue este orden. Primero se identifica la región y se presenta su información general (ubicación, historia, población, clima, economía y contexto social). Después se recorren las manifestaciones culturales: sitios turísticos y arquitectura, gastronomía con recetas y bebidas, empresas emblemáticas, leyendas, música regional, religión, literatura, vestido, fiestas, construcción de identidad (indígena, étnica, juvenil y de género y sexualidad) y noticias culturales y sociales recientes. Cada apartado incluye imágenes y, cuando aplica, enlaces de ubicación.
 
-La guía se presenta además como un **sitio web interactivo** (ver Anexos), que permite explorar los mismos temas, marcar lugares visitados y poner a prueba lo aprendido con un quiz. Al final se incluyen las conclusiones individuales de cada integrante, su aportación al equipo y la bibliografía en formato APA.
+La guía se presenta además como un **sitio web interactivo** (ver el enlace al inicio del documento), que permite explorar los mismos temas, marcar lugares visitados y poner a prueba lo aprendido con un quiz. Al final se incluyen las conclusiones individuales de cada integrante, su aportación al equipo y la bibliografía en formato APA.
 
 ---
 
@@ -641,10 +648,3 @@ Referencias en formato APA 7 de las fuentes consultadas. Las fotografías provie
 | Semana 3 (15–21 sep. 2026)       | Armado del documento, revisión de APA y conclusiones individuales. |
 | Semana 4 (22–24 sep. 2026)       | Revisión final y entrega del avance (24 de septiembre de 2026). |
 | Semanas siguientes               | Retroalimentación del docente y diseño e implementación de la guía digital (sitio web publicado en GitHub Pages). |
-
-### Anexo D. Repositorio y sitio publicado
-
-El desarrollo de este avance (investigación, contenido y control de versiones) se trabajó en el siguiente repositorio, cuyo sitio también está publicado en línea:
-
-* **Repositorio de trabajo (GitHub):** https://github.com/AngelGarcia0905/guia-turistica-amm
-* **Sitio publicado (GitHub Pages):** https://angelgarcia0905.github.io/guia-turistica-amm/
