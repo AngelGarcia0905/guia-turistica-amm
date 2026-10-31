@@ -515,7 +515,7 @@ Desde entonces la marcha ha crecido de manera sostenida: en 2018 reunió a más 
    Fuente: ABC Noticias / POSTA México, agosto de 2026.
 
 4. **"NATURA" lleva el arte contemporáneo al Parque Fundidora**
-   Como parte del Festival Internacional Santa Lucía 2026, abrió al público la exposición colectiva "NATURA" en la Parque Fundidora, con obra de seis artistas nacionales (Jeremy Deller, Lucila Garza, Daniel Pérez Ríos, Miriam Salado, Lucía Vidales, Adair Vigil y Lizbeth Villarreal) bajo la curaduría de Cuauhtémoc Medina y Eliud Nava. La muestra invita a reflexionar sobre la convivencia entre industria y naturaleza en uno de los espacios más representativos de Monterrey, y estará abierta del 26 de septiembre al 8 de noviembre de 2026.
+   Como parte del Festival Internacional Santa Lucía 2026, abrió al público la exposición colectiva "NATURA" en el Parque Fundidora, con obra de seis artistas nacionales (Jeremy Deller, Lucila Garza, Daniel Pérez Ríos, Miriam Salado, Lucía Vidales, Adair Vigil y Lizbeth Villarreal) bajo la curaduría de Cuauhtémoc Medina y Eliud Nava. La muestra invita a reflexionar sobre la convivencia entre industria y naturaleza en uno de los espacios más representativos de Monterrey, y estará abierta del 26 de septiembre al 8 de noviembre de 2026.
    Fuente: POSTA México / El Porvenir, septiembre de 2026.
 ---
 
